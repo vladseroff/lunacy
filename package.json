@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "predeploy": "nuxt generate",
+    "deploy": "gh-pages -d dist -t true"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18",
+    "gh-pages": "^5.0.0",
+    "nuxt": "^3.6.1",
+    "sass": "^1.63.6",
+    "vite-plugin-pug": "^0.3.2"
+  },
+  "dependencies": {
+    "swiper": "^10.0.3"
+  }
+}

@@ -1,0 +1,52 @@
+<template lang="pug">
+component.button(
+    :is="href ? 'a' : 'div'"
+    :href="href"
+    :class="[color, `hover-${hoverColor}`]"
+)
+    slot
+</template>
+
+<script setup>
+defineProps({
+    href: {
+        type: String,
+        default: ''
+    },
+    color: {
+        type: String,
+        default: 'black'
+    },
+    hoverColor: {
+        type: String,
+        default: 'default'
+    }
+})
+</script>
+
+<style lang="scss" scoped>
+.button {
+    min-width: 150px;
+    max-width: 200px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    background: var(--color-white);
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 50px;
+    &:hover {
+        
+    }
+    &.outlined {
+        border: 1px solid var(--color-white);
+        color: var(--color-white);
+        background: transparent;
+    }
+}
+</style>
