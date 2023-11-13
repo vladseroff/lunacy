@@ -8,7 +8,14 @@
             desc="товары"
             count="2"
         )
-            IndexProduct
+            IndexProduct(
+                index="first"
+            )
+            IndexProductSecond(
+                index="second"
+                dark
+            )
+            //- IndexProductSecond
     BaseFooter
 </template>
 

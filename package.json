@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist -t true"
   },
   "devDependencies": {
+    "@hypernym/nuxt-gsap": "^2.4.2",
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
     "gh-pages": "^5.0.0",

@@ -4,26 +4,26 @@
         :class="[`img-${index}`]"
     )
         img(
-            src="/images/bg2.png"
+            src="/images/bg4.png"
         )
     .product__wrapper
         .product__box(
             :class="[`box-${index}`]"
         )
             img(
-                src="/images/circle-3.svg"
+                src="/images/circle-3-b.svg"
             )
             img(
-                src="/images/circle-4.svg"
+                src="/images/circle-4-b.svg"
             )
             img(
-                src="/images/circle-5.svg"
+                src="/images/circle-5-b.svg"
             )
             img(
-                src="/images/circle-6.svg"
+                src="/images/circle-6-b.svg"
             )
             img(
-                src="/images/circle-1.svg"
+                src="/images/circle-1-b.svg"
             )
             img(
                 src="/images/circle-2.svg"
