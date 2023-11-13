@@ -2,27 +2,27 @@
 .banner
     LayoutContainer
         .banner__logo
-            .banner__logo-letter
+            .banner__logo-letter.banner__logo-letter_1
                 img(
                     src="/images/l.svg"
                 )
-            .banner__logo-letter
+            .banner__logo-letter.banner__logo-letter_2
                 img(
                     src="/images/u.svg"
                 )
-            .banner__logo-letter
+            .banner__logo-letter.banner__logo-letter_3
                 img(
                     src="/images/n.svg"
                 )
-            .banner__logo-letter
+            .banner__logo-letter.banner__logo-letter_4
                 img(
                     src="/images/a.svg"
                 )
-            .banner__logo-letter
+            .banner__logo-letter.banner__logo-letter_5
                 img(
                     src="/images/logo-lg.svg"
                 )
-            .banner__logo-letter
+            .banner__logo-letter.banner__logo-letter_6
                 img(
                     src="/images/y.svg"
                 )
@@ -31,18 +31,155 @@
                 src="/images/bg1.png"
             )
         .banner__buttons
-            UiButton(
+            UiButton.button1(
 
             ) КУПИТЬ
-            UiButton.outlined(
+            UiButton.button2.outlined(
                 
             ) ПОДРОБНЕЕ
 </template>
 
-<script>
-export default {
-    
-}
+<script setup>
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    $gsap.fromTo('.banner__logo-letter_1', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.banner__logo-letter_2', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        delay: .4,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.banner__logo-letter_3', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        delay: .8,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.banner__logo-letter_4', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        delay: 1.2,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.banner__logo-letter_5', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        rotate: 30,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        rotate: 0,
+        delay: 1.6,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.banner__logo-letter_6', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        delay: 2,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.banner__product', {
+        y: 200,
+        scale: .8,
+        opacity: 0,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        scale: 1,
+        delay: 2.4,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.button1', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        delay: 3.4,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+    $gsap.fromTo('.button2', {
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "center center", 
+        ease: "ease"
+    },{
+        y: 0,
+        opacity: 1,
+        duration: .8,
+        scale: 1,
+        delay: 3.8,
+        transformOrigin: "center center", 
+        ease: "ease"
+    })
+})
 </script>
 
 <style lang="scss" scoped>
@@ -72,6 +209,7 @@ export default {
         justify-content: center;
         align-items: center;
         top: -170px;
+        z-index: 5;
         img {
             display: block;
             position: relative;

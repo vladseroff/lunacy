@@ -417,7 +417,7 @@ onMounted(() => {
         flex-direction: column;
         justify-content: center;
         position: sticky;
-        top: 60px;
+        top: 90px;
         padding-top: 60px;
         img {
             display: block;
@@ -449,7 +449,7 @@ onMounted(() => {
     }
     &__box {
         position: sticky;
-        top: 60px;
+        top: 90px;
         width: 698px;
         height: 698px;
         transform: scale(.5);
@@ -479,7 +479,7 @@ onMounted(() => {
     }
     &__img {
         position: sticky;
-        top: 60px;
+        top: 90px;
         width: 698px;
         height: 698px;
         z-index: 10;

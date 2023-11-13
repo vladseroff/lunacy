@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     // },
     app: {
         head: {
-            title: 'HBL',
+            title: 'Lunacy',
             htmlAttrs: {
                 lang: 'ru'
             },

@@ -34,5 +34,6 @@
     width: 100vw;
     min-height: 100vh;
     background: #071D49 url('/images/noise.png') repeat left top;
+    max-width: 100vw;
 }
 </style>
