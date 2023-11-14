@@ -103,17 +103,17 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-    $gsap.to('#app', {
-        scrollTrigger: {
-            trigger: `.trigger-color-partner`,
-            scrub: true,
-            start: "center center",
-            end: "+=80%",
-        },
-        backgroundColor: '#071D49',
-        transformOrigin: "center center", 
-        ease: "none"
-    })
+    // $gsap.to('#app', {
+    //     scrollTrigger: {
+    //         trigger: `.trigger-color-partner`,
+    //         scrub: true,
+    //         start: "center center",
+    //         // end: "+=80%",
+    //     },
+    //     backgroundColor: '#071D49',
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
 })
 </script>
 

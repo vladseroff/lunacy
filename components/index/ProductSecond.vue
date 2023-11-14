@@ -1,5 +1,6 @@
 <template lang="pug">
 .product
+    .trigger-dark-bg
     .trigger-color(
         :class="[`trigger-color-${index}`]"
     )
@@ -100,7 +101,7 @@
 </template>
 
 <script setup>
-const { $gsap } = useNuxtApp()
+import { gsap } from "gsap/all";
 
 const props = defineProps({
     index: {
@@ -114,24 +115,7 @@ const props = defineProps({
 })
 
 onMounted(() => {
-    if (props.dark) {
-        $gsap.to('#app', {
-            scrollTrigger: {
-                trigger: `.trigger-color-${props.index}`,
-                start: "center center",
-            },
-            backgroundColor: '#0E0E0E',
-        })
-    } else {
-        $gsap.to('#app', {
-            scrollTrigger: {
-                trigger: `.trigger-color-${props.index}`,
-                start: "center center",
-            },
-            backgroundColor: '#071D49',
-        })
-    }
-    $gsap.timeline({
+    gsap.timeline({
         scrollTrigger: {
             trigger: `.img-zoom-${props.index}`,
             scrub: true,
@@ -154,7 +138,7 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
-    $gsap.timeline({
+    gsap.timeline({
         scrollTrigger: {
             trigger: `.preview-text-${props.index}`,
             scrub: true,
@@ -186,7 +170,7 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
-    $gsap.timeline({
+    gsap.timeline({
         scrollTrigger: {
             trigger: `.preview-text-hide-${props.index}`,
             scrub: true,
@@ -218,7 +202,7 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
-    $gsap.fromTo(`.img-${props.index}`, {
+    gsap.fromTo(`.img-${props.index}`, {
         scrollTrigger: {
             trigger: `.box-zoom-${props.index}`,
             scrub: true,
@@ -239,7 +223,7 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.timeline({
+    gsap.timeline({
         scrollTrigger: {
             trigger: `.box-zoom-${props.index}`,
             scrub: true,
@@ -275,7 +259,7 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
-    $gsap.fromTo(`.box-${props.index}`, {
+    gsap.fromTo(`.box-${props.index}`, {
         scrollTrigger: {
             trigger: `.trigger-text-${props.index}`,
             scrub: true,
@@ -296,7 +280,7 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.fromTo(`.text-${props.index}-1`, {
+    gsap.fromTo(`.text-${props.index}-1`, {
         scrollTrigger: {
             trigger: `.trigger-text-${props.index}`,
             scrub: true,
@@ -321,7 +305,7 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.fromTo(`.img-${props.index}`, {
+    gsap.fromTo(`.img-${props.index}`, {
         scrollTrigger: {
             trigger: `.trigger-text-${props.index}`,
             scrub: true,
@@ -342,7 +326,7 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.fromTo(`.text-${props.index}-2`, {
+    gsap.fromTo(`.text-${props.index}-2`, {
         scrollTrigger: {
             trigger: `.trigger-text-${props.index}`,
             scrub: true,
@@ -367,7 +351,7 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    // $gsap.fromTo(`.box-${props.index}`, {
+    // gsap.fromTo(`.box-${props.index}`, {
     //     scrollTrigger: {
     //         trigger: `.trigger-text-second-${props.index}`,
     //         scrub: true,
@@ -388,7 +372,7 @@ onMounted(() => {
     //     transformOrigin: "center center", 
     //     ease: "none"
     // })
-    // $gsap.fromTo(`.img-${props.index}`, {
+    // gsap.fromTo(`.img-${props.index}`, {
     //     scrollTrigger: {
     //         trigger: `.trigger-text-second-${props.index}`,
     //         scrub: true,
@@ -409,7 +393,7 @@ onMounted(() => {
     //     transformOrigin: "center center", 
     //     ease: "none"
     // })
-    // $gsap.fromTo(`.text-${props.index}-3`, {
+    // gsap.fromTo(`.text-${props.index}-3`, {
     //     scrollTrigger: {
     //         trigger: `.trigger-text-second-${props.index}`,
     //         scrub: true,
@@ -434,7 +418,7 @@ onMounted(() => {
     //     transformOrigin: "center center", 
     //     ease: "none"
     // })
-    // $gsap.fromTo(`.text-${props.index}-2`, {
+    // gsap.fromTo(`.text-${props.index}-2`, {
     //     scrollTrigger: {
     //         trigger: `.trigger-text-second-${props.index}`,
     //         scrub: true,
@@ -467,6 +451,14 @@ onMounted(() => {
     // height: 2000px;
     position: relative;
     margin-top: 200px;
+    .trigger-dark-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+    }
     .trigger-color {
         position: absolute;
         top: 0;

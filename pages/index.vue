@@ -3,6 +3,7 @@
     BaseHeader
     .app__container
         IndexBanner
+        IndexAbout
         IndexSection(
             title="Наши продукты"
             desc="товары"
@@ -27,15 +28,26 @@
 </template>
 
 <script setup>
+import { gsap, ScrollTrigger } from "gsap/all";
+
 setTimeout(() => {
     window.scrollTo(0, 0)
 }, 1)
-// onMounted(() => {
-//     let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-//     if (isSafari) {
-//         document.body.classList.add('isSafari')
-//     }
-// })
+onMounted(() => {
+    // let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+    // if (isSafari) {
+    //     document.body.classList.add('isSafari')
+    // }
+
+    ScrollTrigger.create({
+        trigger: `.trigger-dark-bg`,
+        start: 'top 30%',
+        end: 'bottom 30%',
+        onToggle: (self) => gsap.to('#app', {
+            backgroundColor: self.isActive ? '#0E0E0E' : '#071D49'
+        })
+    });
+})
 </script>
 
 <style lang="scss" scoped>

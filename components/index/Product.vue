@@ -1,5 +1,6 @@
 <template lang="pug">
 .product
+    .trigger-light-bg
     .trigger-color(
         :class="[`trigger-color-${index}`]"
     )
@@ -120,23 +121,7 @@ const props = defineProps({
 })
 
 onMounted(() => {
-    if (props.dark) {
-        $gsap.to('#app', {
-            scrollTrigger: {
-                trigger: `.trigger-color-${props.index}`,
-                start: "center center",
-            },
-            backgroundColor: '#0E0E0E',
-        })
-    } else {
-        $gsap.to('#app', {
-            scrollTrigger: {
-                trigger: `.trigger-color-${props.index}`,
-                start: "center center",
-            },
-            backgroundColor: '#071D49',
-        })
-    }
+    
     $gsap.timeline({
         scrollTrigger: {
             trigger: `.img-zoom-${props.index}`,
@@ -471,6 +456,14 @@ onMounted(() => {
     // height: 2000px;
     position: relative;
     margin-top: 200px;
+    .trigger-light-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+    }
     .trigger-color {
         position: absolute;
         top: 0;
