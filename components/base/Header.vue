@@ -11,11 +11,11 @@ header.header
                 img(
                     src="/images/arrow.svg"
                 )
-            .header__nav-item Драйвера
-            .header__nav-item Поддержка
+            .header__nav-item.disabled Драйвера
+            .header__nav-item.disabled Поддержка
         .header__wrapper
             .header__lang
-                .header__lang-item.active Ru
+                .header__lang-item.disabled Ru
                 .header__lang-item En
 </template>
 
@@ -55,6 +55,10 @@ header.header
             display: flex;
             align-items: center;
             justify-content: center;
+            &.disabled {
+                pointer-events: none;
+                opacity: .2;
+            }
             img {
                 display: block;
                 margin-left: 5px;
@@ -69,6 +73,10 @@ header.header
             padding: 15px 0;
             cursor: pointer;
             font-size: 14px;
+            &.disabled {
+                pointer-events: none;
+                opacity: .2;
+            }
             &.active {
                 color: var(--color-grey);
                 cursor: default;

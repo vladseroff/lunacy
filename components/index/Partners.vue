@@ -103,14 +103,13 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-    $gsap.timeline({
+    $gsap.to('#app', {
         scrollTrigger: {
             trigger: `.trigger-color-partner`,
             scrub: true,
             start: "center center",
             end: "+=80%",
         },
-    }).to('#app', {
         backgroundColor: '#071D49',
         transformOrigin: "center center", 
         ease: "none"

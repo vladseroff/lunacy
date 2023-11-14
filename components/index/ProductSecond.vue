@@ -117,26 +117,18 @@ onMounted(() => {
     if (props.dark) {
         $gsap.to('#app', {
             scrollTrigger: {
-                trigger: `trigger-color-${props.index}`,
-                scrub: true,
+                trigger: `.trigger-color-${props.index}`,
                 start: "center center",
-                end: "+=100%",
             },
             backgroundColor: '#0E0E0E',
-            transformOrigin: "center center", 
-            ease: "none"
         })
     } else {
         $gsap.to('#app', {
             scrollTrigger: {
-                trigger: `trigger-color-${props.index}`,
-                scrub: true,
+                trigger: `.trigger-color-${props.index}`,
                 start: "center center",
-                end: "+=100%",
             },
             backgroundColor: '#071D49',
-            transformOrigin: "center center", 
-            ease: "none"
         })
     }
     $gsap.timeline({
@@ -171,26 +163,26 @@ onMounted(() => {
         },
     })
         .from(`.preview-text-title-${props.index}`, {
-            x: 300,
             opacity: 0,
+            filter: 'blur(15px)',
             transformOrigin: "center center", 
             ease: "none"
         })
         .to(`.preview-text-title-${props.index}`, {
-            x: 0,
             opacity: 1,
+            filter: 'blur(0px)',
             transformOrigin: "center center", 
             ease: "none"
         })
         .from(`.preview-text-desc-${props.index}`, {
-            x: 300,
             opacity: 0,
+            filter: 'blur(15px)',
             transformOrigin: "center center", 
             ease: "none"
         })
         .to(`.preview-text-desc-${props.index}`, {
-            x: 0,
             opacity: 1,
+            filter: 'blur(0px)',
             transformOrigin: "center center", 
             ease: "none"
         })
@@ -204,21 +196,25 @@ onMounted(() => {
     })
         .from(`.preview-text-title-${props.index}`, {
             opacity: 1,
+            filter: 'blur(0px)',
             transformOrigin: "center center", 
             ease: "none"
         })
         .to(`.preview-text-title-${props.index}`, {
             opacity: 0,
+            filter: 'blur(15px)',
             transformOrigin: "center center", 
             ease: "none"
         })
         .from(`.preview-text-desc-${props.index}`, {
             opacity: 1,
+            filter: 'blur(0px)',
             transformOrigin: "center center", 
             ease: "none"
         })
         .to(`.preview-text-desc-${props.index}`, {
             opacity: 0,
+            filter: 'blur(15px)',
             transformOrigin: "center center", 
             ease: "none"
         })
