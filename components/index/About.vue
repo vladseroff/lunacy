@@ -373,11 +373,12 @@ onMounted(() => {
             margin: 0 30px;
             white-space: nowrap;
             &.gold {
-                // font-style: italic;
+                font-style: italic;
                 background: linear-gradient(to bottom right, #8C6D4B 0%, #B18E5D 40%);
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
+                padding-right: 13px;
             }
         }
         &-line {
