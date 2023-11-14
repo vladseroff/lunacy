@@ -1,11 +1,21 @@
 <template lang="pug">
 .product
+    .trigger-color(
+        :class="[`trigger-color-${index}`]"
+    )
     .product__img(
         :class="[`img-${index}`]"
     )
-        img(
-            src="/images/bg2.png"
+        IndexProductCanvas(
+            :index="index"
         )
+    //- .product__img(
+    //-     :class="[`img-${index}`]"
+    //- )
+        //- img(
+        //-     src="/images/bg2.png"
+        //- )
+        //- canvas#img
     .product__wrapper
         .product__box(
             :class="[`box-${index}`]"
@@ -77,89 +87,60 @@ const props = defineProps({
 
 onMounted(() => {
     if (props.dark) {
-        $gsap.fromTo('#app', {
+        $gsap.to('#app', {
             scrollTrigger: {
-                trigger: `.img-zoom-${props.index}`,
+                trigger: `trigger-color-${props.index}`,
                 scrub: true,
                 start: "center center",
                 end: "+=100%",
-                markers: false,
-            },
-            backgroundColor: '#071D49',
-            transformOrigin: "center center", 
-            ease: "none"
-        },{
-            scrollTrigger: {
-                trigger: `.img-zoom-${props.index}`,
-                scrub: true,
-                start: "center center",
-                end: "+=100%",
-                markers: false,
             },
             backgroundColor: '#0E0E0E',
             transformOrigin: "center center", 
             ease: "none"
         })
+    } else {
+        $gsap.to('#app', {
+            scrollTrigger: {
+                trigger: `trigger-color-${props.index}`,
+                scrub: true,
+                start: "center center",
+                end: "+=100%",
+            },
+            backgroundColor: '#071D49',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
     }
-    $gsap.fromTo(`.img-${props.index}`, {
+    $gsap.timeline({
         scrollTrigger: {
             trigger: `.img-zoom-${props.index}`,
             scrub: true,
-            start: "top top",
-            end: "+=100%",
-            markers: false,
-        },
-        x: 0,
-        y: 1000,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.img-zoom-${props.index}`,
-            scrub: true,
-            start: "top top",
-            end: "+=100%",
-            markers: false,
-        },
-        x: 0,
-        y: 0,
-        transformOrigin: "center center", 
-        ease: "none"
-    })
-    $gsap.fromTo(`.box-${props.index}`, {
-        scrollTrigger: {
-            trigger: `.box-zoom-${props.index}`,
-            scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
+            
         },
-        x: 0,
-        scale: 0.5, 
-        opacity: 0,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.box-zoom-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-            markers: false,
-        },
-        x: 0,
-        scale: 1, 
-        opacity: 1,
-        transformOrigin: "center center", 
-        ease: "none"
     })
+        // IMG 
+        .from(`.img-${props.index}`, {
+            x: 0,
+            y: 1000,
+            scale: 1.5,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.img-${props.index}`, {
+            x: 0,
+            y: 0,
+            scale: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
     $gsap.fromTo(`.img-${props.index}`, {
         scrollTrigger: {
             trigger: `.box-zoom-${props.index}`,
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         scale: 1, 
         transformOrigin: "center center", 
@@ -170,44 +151,51 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         scale: .5, 
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.fromTo(`.text-${props.index}-1`, {
+    $gsap.timeline({
         scrollTrigger: {
             trigger: `.box-zoom-${props.index}`,
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
-        opacity: 0,
-        scale: .5,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.box-zoom-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-            markers: false,
-        }, 
-        opacity: 1,
-        scale: 1,
-        transformOrigin: "center center", 
-        ease: "none"
     })
+        .from(`.box-${props.index}`, {
+            x: 0,
+            scale: 0.5, 
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.box-${props.index}`, {
+            x: 0,
+            scale: 1, 
+            opacity: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .from(`.text-${props.index}-1`, {
+            opacity: 0,
+            scale: .5,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.text-${props.index}-1`, {
+            opacity: 1,
+            scale: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
     $gsap.fromTo(`.box-${props.index}`, {
         scrollTrigger: {
             trigger: `.trigger-text-${props.index}`,
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 0,
         transformOrigin: "center center", 
@@ -218,7 +206,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 706,
         transformOrigin: "center center", 
@@ -230,7 +217,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 0,
         // opacity: 1,
@@ -243,7 +229,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         }, 
         x: 706,
         opacity: 0,
@@ -257,7 +242,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 0,
         transformOrigin: "center center", 
@@ -268,7 +252,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 706,
         transformOrigin: "center center", 
@@ -280,7 +263,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 706,
         transformOrigin: "center center", 
@@ -291,7 +273,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 0,
         transformOrigin: "center center", 
@@ -303,7 +284,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 706,
         transformOrigin: "center center", 
@@ -314,7 +294,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 0,
         transformOrigin: "center center", 
@@ -326,7 +305,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         x: 706,
         opacity: 0,
@@ -339,7 +317,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         }, 
         x: 0,
         opacity: 1,
@@ -353,7 +330,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         opacity: 0,
         x: -706,
@@ -366,7 +342,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         opacity: 1,
         x: 0,
@@ -380,7 +355,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         // opacity: 1,
         // x: 0,
@@ -392,7 +366,6 @@ onMounted(() => {
             scrub: true,
             start: "center center",
             end: "+=100%",
-            markers: false,
         },
         opacity: 0,
         x: -706,
@@ -400,6 +373,7 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
+
 })
 </script>
 
@@ -408,9 +382,17 @@ onMounted(() => {
     // height: 2000px;
     position: relative;
     margin-top: 100px;
+    .trigger-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+    }
     &__wrapper {
         position: relative;
-        height: 7597px;
+        height: 10000px;
     }
     &__text {
         display: flex;
@@ -486,7 +468,12 @@ onMounted(() => {
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateX(0)
+        transform: translateX(0);
+        canvas {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
     &__triggers {
         position: absolute;
@@ -495,7 +482,6 @@ onMounted(() => {
         left: 0;
     }
     &__trigger {
-        // background: rgba(red, .2);
         width: 100%;
         height: 1px;
         font-size: 10px;
@@ -503,10 +489,10 @@ onMounted(() => {
         font-weight: 300;
         pointer-events: none;
         &-img-zoom {
-            height: 2000px;
+            height: 500px;
         }
         &-box-zoom {
-            height: 1300px;
+            height: 2000px;
         }
         &-text-1 {
             height: 2000px;

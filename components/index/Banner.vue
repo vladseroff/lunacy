@@ -43,6 +43,17 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
+    // $gsap.to('#app', {
+    //     scrollTrigger: {
+    //         trigger: '.banner',
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     backgroundColor: '#0E0E0E',
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
     $gsap.fromTo('.banner__logo-letter_1', {
         y: 100,
         opacity: 0,

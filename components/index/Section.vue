@@ -4,9 +4,14 @@
         .section__top
             .section__top-name {{desc}}
             .section__top-count ({{count}})
-        .section__title {{title}}
+        .section__title(
+            :class="[`section-title-${index}`]"
+        ) {{title}}
         .section__body
             slot
+            .section__trigger(
+                :class="[`section-trigger-${index}`]"
+            )
 </template>
 
 <script setup>
@@ -23,6 +28,59 @@ const props = defineProps({
         type: String,
         default: ''
     },
+    index: {
+        type: String,
+        required: true
+    },
+})
+
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    // $gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: `.section-trigger-${props.index}`,
+    //         scrub: true,
+    //         start: "top top",
+    //         end: "+=50%",
+    //         markers: true
+    //     },
+    // }).from(`.section-title-${props.index}`, {
+    //     opacity: 0,
+    //     scale: 1.2,
+    //     y: 200,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // }).to(`.section-title-${props.index}`, {
+    //     opacity: 1,
+    //     scale: 1,
+    //     y: 0,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
+    // $gsap.fromTo('.section__title', {
+    //     scrollTrigger: {
+    //         trigger: '.banner__logo',
+    //         scrub: true,
+    //         start: "top top",
+    //         end: "+=100%",
+    //     },
+    //     opacity: 0,
+    //     scale: 200,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // },{
+    //     scrollTrigger: {
+    //         trigger: '.banner__logo',
+    //         scrub: true,
+    //         start: "top top",
+    //         end: "+=100%",
+    //     },
+    //     opacity: 1,
+    //     scale: 1,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
 })
 </script>
 
@@ -30,6 +88,7 @@ const props = defineProps({
 .section {
     padding-top: 150px;
     padding-bottom: 5px;
+    position: relative;
     &:before {
         content: '';
         display: block;
@@ -37,6 +96,19 @@ const props = defineProps({
         height: 1px;
         width: 100%;
         margin-bottom: 30px;
+    }
+    &__trigger {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        font-size: 10px;
+        padding-top: 5px;
+        font-weight: 300;
+        pointer-events: none;
+        height: 1000px;
     }
     &__title {
         text-align: center;

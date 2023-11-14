@@ -7,6 +7,7 @@
             title="Наши продукты"
             desc="товары"
             count="2"
+            index="1"
         )
             IndexProduct(
                 index="first"
@@ -15,7 +16,13 @@
                 index="second"
                 dark
             )
-            //- IndexProductSecond
+        IndexSection(
+            title="Где купить"
+            desc="Партнеры"
+            count="2"
+            index="2"
+        )
+            IndexPartners
     BaseFooter
 </template>
 

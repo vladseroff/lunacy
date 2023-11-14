@@ -41,12 +41,17 @@ defineProps({
     text-decoration: none;
     border-radius: 50px;
     &:hover {
-        
+        background: darken(#fff, 10%);
     }
     &.outlined {
         border: 1px solid var(--color-white);
         color: var(--color-white);
         background: transparent;
+        &:hover {
+            background: transparent;
+            border-color: darken(#fff, 10%);
+            color: darken(#fff, 10%);
+        }
     }
 }
 </style>
