@@ -20,7 +20,7 @@
                 )
             .banner__logo-letter.banner__logo-letter_5
                 img(
-                    src="/images/logo-lg.svg"
+                    src="/images/c.svg"
                 )
             .banner__logo-letter.banner__logo-letter_6
                 img(
@@ -30,13 +30,13 @@
             img(
                 src="/images/bg1.png"
             )
+        .banner__texts
+            .banner__text Создано 
+                span игроками
+            .banner__text Для 
+                span игроков
         .banner__buttons
-            UiButton.button1(
-
-            ) КУПИТЬ
-            UiButton.button2.outlined(
-                
-            ) ПОДРОБНЕЕ
+            UiButton.button1 ПРЕДЗАКАЗ
 </template>
 
 <script setup>
@@ -55,13 +55,13 @@ onMounted(() => {
     //     ease: "none"
     // })
     $gsap.fromTo('.banner__logo-letter_1', {
-        y: 100,
+        x: 200,
         opacity: 0,
         scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: .8,
         scale: 1,
@@ -69,13 +69,13 @@ onMounted(() => {
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_2', {
-        y: 100,
+        x: 200,
         opacity: 0,
         scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: .8,
         scale: 1,
@@ -84,13 +84,13 @@ onMounted(() => {
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_3', {
-        y: 100,
+        x: 200,
         opacity: 0,
         scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: .8,
         scale: 1,
@@ -99,13 +99,13 @@ onMounted(() => {
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_4', {
-        y: 100,
+        x: 200,
         opacity: 0,
         scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: .8,
         scale: 1,
@@ -114,14 +114,14 @@ onMounted(() => {
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_5', {
-        y: 100,
+        x: 200,
         opacity: 0,
         scale: 0.5,
         rotate: 30,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: .8,
         scale: 1,
@@ -131,13 +131,13 @@ onMounted(() => {
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_6', {
-        y: 100,
+        x: 200,
         opacity: 0,
         scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: .8,
         scale: 1,
@@ -171,38 +171,85 @@ onMounted(() => {
         opacity: 1,
         duration: .8,
         scale: 1,
-        delay: 3.4,
+        delay: 4,
         transformOrigin: "center center", 
         ease: "ease"
     })
-    $gsap.fromTo('.button2', {
-        y: 100,
+    $gsap.fromTo('.banner__texts', {
         opacity: 0,
-        scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
-        y: 0,
         opacity: 1,
         duration: .8,
-        scale: 1,
-        delay: 3.8,
+        delay: 3.7,
         transformOrigin: "center center", 
         ease: "ease"
     })
+    // $gsap.fromTo('.button2', {
+    //     y: 100,
+    //     opacity: 0,
+    //     scale: 0.5,
+    //     transformOrigin: "center center", 
+    //     ease: "ease"
+    // },{
+    //     y: 0,
+    //     opacity: 1,
+    //     duration: .8,
+    //     scale: 1,
+    //     delay: 3.8,
+    //     transformOrigin: "center center", 
+    //     ease: "ease"
+    // })
 })
 </script>
 
 <style lang="scss" scoped>
 .banner {
+    .container {
+        position: relative;
+    }
+    &__texts {
+        position: absolute;
+        top: 450px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 200px 0 130px;
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-top: 40px;
+        span {
+            font-style: italic;
+            display: inline-block;
+            position: relative;
+            margin-left: 15px;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                right: 0;
+                width: 80%;
+                background: #fff;
+                height: 1px;
+            }
+        }
+    }
     &__logo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-left: 50px;
+        margin-top: -70px;
         &-letter {
             position: relative;
-            margin: 0 50px;
+            margin: 0 -40px;
             z-index: 4;
             &:nth-child(1),
             &:nth-child(2),
@@ -219,8 +266,10 @@ onMounted(() => {
         display: flex;
         justify-content: center;
         align-items: center;
-        top: -170px;
+        top: -458px;
+        right: -15px;
         z-index: 5;
+        margin-bottom: -600px;
         img {
             display: block;
             position: relative;

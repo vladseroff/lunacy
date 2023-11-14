@@ -27,6 +27,9 @@
 </template>
 
 <script setup>
+setTimeout(() => {
+    window.scrollTo(0, 0)
+}, 1)
 // onMounted(() => {
 //     let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 //     if (isSafari) {

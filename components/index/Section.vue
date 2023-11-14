@@ -89,14 +89,14 @@ onMounted(() => {
     padding-top: 150px;
     padding-bottom: 5px;
     position: relative;
-    &:before {
-        content: '';
-        display: block;
-        background: url('/images/line.svg') center center no-repeat;
-        height: 1px;
-        width: 100%;
-        margin-bottom: 30px;
-    }
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     background: url('/images/line.svg') center center no-repeat;
+    //     height: 1px;
+    //     width: 100%;
+    //     margin-bottom: 30px;
+    // }
     &__trigger {
         position: absolute;
         top: 0;
@@ -112,16 +112,18 @@ onMounted(() => {
     }
     &__title {
         text-align: center;
-        font-family: 'Geologica';
+        font-family: 'Cygre';
         font-weight: 300;
         font-size: 110px;
         text-transform: uppercase;
-        background: linear-gradient(180deg, #F9F9F9 0%, #8F8F8F 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        margin-top: -43px;
+        color: #fff;
+        margin-top: -37px;
+        // background: linear-gradient(180deg, #F9F9F9 0%, #8F8F8F 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
+        // margin-top: -43px;
     }
     &__top {
         display: flex;
@@ -134,7 +136,7 @@ onMounted(() => {
             text-transform: uppercase;
         }
         &-count {
-            font-family: 'Geologica';
+            font-family: 'Cygre';
             font-weight: 400;
             font-size: 20px;
             text-transform: uppercase;

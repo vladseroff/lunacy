@@ -3,20 +3,29 @@
     .trigger-color(
         :class="[`trigger-color-${index}`]"
     )
-    .product__img(
-        :class="[`img-${index}`]"
-    )
-        IndexProductCanvas(
-            :index="index"
-        )
     //- .product__img(
     //-     :class="[`img-${index}`]"
     //- )
-        //- img(
-        //-     src="/images/bg2.png"
-        //- )
-        //- canvas#img
+    //-     IndexProductCanvas(
+    //-         :index="index"
+    //-     )
     .product__wrapper
+        .product__img(
+            :class="[`img-${index}`]"
+        )
+            img(
+                src="/images/bg2.png"
+            )
+        .product__preview-text
+            .product__preview-text-box
+                .product__preview-text-title(
+                    :class="[`preview-text-title-${index}`]"
+                ) Loud
+                .product__preview-text-desc(
+                    :class="[`preview-text-desc-${index}`]"
+                ) Громче. 
+                    em Еще 
+                        span громче
         .product__box(
             :class="[`box-${index}`]"
         )
@@ -41,24 +50,43 @@
         .product__text#text1(
             :class="[`text-${index}-1`]"
         )
-            img(
-                src="/images/bg6.png"
-            )
+            .product__text-container
+                .product__text-title Loud
+                .product__text-pretitle Универсальность
+                .product__text-desc
+                    p Три режима подключения: 
+                        br 
+                        |проводной, радиоканал, bluetooth
+                    p Совместимы с большинством устройств 
+                        br 
+                        |на рынке, включая мобильные телефоны, 
+                        br 
+                        |игровые консоли и настольные ПК.
+                UiButton ПРЕДЗАКАЗ
         .product__text#text2(
             :class="[`text-${index}-2`]"
         )
-            img(
-                src="/images/bg6.png"
-            )
-        .product__text#text3(
-            :class="[`text-${index}-3`]"
-        )
-            img(
-                src="/images/bg6.png"
-            )
+            .product__text-container
+                .product__text-title Loud
+                .product__text-pretitle Внешний вид
+                .product__text-desc
+                    p Сочетание дорогой экокожи, ткани 
+                        br 
+                        |и терморегулирующего силикагеля 
+                        br 
+                        |позволят тебе наслаждаться комфортом 
+                        br 
+                        |даже в самых потных катках.
+                UiButton ПРЕДЗАКАЗ
     .product__triggers
         .product__trigger.product__trigger-img-zoom(
             :class="[`img-zoom-${index}`]"
+        )
+        .product__trigger.product__trigger-preview-text(
+            :class="[`preview-text-${index}`]"
+        )
+        .product__trigger.product__trigger-preview-text-hide(
+            :class="[`preview-text-hide-${index}`]"
         )
         .product__trigger.product__trigger-box-zoom(
             :class="[`box-zoom-${index}`]"
@@ -66,9 +94,9 @@
         .product__trigger.product__trigger-text-1(
             :class="[`trigger-text-${index}`]"
         )
-        .product__trigger.product__trigger-text-2(
-            :class="[`trigger-text-second-${index}`]"
-        )
+        //- .product__trigger.product__trigger-text-2(
+        //-     :class="[`trigger-text-second-${index}`]"
+        //- )
 </template>
 
 <script setup>
@@ -120,7 +148,6 @@ onMounted(() => {
             
         },
     })
-        // IMG 
         .from(`.img-${props.index}`, {
             x: 0,
             y: 1000,
@@ -132,6 +159,66 @@ onMounted(() => {
             x: 0,
             y: 0,
             scale: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.preview-text-${props.index}`,
+            scrub: true,
+            start: "center center",
+            end: "+=100%",
+        },
+    })
+        .from(`.preview-text-title-${props.index}`, {
+            x: 300,
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.preview-text-title-${props.index}`, {
+            x: 0,
+            opacity: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .from(`.preview-text-desc-${props.index}`, {
+            x: 300,
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.preview-text-desc-${props.index}`, {
+            x: 0,
+            opacity: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.preview-text-hide-${props.index}`,
+            scrub: true,
+            start: "center center",
+            end: "+=100%",
+        },
+    })
+        .from(`.preview-text-title-${props.index}`, {
+            opacity: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.preview-text-title-${props.index}`, {
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .from(`.preview-text-desc-${props.index}`, {
+            opacity: 1,
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.preview-text-desc-${props.index}`, {
+            opacity: 0,
             transformOrigin: "center center", 
             ease: "none"
         })
@@ -180,12 +267,14 @@ onMounted(() => {
         })
         .from(`.text-${props.index}-1`, {
             opacity: 0,
-            scale: .5,
+            x: 306,
+            scale: 0.8,
             transformOrigin: "center center", 
             ease: "none"
         })
         .to(`.text-${props.index}-1`, {
             opacity: 1,
+            x: 0,
             scale: 1,
             transformOrigin: "center center", 
             ease: "none"
@@ -257,73 +346,6 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.fromTo(`.box-${props.index}`, {
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        x: 706,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        x: 0,
-        transformOrigin: "center center", 
-        ease: "none"
-    })
-    $gsap.fromTo(`.img-${props.index}`, {
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        x: 706,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        x: 0,
-        transformOrigin: "center center", 
-        ease: "none"
-    })
-    $gsap.fromTo(`.text-${props.index}-3`, {
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        x: 706,
-        opacity: 0,
-        scale: 0.5,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        }, 
-        x: 0,
-        opacity: 1,
-        scale: 1,
-        transformOrigin: "center center", 
-        ease: "none"
-    })
     $gsap.fromTo(`.text-${props.index}-2`, {
         scrollTrigger: {
             trigger: `.trigger-text-${props.index}`,
@@ -349,30 +371,97 @@ onMounted(() => {
         transformOrigin: "center center", 
         ease: "none"
     })
-    $gsap.fromTo(`.text-${props.index}-2`, {
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        // opacity: 1,
-        // x: 0,
-        transformOrigin: "center center", 
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.trigger-text-second-${props.index}`,
-            scrub: true,
-            start: "center center",
-            end: "+=100%",
-        },
-        opacity: 0,
-        x: -706,
-        scale: 0.5,
-        transformOrigin: "center center", 
-        ease: "none"
-    })
+    // $gsap.fromTo(`.box-${props.index}`, {
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     x: 706,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // },{
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     x: 0,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
+    // $gsap.fromTo(`.img-${props.index}`, {
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     x: 706,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // },{
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     x: 0,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
+    // $gsap.fromTo(`.text-${props.index}-3`, {
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     x: 706,
+    //     opacity: 0,
+    //     scale: 0.5,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // },{
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     }, 
+    //     x: 0,
+    //     opacity: 1,
+    //     scale: 1,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
+    // $gsap.fromTo(`.text-${props.index}-2`, {
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     // opacity: 1,
+    //     // x: 0,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // },{
+    //     scrollTrigger: {
+    //         trigger: `.trigger-text-second-${props.index}`,
+    //         scrub: true,
+    //         start: "center center",
+    //         end: "+=100%",
+    //     },
+    //     opacity: 0,
+    //     x: -706,
+    //     scale: 0.5,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // })
 
 })
 </script>
@@ -381,7 +470,7 @@ onMounted(() => {
 .product {
     // height: 2000px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 200px;
     .trigger-color {
         position: absolute;
         top: 0;
@@ -394,13 +483,63 @@ onMounted(() => {
         position: relative;
         height: 10000px;
     }
+    &__preview-text {
+        position: sticky;
+        top: 90px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 600px;
+        &-box {
+            width: 500px;
+            text-align: center;
+        }
+        &-title {
+            font-family: 'Cygre';
+            font-style: normal;
+            font-size: 80px;
+            text-transform: uppercase;
+            background: linear-gradient(159.68deg, #6F543D -1.53%, #A68457 36%, #C39D64 58.67%, #BB9661 66.86%, #A68457 79.27%, #846747 94.31%, #6F543D 102.34%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &-desc {
+            font-weight: 600;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-top: 40px;
+            em {
+                margin-left: 10px;
+            }
+            span {
+                display: inline-block;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: -3px;
+                    right: 0;
+                    width: 80%;
+                    background: #fff;
+                    height: 1px;
+                }
+            }
+        }
+    }
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: sticky;
         top: 90px;
-        padding-top: 60px;
+        text-align: left;
+        height: 698px;
+        &.right {
+            text-align: right;
+        }
         img {
             display: block;
             width: 600px;
@@ -410,15 +549,48 @@ onMounted(() => {
             display: flex;
         }
         &#text1 {
-            opacity: 0;
             align-items: flex-end;
         }
         &#text2 {
-            opacity: 0;
+            // text-align: right;
+            // .button {
+            //     float: right;
+            // }
         }
         &#text3 {
-            opacity: 0;
             align-items: flex-end;
+        }
+        &-container {
+            width: 620px;
+        }
+        &-title {
+            font-family: 'Cygre';
+            font-weight: 400;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom right, #8C6D4B 0%, #B18E5D 40%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &-pretitle {
+            font-family: 'Cygre';
+            font-style: normal;
+            font-size: 56px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 30px 0 20px;
+        }
+        &-desc {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            margin-bottom: 80px;
         }
     }
     @keyframes rotation {
@@ -488,17 +660,27 @@ onMounted(() => {
         padding-top: 5px;
         font-weight: 300;
         pointer-events: none;
+        position: absolute;
+        left: 0;
         &-img-zoom {
-            height: 500px;
+            height: 2000px;
+            top: 0;
+        }
+        &-preview-text {
+            height: 1000px;
+            top: 2000px;
+        }
+        &-preview-text-hide {
+            height: 1000px;
+            top: 4000px;
         }
         &-box-zoom {
-            height: 2000px;
+            height: 3000px;
+            top: 4000px;
         }
         &-text-1 {
-            height: 2000px;
-        }
-        &-text-2 {
             height: 3000px;
+            top: 6000px;
         }
     }
     &__alert {

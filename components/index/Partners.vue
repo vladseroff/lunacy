@@ -142,7 +142,7 @@ onMounted(() => {
         }
     }
     &__text {
-        font-family: "Geologica";
+        font-family: "Cygre";
         font-weight: 300;
         font-size: 16px;
         text-align: center;

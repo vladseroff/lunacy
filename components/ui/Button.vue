@@ -26,20 +26,20 @@ defineProps({
 
 <style lang="scss" scoped>
 .button {
-    min-width: 150px;
+    min-width: 180px;
     max-width: 200px;
-    height: 47px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #000;
-    font-weight: 500;
+    font-weight: 600;
     font-style: italic;
     font-size: 16px;
     background: var(--color-white);
     cursor: pointer;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 12px;
     &:hover {
         background: darken(#fff, 10%);
     }
