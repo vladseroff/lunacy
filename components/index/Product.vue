@@ -25,9 +25,27 @@
                 ) Loud
                 .product__preview-text-desc(
                     :class="[`preview-text-desc-${index}`]"
-                ) Громче. 
-                    em Еще 
-                        span громче
+                ) 
+                    span(
+                        :class="[`preview-text-word-1-${index}`]"
+                    ) Громче. 
+                    span(
+                        style="margin-left: 15px"
+                        :class="[`preview-text-word-2-${index}`]"
+                    ) Еще 
+                        span.underline громче
+            .product__preview-text-box
+                .product__preview-text-text(
+                    :class="[`preview-text-text-${index}`]"
+                ) Сочетание дорогой экокожи, 
+                    br 
+                    |ткани и терморегулирующего 
+                    br 
+                    |геля позволят тебе наслаждаться 
+                    br 
+                    |комфортом даже в самых потных 
+                    br 
+                    |катках.
         .product__box(
             :class="[`box-${index}`]"
         )
@@ -80,11 +98,13 @@
                 .product__text-desc
                     p Сочетание дорогой экокожи, ткани 
                         br 
-                        |и терморегулирующего силикагеля 
+                        |и терморегулирующего  
                         br 
-                        |позволят тебе наслаждаться комфортом 
+                        |геля позволят тебе наслаждаться  
                         br 
-                        |даже в самых потных катках.
+                        |комфортом даже в самых потных 
+                        br 
+                        |катках.
                 UiButton ПРЕДЗАКАЗ
     .product__triggers
         .product__trigger.product__trigger-img-zoom(
@@ -133,14 +153,14 @@ onMounted(() => {
         },
     })
         .from(`.img-${props.index}`, {
-            x: 0,
+            x: 340,
             y: 1000,
             scale: 1.5,
             transformOrigin: "center center", 
             ease: "none"
         })
         .to(`.img-${props.index}`, {
-            x: 0,
+            x: 340,
             y: 0,
             scale: 1,
             transformOrigin: "center center", 
@@ -150,15 +170,17 @@ onMounted(() => {
         scrollTrigger: {
             trigger: `.preview-text-${props.index}`,
             scrub: true,
-            start: "top 20%",
-            end: "bottom 20%",
+            start: "80% center",
+            end: "=+100%",
+            // markers: true,
         },
     })
         .from(`.preview-text-title-${props.index}`, {
             opacity: 0,
             filter: 'blur(15px)',
             transformOrigin: "center center", 
-            ease: "none"
+            ease: "none",
+            duration: 10,
         })
         .to(`.preview-text-title-${props.index}`, {
             opacity: 1,
@@ -166,13 +188,44 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
-        .from(`.preview-text-desc-${props.index}`, {
-            opacity: 0,
+        .from(`.preview-text-word-1-${props.index}`, {
             filter: 'blur(15px)',
+            scale: 10,
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none",
+            duration: 10,
+        })
+        .to(`.preview-text-word-1-${props.index}`, {
+            opacity: 1,
+            filter: 'blur(0px)',
+            scale: 1,
             transformOrigin: "center center", 
             ease: "none"
         })
-        .to(`.preview-text-desc-${props.index}`, {
+        .from(`.preview-text-word-2-${props.index}`, {
+            filter: 'blur(15px)',
+            scale: 10,
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none",
+            duration: 10,
+        })
+        .to(`.preview-text-word-2-${props.index}`, {
+            opacity: 1,
+            filter: 'blur(0px)',
+            scale: 1,
+            transformOrigin: "center center", 
+            ease: "none",
+        })
+        .from(`.preview-text-text-${props.index}`, {
+            opacity: 0,
+            filter: 'blur(15px)',
+            transformOrigin: "center center", 
+            ease: "none",
+            duration: 10,
+        })
+        .to(`.preview-text-text-${props.index}`, {
             opacity: 1,
             filter: 'blur(0px)',
             transformOrigin: "center center", 
@@ -180,34 +233,39 @@ onMounted(() => {
         })
     $gsap.timeline({
         scrollTrigger: {
-            trigger: `.preview-text-hide-${props.index}`,
+            trigger: `.box-zoom-${props.index}`,
             scrub: true,
-            start: "center center",
+            start: "center 80%",
             end: "+=100%",
         },
     })
-        .from(`.preview-text-title-${props.index}`, {
-            filter: 'blur(0px)',
+        .to(`.preview-text-text-${props.index}`, {
+            opacity: 0,
+            x: -100,
+            filter: 'blur(15px)',
             transformOrigin: "center center", 
             ease: "none"
-        })
+        }, 0)
         .to(`.preview-text-title-${props.index}`, {
             opacity: 0,
             filter: 'blur(15px)',
             transformOrigin: "center center", 
             ease: "none"
-        })
-        .from(`.preview-text-desc-${props.index}`, {
-            filter: 'blur(0px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .to(`.preview-text-desc-${props.index}`, {
-            opacity: 0,
+        }, 0)
+        .to(`.preview-text-word-1-${props.index}`, {
             filter: 'blur(15px)',
+            scale: 10,
+            opacity: 0,
             transformOrigin: "center center", 
             ease: "none"
-        })
+        }, 0)
+        .to(`.preview-text-word-2-${props.index}`, {
+            filter: 'blur(15px)',
+            scale: 10,
+            opacity: 0,
+            transformOrigin: "center center", 
+            ease: "none"
+        }, 0)
     $gsap.fromTo(`.img-${props.index}`, {
         scrollTrigger: {
             trigger: `.box-zoom-${props.index}`,
@@ -215,7 +273,8 @@ onMounted(() => {
             start: "center center",
             end: "+=100%",
         },
-        scale: 1, 
+        scale: 1,
+        x: 340,
         transformOrigin: "center center", 
         ease: "none"
     },{
@@ -225,7 +284,8 @@ onMounted(() => {
             start: "center center",
             end: "+=100%",
         },
-        scale: .5, 
+        scale: .5,
+        x: 0,
         transformOrigin: "center center", 
         ease: "none"
     })
@@ -473,23 +533,30 @@ onMounted(() => {
     }
     &__wrapper {
         position: relative;
-        height: 10000px;
+        height: 9000px;
     }
     &__preview-text {
         position: sticky;
         top: 90px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         height: 600px;
+        &-text {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            text-align: left;
+        }
         &-box {
-            width: 500px;
+            width: 400px;
             text-align: center;
         }
         &-title {
             font-family: 'Cygre';
             font-style: normal;
-            font-size: 80px;
+            font-size: 100px;
             text-transform: uppercase;
             background: linear-gradient(159.68deg, #6F543D -1.53%, #A68457 36%, #C39D64 58.67%, #BB9661 66.86%, #A68457 79.27%, #846747 94.31%, #6F543D 102.34%);
             -webkit-background-clip: text;
@@ -501,22 +568,24 @@ onMounted(() => {
             font-weight: 600;
             font-size: 24px;
             text-transform: uppercase;
-            margin-top: 40px;
+            margin-top: 10px;
             em {
                 margin-left: 10px;
             }
             span {
                 display: inline-block;
-                position: relative;
-                &:before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    bottom: -3px;
-                    right: 0;
-                    width: 80%;
-                    background: #fff;
-                    height: 1px;
+                &.underline {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -3px;
+                        right: 0;
+                        width: 80%;
+                        background: #fff;
+                        height: 1px;
+                    }
                 }
             }
         }
@@ -661,19 +730,19 @@ onMounted(() => {
         }
         &-preview-text {
             height: 1000px;
-            top: 1000px;
+            top: 0px;
         }
         &-preview-text-hide {
             height: 1000px;
-            top: 3000px;
+            top: 2000px;
         }
         &-box-zoom {
-            height: 3000px;
-            top: 4000px;
+            height: 2000px;
+            top: 2000px;
         }
         &-text-1 {
             height: 3000px;
-            top: 6000px;
+            top: 4000px;
         }
     }
     &__alert {

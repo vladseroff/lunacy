@@ -50,15 +50,16 @@ onMounted(() => {
             $gsap.timeline({
                 onUpdate: render,
                 scrollTrigger: {
-                    trigger: `.preview-text-${props.index}`,
+                    trigger: `.img-zoom-${props.index}`,
                     pin: true,
                     scrub: true,
+                    start: "bottom 20%",
                     end: "+=100%",
-                    start: "center center",
+                    // markers: true,
                 }
             })
             .to(productImages, {
-                frame: 15 - 1,
+                frame: 13 - 1,
                 snap: "frame",
                 ease: "none",
             }, 0);
@@ -66,11 +67,11 @@ onMounted(() => {
             $gsap.timeline({
                 onUpdate: render,
                 scrollTrigger: {
-                    trigger: `.preview-text-hide-${props.index}`,
+                    trigger: `.box-zoom-${props.index}`,
                     pin: true,
                     scrub: true,
-                    end: "+=100%",
                     start: "center center",
+                    end: "+=100%",
                 }
             })
             .to(productImages, {
