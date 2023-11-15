@@ -10,7 +10,7 @@
         )
             IndexProductCanvas(
                 :index="index"
-                folder="/sequence/laud/"
+                folder="sequence/laud/"
             )
         //- .product__img(
         //-     :class="[`img-${index}`]"
