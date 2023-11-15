@@ -7,12 +7,18 @@ header.header
                     src="/images/logo-sm.svg"
                 )
         .header__nav
-            .header__nav-item Продукты
-                img(
-                    src="/images/arrow.svg"
-                )
-            .header__nav-item.disabled Драйвера
-            .header__nav-item.disabled Поддержка
+            a.header__nav-item(
+                href="#about"
+            ) О нас
+                //- img(
+                //-     src="/images/arrow.svg"
+                //- )
+            a.header__nav-item(
+                href="#products"
+            ) Продукты
+            a.header__nav-item(
+                href="#buy"
+            ) Где купить
         .header__wrapper
             .header__lang
                 .header__lang-item.disabled Ru
@@ -26,6 +32,8 @@ header.header
 <style lang="scss" scoped>
 .header {
     padding: 30px 0;
+    position: relative;
+    z-index: 100;
     .container {
         display: flex;
         justify-content: center;
@@ -55,6 +63,9 @@ header.header
             display: flex;
             align-items: center;
             justify-content: center;
+            &:hover {
+                text-decoration: underline;
+            }
             &.disabled {
                 pointer-events: none;
                 opacity: .2;

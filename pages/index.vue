@@ -4,31 +4,34 @@
     .app__container
         IndexBanner
         IndexAbout
-        IndexSection(
-            title="Наши продукты"
-            desc="товары"
-            count="2"
-            index="1"
-        )
-            IndexProduct(
-                index="first"
+        section#products
+            IndexSection(
+                title="Наши продукты"
+                desc="товары"
+                count="2"
+                index="1"
             )
-            IndexProductSecond(
-                index="second"
-                dark
+                IndexProduct(
+                    index="first"
+                )
+                IndexProductSecond(
+                    index="second"
+                    dark
+                )
+        section#buy
+            IndexSection(
+                title="Где купить"
+                desc="Партнеры"
+                count="2"
+                index="2"
             )
-        IndexSection(
-            title="Где купить"
-            desc="Партнеры"
-            count="2"
-            index="2"
-        )
-            IndexPartners
+                IndexPartners
     BaseFooter
 </template>
 
 <script setup>
 import { gsap, ScrollTrigger } from "gsap/all";
+
 
 setTimeout(() => {
     window.scrollTo(0, 0)

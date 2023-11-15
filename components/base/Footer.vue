@@ -29,11 +29,15 @@ footer.footer
         .footer__wrapper
             .footer__box
                 .footer__social
-                    .footer__social-item Вконтакте
+                    a.footer__social-item(
+                        href="#"
+                    ) Вконтакте
                         img(
                             src="/images/ic1.svg"
                         )
-                    .footer__social-item Телеграм
+                    a.footer__social-item(
+                        href="#"
+                    ) Телеграм
                         img(
                             src="/images/ic1.svg"
                         )
@@ -53,12 +57,18 @@ footer.footer
                 .footer__wrapper
                     .footer__box
                         .footer__nav
-                            .footer__nav-item Продукты
-                                img(
-                                    src="/images/arrow.svg"
-                                )
-                            .footer__nav-item.disabled Драйвера
-                            .footer__nav-item.disabled Поддержка
+                            a.footer__nav-item(
+                                href="#about"
+                            ) О нас
+                                //- img(
+                                //-     src="/images/arrow.svg"
+                                //- )
+                            a.footer__nav-item(
+                                href="#products"
+                            ) Продукты
+                            a.footer__nav-item(
+                                href="#buy"
+                            ) Где купить
                     .footer__box
                         .footer__arrow(
                             @click="scrollToTop"
@@ -88,13 +98,14 @@ footer.footer
 const { $gsap } = useNuxtApp()
 
 const scrollToTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({top: 0});
 }
 </script>
 
 <style lang="scss" scoped>
 .footer {
     position: relative;
+    z-index: 100;
     &:before {
         content: '';
         display: block;
@@ -157,12 +168,18 @@ const scrollToTop = () => {
             font-weight: 600;
             display: flex;
             align-items: center;
+            &:hover {
+                img {
+                    transform: translateX(5px);
+                }
+            }
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
             img {
                 display: block;
                 margin-left: 8px;
+                transition: .8s ease;
             }
         }
     }
@@ -219,6 +236,7 @@ const scrollToTop = () => {
         align-items: center;
         margin-top: -70px;
         margin-bottom: -50px;
+        pointer-events: none;
         &-letter {
             position: relative;
             margin: 0 -20px;
@@ -250,6 +268,9 @@ const scrollToTop = () => {
     &__nav {
         flex: none;
         &-item {
+            &:hover {
+                text-decoration: underline;
+            }
             font-size: 14px;
             text-decoration: none;
             cursor: pointer;

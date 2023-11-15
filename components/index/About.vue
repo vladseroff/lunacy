@@ -35,6 +35,7 @@
                 img(
                     src="/images/bg8.png"
                 )
+    .about__anchor#about
     .about__trigger.about__trigger-full
     .about__trigger.about__trigger-one
     .about__trigger.about__trigger-two
@@ -295,6 +296,10 @@ onMounted(() => {
 <style lang="scss" scoped>
 .about {
     position: relative;
+    &__anchor {
+        position: absolute;
+        top: 2000px;
+    }
     .container {
         padding: 300px 0;
         height: 11000px;
