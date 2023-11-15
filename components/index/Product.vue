@@ -127,8 +127,8 @@ onMounted(() => {
         scrollTrigger: {
             trigger: `.img-zoom-${props.index}`,
             scrub: true,
-            start: "center center",
-            end: "+=100%",
+            start: "top 20%",
+            end: "bottom 20%",
             
         },
     })
@@ -150,8 +150,8 @@ onMounted(() => {
         scrollTrigger: {
             trigger: `.preview-text-${props.index}`,
             scrub: true,
-            start: "center center",
-            end: "+=100%",
+            start: "top 20%",
+            end: "bottom 20%",
         },
     })
         .from(`.preview-text-title-${props.index}`, {
@@ -529,6 +529,7 @@ onMounted(() => {
         top: 90px;
         text-align: left;
         height: 698px;
+        z-index: 3;
         &.right {
             text-align: right;
         }
@@ -655,16 +656,16 @@ onMounted(() => {
         position: absolute;
         left: 0;
         &-img-zoom {
-            height: 2000px;
-            top: 0;
+            height: 1000px;
+            top: -1500px;
         }
         &-preview-text {
             height: 1000px;
-            top: 2000px;
+            top: 1000px;
         }
         &-preview-text-hide {
             height: 1000px;
-            top: 4000px;
+            top: 3000px;
         }
         &-box-zoom {
             height: 3000px;

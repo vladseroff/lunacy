@@ -524,6 +524,7 @@ onMounted(() => {
         top: 90px;
         text-align: left;
         height: 698px;
+        z-index: 3;
         &.right {
             text-align: right;
         }

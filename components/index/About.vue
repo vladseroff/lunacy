@@ -115,7 +115,8 @@ onMounted(() => {
         },
     })
         .to(`.about__title`, {
-            opacity: 0.2,
+            opacity: 0.03,
+            duration: 1.4,
             transformOrigin: "center center", 
             ease: "none"
         })
@@ -175,6 +176,63 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
+        .from(`.about__text-3-1`, {
+            opacity: 0,
+            x: -20,
+            filter: 'blur(15px)',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.about__text-3-1`, {
+            opacity: 1,
+            x: 0,
+            filter: 'blur(0px)',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .from(`.about__text-3-2`, {
+            opacity: 0,
+            x: -20,
+            filter: 'blur(15px)',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.about__text-3-2`, {
+            opacity: 1,
+            x: 0,
+            filter: 'blur(0px)',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .from(`.about__text-3-3`, {
+            opacity: 0,
+            x: -20,
+            filter: 'blur(15px)',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .to(`.about__text-3-3`, {
+            opacity: 1,
+            x: 0,
+            filter: 'blur(0px)',
+            transformOrigin: "center center", 
+            ease: "none"
+        })
+        .from(`.about__content-second-img`, {
+            opacity: 0,
+            y: 100,
+            filter: 'blur(15px)',
+            transformOrigin: "center center", 
+            ease: "none",
+            duration: 2,
+        })
+        .to(`.about__content-second-img`, {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+            transformOrigin: "center center", 
+            ease: "none",
+        })
         .from(`.about__text-2-1`, {
             opacity: 0,
             x: -20,
@@ -225,63 +283,6 @@ onMounted(() => {
             ease: "none"
         })
         .to(`.about__text-2-4`, {
-            opacity: 1,
-            x: 0,
-            filter: 'blur(0px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .from(`.about__content-second-img`, {
-            opacity: 0,
-            y: 100,
-            filter: 'blur(15px)',
-            transformOrigin: "center center", 
-            ease: "none",
-            duration: 2,
-        })
-        .to(`.about__content-second-img`, {
-            opacity: 1,
-            y: 0,
-            filter: 'blur(0px)',
-            transformOrigin: "center center", 
-            ease: "none",
-        })
-        .from(`.about__text-3-1`, {
-            opacity: 0,
-            x: -20,
-            filter: 'blur(15px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .to(`.about__text-3-1`, {
-            opacity: 1,
-            x: 0,
-            filter: 'blur(0px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .from(`.about__text-3-2`, {
-            opacity: 0,
-            x: -20,
-            filter: 'blur(15px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .to(`.about__text-3-2`, {
-            opacity: 1,
-            x: 0,
-            filter: 'blur(0px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .from(`.about__text-3-3`, {
-            opacity: 0,
-            x: -20,
-            filter: 'blur(15px)',
-            transformOrigin: "center center", 
-            ease: "none"
-        })
-        .to(`.about__text-3-3`, {
             opacity: 1,
             x: 0,
             filter: 'blur(0px)',

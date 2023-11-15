@@ -57,27 +57,28 @@ onMounted(() => {
     $gsap.fromTo('.banner__logo-letter_1', {
         x: 200,
         opacity: 0,
-        scale: 0.5,
+        // scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         x: 0,
         opacity: 1,
-        duration: .8,
+        duration: .5,
         scale: 1,
+        delay: .2,
         transformOrigin: "center center", 
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_2', {
         x: 200,
         opacity: 0,
-        scale: 0.5,
+        // scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         x: 0,
         opacity: 1,
-        duration: .8,
+        duration: .5,
         scale: 1,
         delay: .4,
         transformOrigin: "center center", 
@@ -86,67 +87,67 @@ onMounted(() => {
     $gsap.fromTo('.banner__logo-letter_3', {
         x: 200,
         opacity: 0,
-        scale: 0.5,
+        // scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         x: 0,
         opacity: 1,
-        duration: .8,
+        duration: .5,
         scale: 1,
-        delay: .8,
+        delay: .6,
         transformOrigin: "center center", 
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_4', {
         x: 200,
         opacity: 0,
-        scale: 0.5,
+        // scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         x: 0,
         opacity: 1,
-        duration: .8,
+        duration: .5,
         scale: 1,
-        delay: 1.2,
+        delay: 0.8,
         transformOrigin: "center center", 
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_5', {
         x: 200,
         opacity: 0,
-        scale: 0.5,
+        // scale: 0.5,
         rotate: 30,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         x: 0,
         opacity: 1,
-        duration: .8,
+        duration: .5,
         scale: 1,
         rotate: 0,
-        delay: 1.6,
+        delay: 1,
         transformOrigin: "center center", 
         ease: "ease"
     })
     $gsap.fromTo('.banner__logo-letter_6', {
         x: 200,
         opacity: 0,
-        scale: 0.5,
+        // scale: 0.5,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         x: 0,
         opacity: 1,
-        duration: .8,
+        duration: .5,
         scale: 1,
-        delay: 2,
+        delay: 1.2,
         transformOrigin: "center center", 
         ease: "ease"
     })
     $gsap.fromTo('.banner__product', {
-        y: 200,
+        y: 50,
         scale: .8,
         opacity: 0,
         transformOrigin: "center center", 
@@ -156,7 +157,7 @@ onMounted(() => {
         opacity: 1,
         duration: 1.2,
         scale: 1,
-        delay: 2.4,
+        delay: 1.4,
         transformOrigin: "center center", 
         ease: "ease"
     })
@@ -169,20 +170,22 @@ onMounted(() => {
     },{
         y: 0,
         opacity: 1,
-        duration: .8,
+        duration: 1.2,
         scale: 1,
-        delay: 4,
+        delay: 1.4,
         transformOrigin: "center center", 
         ease: "ease"
     })
     $gsap.fromTo('.banner__texts', {
         opacity: 0,
+        scale: 0.8,
         transformOrigin: "center center", 
         ease: "ease"
     },{
         opacity: 1,
-        duration: .8,
-        delay: 3.7,
+        duration: 1.2,
+        delay: 1.4,
+        scale: 1,
         transformOrigin: "center center", 
         ease: "ease"
     })
