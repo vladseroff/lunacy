@@ -1,0 +1,75 @@
+<svg width="694" height="696" viewBox="0 0 694 696" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="3.5" width="689" height="689" rx="344.5" stroke="#3A416A" stroke-dasharray="6 6"/>
+<rect x="346" width="7" height="7" rx="3.5" fill="url(#paint0_linear_1559_45)"/>
+<rect x="686.321" y="353.25" width="6.5" height="6.5" rx="3.25" fill="#071D49" stroke="url(#paint1_linear_1559_45)" stroke-width="0.5"/>
+<rect x="318.25" y="689.25" width="6.5" height="6.5" rx="3.25" fill="#071D49" stroke="url(#paint2_linear_1559_45)" stroke-width="0.5"/>
+<rect x="359.25" y="1.25" width="4.5" height="4.5" rx="2.25" fill="#071D49" stroke="url(#paint3_linear_1559_45)" stroke-width="0.5"/>
+<rect x="686" y="367" width="5" height="5" rx="2.5" fill="url(#paint4_linear_1559_45)"/>
+<rect x="331" y="690" width="5" height="5" rx="2.5" fill="url(#paint5_linear_1559_45)"/>
+<rect x="307" y="688" width="5" height="5" rx="2.5" fill="url(#paint6_linear_1559_45)"/>
+<defs>
+<linearGradient id="paint0_linear_1559_45" x1="345.604" y1="1.22526e-07" x2="348.848" y2="8.76209" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1559_45" x1="685.675" y1="353" x2="688.919" y2="361.762" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1559_45" x1="317.604" y1="689" x2="320.848" y2="697.762" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+<linearGradient id="paint3_linear_1559_45" x1="358.717" y1="1" x2="361.034" y2="7.25864" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+<linearGradient id="paint4_linear_1559_45" x1="685.717" y1="367" x2="688.034" y2="373.259" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+<linearGradient id="paint5_linear_1559_45" x1="330.717" y1="690" x2="333.034" y2="696.259" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+<linearGradient id="paint6_linear_1559_45" x1="306.717" y1="688" x2="309.034" y2="694.259" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F543D"/>
+<stop offset="0.3613" stop-color="#A68457"/>
+<stop offset="0.5796" stop-color="#C39D64"/>
+<stop offset="0.6584" stop-color="#BB9661"/>
+<stop offset="0.7779" stop-color="#A68457"/>
+<stop offset="0.9227" stop-color="#846747"/>
+<stop offset="1" stop-color="#6F543D"/>
+</linearGradient>
+</defs>
+</svg>
