@@ -21,7 +21,8 @@
 
 html {
     min-height: 100vh;
-    min-width: 1920px;
+    min-width: 1600px;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -35,6 +36,10 @@ body {
     color: var(--color-black);
     // overflow-x: hidden;
     color: #fff;
+    min-height: 100vh;
+    min-width: 1600px;
+    width: 100vw;
+    // overflow-x: hidden;
 }
 
 ::placeholder {

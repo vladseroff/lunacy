@@ -1,119 +1,124 @@
 <template lang="pug">
 .partners
-    .trigger-color.trigger-color-partner
-    .partners__trigger
     .partners__wrapper
-        .partners__item
-            .partners__content
-                
-            .partners__planets
-                .partners__planet
-                    img(
-                        src="/images/p6.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p7.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p8.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p9.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p10.svg"
-                    )
-            .partners__circles
-                .partners__circle
-                    img(
-                        src="/images/p1.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p2.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p3.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p4.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p5.svg"
-                    )
-        .partners__item
-            .partners__content
+        .partners__box.partners__box-1
+            .partners__top
                 .partners__logo
                     img(
                         src="/images/mvideo.svg"
                     )
-                .partners__text Официальный партнер
-            .partners__planets
-                .partners__planet
+                .partners__description Официальный партнер
+            .partners__item
+                a.partners__content(
+                    href="#"
+                ) купить в мвидео
+                .partners__circles
+                    .partners__circles-zoom
+                        .partners__circle
+                            img(
+                                src="/images/cp3.svg"
+                            )
+                        .partners__circle
+                            img(
+                                src="/images/cp4.svg"
+                            )
+                        
+                    .partners__circles-wrapper
+                        .partners__circle
+                            img(
+                                src="/images/cp2.svg"
+                            )
+                        .partners__circle
+                            img(
+                                src="/images/cp1.svg"
+                            )
+                        .partners__circle
+                            img(
+                                src="/images/cp5.svg"
+                            )
+        .partners__box.partners__box-2
+            .partners__top
+                .partners__logo
                     img(
-                        src="/images/p6.svg"
+                        src="/images/ozon.svg"
                     )
-                .partners__planet
-                    img(
-                        src="/images/p7.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p8.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p9.svg"
-                    )
-                .partners__planet
-                    img(
-                        src="/images/p10.svg"
-                    )
-            .partners__circles
-                .partners__circle
-                    img(
-                        src="/images/p1.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p2.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p3.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p4.svg"
-                    )
-                .partners__circle
-                    img(
-                        src="/images/p5.svg"
-                    )
+                .partners__description Официальный партнер
+            .partners__item
+                a.partners__content(
+                    href="#"
+                ) купить в озоне
+                .partners__circles
+                    .partners__circles-zoom
+                        .partners__circle
+                            img(
+                                src="/images/cp3.svg"
+                            )
+                        .partners__circle
+                            img(
+                                src="/images/cp4.svg"
+                            )
+                        
+                    .partners__circles-wrapper
+                        .partners__circle
+                            img(
+                                src="/images/cp2.svg"
+                            )
+                        .partners__circle
+                            img(
+                                src="/images/cp1.svg"
+                            )
+                        .partners__circle
+                            img(
+                                src="/images/cp5.svg"
+                            )
 </template>
 
 <script setup>
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-    // $gsap.to('#app', {
+    // $gsap.fromTo(".partners__box-1", {
     //     scrollTrigger: {
-    //         trigger: `.trigger-color-partner`,
-    //         scrub: true,
-    //         start: "center center",
-    //         // end: "+=80%",
+    //         trigger: ".partners__wrapper",
+    //         start: "10% bottom",
     //     },
-    //     backgroundColor: '#071D49',
+    //     x: 0,
+    //     y: 1000,
+    //     scale: 1.5,
+    //     transformOrigin: "center center", 
+    //     ease: "none"
+    // }, {
+    //     scrollTrigger: {
+    //         trigger: ".partners__wrapper",
+    //         start: "10% bottom",
+    //     },
+    //     x: 0,
+    //     y: 0,
+    //     scale: 1,
     //     transformOrigin: "center center", 
     //     ease: "none"
     // })
+    // $gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: `.partners__wrapper`,
+    //         start: "top 20%",
+    //         end: "+=100%",
+    //     },
+    // })
+    //     .from(`.partners__box-1`, {
+    //         x: 0,
+    //         y: 1000,
+    //         scale: 1.5,
+    //         transformOrigin: "center center", 
+    //         ease: "none"
+    //     })
+    //     .to(`.partners__box-1`, {
+    //         x: 0,
+    //         y: 0,
+    //         scale: 1,
+    //         transformOrigin: "center center", 
+    //         ease: "none"
+    //     })
 })
 </script>
 
@@ -132,7 +137,45 @@ onMounted(() => {
     padding: 80px 0 150px;
     $root: &;
     &__content {
-
+        width: 220px;
+        height: 220px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(.8);
+        z-index: 3;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        transition: .8s ease;
+    }
+    &__top {
+        margin-bottom: 40px;
+    }
+    &__logo {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__description {
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        color: #959595;
+        margin-top: 20px;
     }
     &__logo {
         img {
@@ -156,9 +199,12 @@ onMounted(() => {
         display: flex;
         margin: -10px;
     }
+    &__box {
+        margin: 10px;
+        flex: 1 1 1px;
+    }
     &__item {
         flex: 1 1 1px;
-        margin: 10px;
         position: relative;
         height: 690px;
         display: flex;
@@ -166,10 +212,39 @@ onMounted(() => {
         align-items: center;
         &:hover {
             #{$root} {
-                &__circle {
-                    &:nth-child(2) {
-                        animation: rotation 200s linear infinite;
+                &__circles {
+                    &-zoom {
+                        transform: none;
+                        opacity: 1;
+                        #{$root} {
+                            &__circle {
+                                
+                            }
+                        }
                     }
+                    &-wrapper {
+                        #{$root} {
+                            &__circle {
+                                &:nth-child(1) {
+                                    transform: translate3d(-50%, -50%, 0) scale(1.6)
+                                }
+                                &:nth-child(2) {
+                                    opacity: 0;
+                                }
+                                &:nth-child(3) {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__content {
+                    background: #fff;
+                    color: #000;
+                    // transition-delay: .3s;
+                    transform: translate3d(-50%, -50%, 0) scale(1);
+                }
+                &__circle {
                     &:nth-child(3),
                     &:nth-child(4),
                     &:nth-child(5) {
@@ -185,23 +260,54 @@ onMounted(() => {
         left: 0;
         width: 100%;
         height: 100%;
+        &-zoom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(.8);
+            opacity: 0;
+            transition: .8s ease;
+            #{$root} {
+                &__circle {
+                    &:nth-child(1) {
+                        animation: rotation 30s linear infinite;
+                    }
+                    &:nth-child(2) {
+                        animation: rotation 100s linear infinite;
+                    }
+                }
+            }
+        }
+        &-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            #{$root} {
+                &__circle {
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        animation: rotation 100s linear infinite;
+                    }
+                    &:nth-child(3) {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
     }
     &__circle {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate3d(-50%, -50%, 0);
+        transform-origin: 50% 50%;
         transition: opacity .3s ease, transform .3s ease;
-        &:nth-child(4) {
-            opacity: 0;
-            animation: rotation 40s linear infinite;
-        }
-        &:nth-child(3) {
-            opacity: 0;
-            animation: rotation 120s linear infinite backwards;
-        }
-        &:nth-child(5) {
-            opacity: 0;
+        img {
+            display: block;
         }
     }
     &__planets {

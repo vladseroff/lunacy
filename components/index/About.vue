@@ -31,6 +31,10 @@
                 img(
                     src="/images/bg7.png"
                 )
+            .about__content-second-img
+                img(
+                    src="/images/bg8.png"
+                )
     .about__trigger.about__trigger-full
     .about__trigger.about__trigger-one
     .about__trigger.about__trigger-two
@@ -227,6 +231,21 @@ onMounted(() => {
             transformOrigin: "center center", 
             ease: "none"
         })
+        .from(`.about__content-second-img`, {
+            opacity: 0,
+            y: 100,
+            filter: 'blur(15px)',
+            transformOrigin: "center center", 
+            ease: "none",
+            duration: 2,
+        })
+        .to(`.about__content-second-img`, {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+            transformOrigin: "center center", 
+            ease: "none",
+        })
         .from(`.about__text-3-1`, {
             opacity: 0,
             x: -20,
@@ -344,6 +363,16 @@ onMounted(() => {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        &-second {
+            &-img {
+                position: absolute;
+                right: 0px;
+                bottom: 50px;
+                img {
+                    display: block;
+                }
+            }
+        }
         &-general {
             &-img {
                 padding-top: 100px;
