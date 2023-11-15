@@ -22,12 +22,12 @@
             .product__preview-text-box
                 .product__preview-text-title(
                     :class="[`preview-text-title-${index}`]"
-                ) Loud
+                ) night
                 .product__preview-text-desc(
                     :class="[`preview-text-desc-${index}`]"
-                ) Громче. 
-                    em Еще 
-                        span громче
+                ) Очень легкие. 
+                    em 
+                        span Легчайшие
         .product__box(
             :class="[`box-${index}`]"
         )
@@ -53,32 +53,31 @@
             :class="[`text-${index}-1`]"
         )
             .product__text-container
-                .product__text-title Loud
-                .product__text-pretitle Универсальность
+                .product__text-title night
+                .product__text-pretitle Никаких 
+                    br 
+                    |компромиссов
                 .product__text-desc
-                    p Три режима подключения: 
+                    p В гонке за весом мы не бросили 
                         br 
-                        |проводной, радиоканал, bluetooth
-                    p Совместимы с большинством устройств 
+                        |гонку за качеством, надежностью 
                         br 
-                        |на рынке, включая мобильные телефоны, 
-                        br 
-                        |игровые консоли и настольные ПК.
+                        |и технологичностью
                 UiButton ПРЕДЗАКАЗ
         .product__text#text2(
             :class="[`text-${index}-2`]"
         )
             .product__text-container
-                .product__text-title Loud
-                .product__text-pretitle Внешний вид
+                .product__text-title night
+                .product__text-pretitle Так звучит ночь
                 .product__text-desc
-                    p Сочетание дорогой экокожи, ткани 
+                    p Никаких лишних шумов, только 
                         br 
-                        |и терморегулирующего силикагеля 
+                        |чистый звук динамиков и микрофона. 
                         br 
-                        |позволят тебе наслаждаться комфортом 
+                        |Кстати, микрофон задвигается 
                         br 
-                        |даже в самых потных катках.
+                        |и автоматически выключается.
                 UiButton ПРЕДЗАКАЗ
     .product__triggers
         .product__trigger.product__trigger-img-zoom(
