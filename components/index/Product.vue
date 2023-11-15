@@ -187,7 +187,6 @@ onMounted(() => {
         },
     })
         .from(`.preview-text-title-${props.index}`, {
-            opacity: 1,
             filter: 'blur(0px)',
             transformOrigin: "center center", 
             ease: "none"
@@ -199,7 +198,6 @@ onMounted(() => {
             ease: "none"
         })
         .from(`.preview-text-desc-${props.index}`, {
-            opacity: 1,
             filter: 'blur(0px)',
             transformOrigin: "center center", 
             ease: "none"
