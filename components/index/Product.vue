@@ -4,19 +4,20 @@
     .trigger-color(
         :class="[`trigger-color-${index}`]"
     )
-    //- .product__img(
-    //-     :class="[`img-${index}`]"
-    //- )
-    //-     IndexProductCanvas(
-    //-         :index="index"
-    //-     )
     .product__wrapper
         .product__img(
             :class="[`img-${index}`]"
         )
-            img(
-                src="/images/bg2.png"
+            IndexProductCanvas(
+                :index="index"
+                folder="/sequence/laud/"
             )
+        //- .product__img(
+        //-     :class="[`img-${index}`]"
+        //- )
+        //-     img(
+        //-         src="/images/bg2.png"
+        //-     )
         .product__preview-text
             .product__preview-text-box
                 .product__preview-text-title(

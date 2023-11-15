@@ -12,6 +12,10 @@ const props = defineProps({
     index: {
         type: String,
         required: true
+    },
+    folder: {
+        type: String,
+        required: true
     }
 })
 
@@ -26,9 +30,10 @@ onMounted(() => {
             canvas.width = 698;
             canvas.height = 698;  
             
-            let frameCount = 147;
+            let frameCount = 100;
             const currentFrame = index => (
-                `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${(index + 1).toString().padStart(4, '0')}.jpg`
+                // `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${(index + 1).toString().padStart(4, '0')}.jpg`
+                `${props.folder}${(index + 1).toString().padStart(4, '0')}.png`
             );
     
             let images = []
@@ -41,18 +46,35 @@ onMounted(() => {
                 img.src = currentFrame(i);
                 images.push(img);
             }
+
+            $gsap.timeline({
+                onUpdate: render,
+                scrollTrigger: {
+                    trigger: `.preview-text-${props.index}`,
+                    pin: true,
+                    scrub: true,
+                    end: "+=100%",
+                    start: "center center",
+                }
+            })
+            .to(productImages, {
+                frame: 15 - 1,
+                snap: "frame",
+                ease: "none",
+            }, 0);
     
             $gsap.timeline({
                 onUpdate: render,
                 scrollTrigger: {
-                    trigger: `.box-zoom-${props.index}`,
+                    trigger: `.preview-text-hide-${props.index}`,
                     pin: true,
                     scrub: true,
                     end: "+=100%",
+                    start: "center center",
                 }
             })
             .to(productImages, {
-                frame: 20 - 1,
+                frame: 25 - 1,
                 snap: "frame",
                 ease: "none",
             }, 0);
@@ -63,26 +85,13 @@ onMounted(() => {
                     trigger: `.trigger-text-${props.index}`,
                     pin: true,
                     scrub: true,
+                    markers: true,
+                    start: "center center",
                     end: "+=100%",
                 }
             })
             .to(productImages, {
-                frame: 40 - 1,
-                snap: "frame",
-                ease: "none",
-            }, 0);
-
-            $gsap.timeline({
-                onUpdate: render,
-                scrollTrigger: {
-                    trigger: `.trigger-text-second-${props.index}`,
-                    pin: true,
-                    scrub: true,
-                    end: "+=100%",
-                }
-            })
-            .to(productImages, {
-                frame: 100 - 1,
+                frame: 88 - 1,
                 snap: "frame",
                 ease: "none",
             }, 0);
