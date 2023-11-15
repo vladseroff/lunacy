@@ -2,16 +2,22 @@
 .partners
     .partners__wrapper
         .partners__box.partners__box-1
-            .partners__top
-                .partners__logo
-                    img(
-                        src="/images/mvideo.svg"
-                    )
-                .partners__description Официальный партнер
+            //- .partners__top
+            //-     .partners__logo
+            //-         img(
+            //-             src="/images/mvideo.svg"
+            //-         )
+            //-     .partners__description Официальный партнер
             .partners__item
                 a.partners__content(
                     href="#"
-                ) купить в мвидео
+                )
+                    span купить в мвидео
+                    .partners__logo
+                        img(
+                            src="/images/mvideo.svg"
+                        )
+                    .partners__description Официальный партнер
                 .partners__circles
                     .partners__circles-zoom
                         .partners__circle
@@ -37,16 +43,22 @@
                                 src="/images/cp5.svg"
                             )
         .partners__box.partners__box-2
-            .partners__top
-                .partners__logo
-                    img(
-                        src="/images/ozon.svg"
-                    )
-                .partners__description Официальный партнер
+            //- .partners__top
+            //-     .partners__logo
+            //-         img(
+            //-             src="/images/ozon.svg"
+            //-         )
+            //-     .partners__description Официальный партнер
             .partners__item
                 a.partners__content(
                     href="#"
-                ) купить в озоне
+                )
+                    span купить в озоне
+                    .partners__logo
+                        img(
+                            src="/images/ozon.svg"
+                        )
+                    .partners__description Официальный партнер
                 .partners__circles
                     .partners__circles-zoom
                         .partners__circle
@@ -141,6 +153,7 @@ onMounted(() => {
         height: 220px;
         background: transparent;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -159,11 +172,26 @@ onMounted(() => {
         color: #fff;
         text-decoration: none;
         transition: .8s ease;
+        span {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: .8s ease;
+        }
     }
     &__top {
         margin-bottom: 40px;
     }
     &__logo {
+        transition: .8s ease;
         img {
             display: block;
             margin: 0 auto;
@@ -176,12 +204,7 @@ onMounted(() => {
         letter-spacing: 0.02em;
         color: #959595;
         margin-top: 20px;
-    }
-    &__logo {
-        img {
-            display: block;
-            margin: 0 auto;
-        }
+        transition: .8s ease;
     }
     &__text {
         font-family: "Cygre";
@@ -241,8 +264,18 @@ onMounted(() => {
                 &__content {
                     background: #fff;
                     color: #000;
-                    // transition-delay: .3s;
                     transform: translate3d(-50%, -50%, 0) scale(1);
+                    span {
+                        opacity: 1;
+                    }
+                    #{$root} {
+                        &__logo {
+                            opacity: 0;
+                        }
+                        &__description {
+                            opacity: 0;
+                        }
+                    }
                 }
                 &__circle {
                     &:nth-child(3),
