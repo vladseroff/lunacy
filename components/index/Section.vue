@@ -43,7 +43,6 @@ onMounted(() => {
     //         scrub: true,
     //         start: "top top",
     //         end: "+=50%",
-    //         markers: true
     //     },
     // }).from(`.section-title-${props.index}`, {
     //     opacity: 0,

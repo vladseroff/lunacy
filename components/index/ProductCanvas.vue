@@ -85,7 +85,6 @@ onMounted(() => {
                     trigger: `.trigger-text-${props.index}`,
                     pin: true,
                     scrub: true,
-                    markers: true,
                     start: "center center",
                     end: "+=100%",
                 }
