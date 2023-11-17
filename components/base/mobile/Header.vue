@@ -31,6 +31,7 @@ const toggleMenu = () => {
 .mobile-header {
     display: none;
     margin-bottom: 10px;
+    overflow: hidden;
     @media screen and (max-width: 1420px) {
         display: block;
     }

@@ -51,6 +51,7 @@ footer.mobile-footer
 .mobile-footer {
     display: none;
     padding-top: 50px;
+    overflow: hidden;
     @media screen and (max-width: 1420px) {
         display: block;
     }
