@@ -50,6 +50,7 @@ footer.mobile-footer
 <style lang="scss" scoped>
 .mobile-footer {
     display: none;
+    padding-top: 50px;
     @media screen and (max-width: 1420px) {
         display: block;
     }
