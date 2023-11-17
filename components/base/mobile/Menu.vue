@@ -162,7 +162,7 @@ const scrollTo = (anchor) => {
         top: 0;
         left: 0;
         width: 100%;
-        min-height: 530px;
+        min-height: 570px;
         display: flex;
         flex-direction: column;
         padding: 70px 0 40px;
