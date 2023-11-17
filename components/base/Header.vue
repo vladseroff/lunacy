@@ -34,6 +34,10 @@ header.header
     padding: 30px 0;
     position: relative;
     z-index: 100;
+    display: none;
+    @media screen and (min-width: 1420px) {
+        display: block;
+    }
     .container {
         display: flex;
         justify-content: center;

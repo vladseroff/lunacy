@@ -40,6 +40,9 @@ defineProps({
     cursor: pointer;
     text-decoration: none;
     border-radius: 12px;
+    @media screen and (max-width: 1420px) {
+        max-width: 320px;
+    }
     &:hover {
         background: darken(#fff, 10%);
     }

@@ -395,6 +395,7 @@ onMounted(() => {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
     }
     &__title {
         right: 34px;
@@ -407,6 +408,9 @@ onMounted(() => {
             color: #FFFFFF;
             margin: 0 30px;
             white-space: nowrap;
+            @media screen and (max-width: 1600px) {
+                font-size: 80px;
+            }
             &.gold {
                 font-style: italic;
                 background: linear-gradient(to bottom right, #8C6D4B 0%, #B18E5D 40%);

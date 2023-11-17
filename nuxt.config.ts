@@ -12,8 +12,8 @@ export default defineNuxtConfig({
             },
             meta: [
                 { charset: 'utf-8' },
-                { name: 'viewport', content: 'width=1920, user-scalable=1' },
-                // { name: 'viewport', content: 'width=device-width, user-scalable=1' },
+                // { name: 'viewport', content: 'width=1920, user-scalable=1' },
+                { name: 'viewport', content: 'width=device-width, user-scalable=no' },
                 { hid: 'description', name: 'description', content: 'Kettari' },
                 { name: 'format-detection', content: 'telephone=no' }
             ],

@@ -1,32 +1,40 @@
 <template lang="pug">
 .app#app
+    BaseMobileHeader
     BaseHeader
     .app__container
-        IndexBanner
-        IndexAbout
-        section#products
-            IndexSection(
-                title="Наши продукты"
-                desc="товары"
-                count="2"
-                index="1"
-            )
-                IndexProduct(
-                    index="first"
+        .index__desktop
+            IndexBanner
+            IndexAbout
+            section#products
+                IndexSection(
+                    title="Наши продукты"
+                    desc="товары"
+                    count="2"
+                    index="1"
                 )
-                IndexProductSecond(
-                    index="second"
-                    dark
+                    IndexProduct(
+                        index="first"
+                    )
+                    IndexProductSecond(
+                        index="second"
+                        dark
+                    )
+            section#buy
+                IndexSection(
+                    title="Где купить"
+                    desc="Партнеры"
+                    count="2"
+                    index="2"
                 )
-        section#buy
-            IndexSection(
-                title="Где купить"
-                desc="Партнеры"
-                count="2"
-                index="2"
-            )
-                IndexPartners
+                    IndexPartners
+        .index__mobile
+            IndexMobileBanner
+            IndexMobileAbout
+            IndexMobileProducts
+            IndexMobilePartners
     BaseFooter
+    BaseMobileFooter
 </template>
 
 <script setup>
@@ -60,5 +68,20 @@ onMounted(() => {
     min-height: 100vh;
     background: #071D49 url('/images/noise.png') repeat left top;
     max-width: 100vw;
+}
+.index {
+    &__desktop {
+        display: none;
+        @media screen and (min-width: 1420px) {
+            display: block;
+        }
+    }
+    &__mobile {
+        display: none;
+        overflow: hidden;
+        @media screen and (max-width: 1420px) {
+            display: block;
+        }
+    }
 }
 </style>

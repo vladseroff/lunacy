@@ -106,6 +106,10 @@ const scrollToTop = () => {
 .footer {
     position: relative;
     z-index: 100;
+    display: none;
+    @media screen and (min-width: 1420px) {
+        display: block;
+    }
     &:before {
         content: '';
         display: block;
