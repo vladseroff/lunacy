@@ -21,14 +21,12 @@
 
 html {
     min-height: 100vh;
-    min-width: 1600px;
     width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
-    min-width: 1600px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: -0.015em; /* adjust letter spacing depending on font size */
     word-spacing: -0.1em; /* adjust word spacing depending on font size */
@@ -38,7 +36,6 @@ body {
     // overflow-x: hidden;
     color: #fff;
     min-height: 100vh;
-    min-width: 1600px;
     width: 100vw;
     // overflow-x: hidden;
 }
