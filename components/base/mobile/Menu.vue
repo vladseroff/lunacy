@@ -66,6 +66,7 @@ const scrollTo = (anchor) => {
     right: 0;
     bottom: 0;
     z-index: 1000;
+    overflow: hidden;
     &__cross {
         position: absolute;
         right: -5px;
