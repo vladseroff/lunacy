@@ -16,7 +16,7 @@
             |должны быть девайсы. 
         .about-mobile__img
             img(
-                src="images/mobile/bg2.png"
+                src="/images/mobile/bg2.png"
             )
         .about-mobile__text В поисках идеала он пришел 
             br 
@@ -29,7 +29,7 @@
             |фанатами игр: LUNACY.
         .about-mobile__img
             img(
-                src="images/mobile/bg3.png"
+                src="/images/mobile/bg3.png"
             )
         .about-mobile__text Через него прошли десятки 
             br 

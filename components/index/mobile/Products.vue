@@ -8,7 +8,7 @@
             .mobile-product__preview
                 .mobile-product__preview-img
                     img(
-                        src="images/mobile/bg4.png"
+                        src="/images/mobile/bg4.png"
                     )
                 .mobile-product__preview-text
                     .mobile-product__preview-name LOUD
@@ -27,21 +27,21 @@
                     |Совместимы с большинством устройств на рынке, включая мобильные телефоны, игровые консоли и настольные ПК.
                 .mobile-product__img
                     img(
-                        src="images/mobile/bg5.png"
+                        src="/images/mobile/bg5.png"
                     )
             .mobile-product__section
                 .mobile-product__ttl Внешний вид
                 .mobile-product__text Сочетание дорогой экокожи, ткани и терморегулирующего геля позволят тебе наслаждаться комфортом даже в самых потных катках.
                 .mobile-product__img
                     img(
-                        src="images/mobile/bg6.png"
+                        src="/images/mobile/bg6.png"
                     )
                 UiButton ПРЕДЗАКАЗ
         .mobile-product__item
             .mobile-product__preview
                 .mobile-product__preview-img
                     img(
-                        src="images/mobile/bg7.png"
+                        src="/images/mobile/bg7.png"
                     )
                 .mobile-product__preview-text(
                     style="top: 25%"
@@ -68,7 +68,7 @@
                     |и технологичностью
                 .mobile-product__img
                     img(
-                        src="images/mobile/bg8.png"
+                        src="/images/mobile/bg8.png"
                     )
             .mobile-product__section
                 .mobile-product__ttl Так звучит ночь
@@ -81,7 +81,7 @@
                     |и автоматически выключается.
                 .mobile-product__img
                     img(
-                        src="images/mobile/bg9.png"
+                        src="/images/mobile/bg9.png"
                     )
                 UiButton ПРЕДЗАКАЗ
 </template>

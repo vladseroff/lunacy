@@ -3,7 +3,7 @@ footer.mobile-footer
     LayoutContainer
         .mobile-footer__logo
             img(
-                src="images/mobile/logo.svg"
+                src="/images/mobile/logo.svg"
             )
         .mobile-footer__copyright Все права защищены
         .mobile-footer__section

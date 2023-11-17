@@ -3,7 +3,7 @@
     LayoutContainer
         .banner__logo
             img(
-                src="images/mobile/logo.svg"
+                src="/images/mobile/logo.svg"
             )
         .banner__content
             .banner__text
@@ -13,7 +13,7 @@
                     span игроков
             .banner__img
                 img(
-                    src="images/mobile/bg1.png"
+                    src="/images/mobile/bg1.png"
                 )
             UiButton ПРЕДЗАКАЗ
 </template>

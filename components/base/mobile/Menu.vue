@@ -6,11 +6,11 @@
                 @click="emits('toggleMenu')"
             )
                 img(
-                    src="images/mobile/cross.svg"
+                    src="/images/mobile/cross.svg"
                 )
             .mobile-menu__logo
                 img(
-                    src="images/mobile/logo.svg"
+                    src="/images/mobile/logo.svg"
                 )
             .mobile-menu__nav
                 a.mobile-menu__nav-item(

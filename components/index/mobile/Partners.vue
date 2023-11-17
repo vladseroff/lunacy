@@ -9,14 +9,14 @@
                 href="#"
             )
                 img(
-                    src="images/mobile/p1.svg"
+                    src="/images/mobile/p1.svg"
                 )
                 .mobile-partners__name купить в мвидео
             a.mobile-partners__item(
                 href="#"
             )
                 img(
-                    src="images/mobile/p1.svg"
+                    src="/images/mobile/p1.svg"
                 )
                 .mobile-partners__name купить в озоне
 </template>
