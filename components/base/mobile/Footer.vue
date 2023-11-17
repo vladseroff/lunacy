@@ -25,13 +25,13 @@ footer.mobile-footer
             .mobile-footer__title Навигация
             .mobile-footer__nav
                 a.mobile-footer__nav-item(
-                    href="#about"
+                    href="#aboutMobile"
                 ) О нас
                 a.mobile-footer__nav-item(
-                    href="#products"
+                    href="#productsMobile"
                 ) Продукты
                 a.mobile-footer__nav-item(
-                    href="#buy"
+                    href="#buyMobile"
                 ) Где купить
         .mobile-footer__section
             .mobile-footer__title По любым вопросам пишите на почту
