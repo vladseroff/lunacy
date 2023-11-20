@@ -73,12 +73,22 @@ footer.footer
                         .footer__arrow(
                             @click="scrollToTop"
                         )
-                            img(
-                                src="/images/ic3.svg"
+                            svg(
+                                width="15"
+                                height="16"
+                                viewBox="0 0 15 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
                             )
+                                path(
+                                    d="M14.5554 10.644L14.5327 10.6667L7.44403 3.59467L0.354697 10.6667L0.332031 10.644L0.332031 7.098L7.44336 4.44017e-07L14.554 7.098L14.5554 10.644Z"
+                                )
+                                path(
+                                    d="M6.25781 16.0006L6.25781 3.55664L8.62781 3.55664L8.62781 16.0006L6.25781 16.0006Z"
+                                )
                 a.footer__mailer(
-                    href="mailto:lunacyweb@gmail.com"
-                ) Lunacyweb@gmail.com
+                    href="mailto:help@lunacy.ru"
+                ) Help@lunacy.ru
         .footer__bottom
             .footer__wrapper.line
                 .footer__box Все права защищены
@@ -119,12 +129,31 @@ const scrollToTop = () => {
         margin-bottom: 30px;
     }
     &__arrow {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid var(--color-grey);
         float: right;
         cursor: pointer;
         transition: .3s ease;
+        svg {
+            display: block;
+            path {
+                fill: var(--color-grey);
+                transition: .3s ease;
+            }
+        }
         &:hover {
-            transform: scale(1.1)
+            transform: scale(1);
+            border-color: #fff;
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
         }
     }
     &__bottom {
@@ -191,7 +220,7 @@ const scrollToTop = () => {
         max-width: 350px;
         &-text {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             text-transform: uppercase;
             color: var(--color-grey);
             margin-bottom: 30px;

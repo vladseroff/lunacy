@@ -7,10 +7,10 @@
             )
         .banner__content
             .banner__text
-                .banner__text-item Создано 
-                    span игроками 
-                .banner__text-item Для 
-                    span игроков
+                .banner__text-item Город засыпает 
+                    //- span игроками 
+                .banner__text-item ты – нет 
+                    //- span игроков
             .banner__img
                 img(
                     src="/images/mobile/bg1.png"

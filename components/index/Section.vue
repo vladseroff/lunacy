@@ -139,11 +139,12 @@ onMounted(() => {
             font-weight: 400;
             font-size: 20px;
             text-transform: uppercase;
-            background: linear-gradient(180deg, #F9F9F9 0%, #8F8F8F 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+            color: var(--color-grey);
+            // background: linear-gradient(180deg, #F9F9F9 0%, #8F8F8F 100%);
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            // background-clip: text;
+            // text-fill-color: transparent;
         }
     }
 }

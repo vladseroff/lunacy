@@ -36,8 +36,8 @@ footer.mobile-footer
         .mobile-footer__section
             .mobile-footer__title По любым вопросам пишите на почту
             a.mobile-footer__mailer(
-                href="mailto:lunacyweb@gmail.com"
-            ) Lunacyweb@gmail.com
+                href="mailto:help@lunacy.ru"
+            ) Help@lunacy.ru
         .mobile-footer__bottom
             a(
                 href="#"

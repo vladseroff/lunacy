@@ -171,7 +171,7 @@ onMounted(() => {
         cursor: pointer;
         color: #fff;
         text-decoration: none;
-        transition: .8s ease;
+        transition: .4s ease;
         span {
             display: block;
             position: absolute;
@@ -184,14 +184,14 @@ onMounted(() => {
             justify-content: center;
             align-items: center;
             opacity: 0;
-            transition: .8s ease;
+            transition: .4s ease;
         }
     }
     &__top {
         margin-bottom: 40px;
     }
     &__logo {
-        transition: .8s ease;
+        transition: .4s ease;
         img {
             display: block;
             margin: 0 auto;
@@ -202,9 +202,9 @@ onMounted(() => {
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 0.02em;
-        color: #959595;
+        color: var(--color-grey);
         margin-top: 20px;
-        transition: .8s ease;
+        transition: .4s ease;
     }
     &__text {
         font-family: "Cygre";
@@ -301,7 +301,7 @@ onMounted(() => {
             height: 100%;
             transform: scale(.8);
             opacity: 0;
-            transition: .8s ease;
+            transition: .4s ease;
             #{$root} {
                 &__circle {
                     &:nth-child(1) {

@@ -31,10 +31,10 @@
                 src="/images/bg1.png"
             )
         .banner__texts
-            .banner__text Создано 
-                span игроками
-            .banner__text Для 
-                span игроков
+            .banner__text Город засыпает
+                //- span игроками
+            .banner__text ты – нет 
+                //- span игроков
         .banner__buttons
             UiButton.button1 ПРЕДЗАКАЗ
 </template>
