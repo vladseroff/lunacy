@@ -36,7 +36,9 @@
             .banner__text ты – нет 
                 //- span игроков
         .banner__buttons
-            UiButton.button1 ПРЕДЗАКАЗ
+            UiButton.button1(
+                href="#buy"
+            ) ПРЕДЗАКАЗ
 </template>
 
 <script setup>
@@ -209,6 +211,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .banner {
+    padding-top: 100px;
     .container {
         position: relative;
     }

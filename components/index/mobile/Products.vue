@@ -36,7 +36,9 @@
                     img(
                         src="/images/mobile/bg6.png"
                     )
-                UiButton ПРЕДЗАКАЗ
+                UiButton(
+                    href="#buy"
+                ) ПРЕДЗАКАЗ
         .mobile-product__item
             .mobile-product__preview
                 .mobile-product__preview-img
@@ -83,7 +85,9 @@
                     img(
                         src="/images/mobile/bg9.png"
                     )
-                UiButton ПРЕДЗАКАЗ
+                UiButton(
+                    href="#buy"
+                ) ПРЕДЗАКАЗ
 </template>
 
 <style lang="scss" scoped>

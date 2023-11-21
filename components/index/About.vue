@@ -308,6 +308,7 @@ onMounted(() => {
     &__trigger {
         position: absolute;
         left: 0;
+        pointer-events: none;
         &-full {
             top: 0px;
             height: 3000px;
@@ -374,6 +375,8 @@ onMounted(() => {
                 position: absolute;
                 right: 0px;
                 bottom: 50px;
+                border-radius: 12px;
+                overflow: hidden;
                 img {
                     display: block;
                 }
@@ -381,7 +384,9 @@ onMounted(() => {
         }
         &-general {
             &-img {
-                padding-top: 100px;
+                margin-top: 100px;
+                border-radius: 12px;
+                overflow: hidden;
                 img {
                     display: block;
                 }

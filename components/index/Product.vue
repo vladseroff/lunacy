@@ -88,7 +88,9 @@
                         |на рынке, включая мобильные телефоны, 
                         br 
                         |игровые консоли и настольные ПК.
-                UiButton ПРЕДЗАКАЗ
+                UiButton(
+                    href="#buy"
+                ) ПРЕДЗАКАЗ
         .product__text#text2(
             :class="[`text-${index}-2`]"
         )
@@ -105,7 +107,9 @@
                         |комфортом даже в самых потных 
                         br 
                         |катках.
-                UiButton ПРЕДЗАКАЗ
+                UiButton(
+                    href="#buy"
+                ) ПРЕДЗАКАЗ
     .product__triggers
         .product__trigger.product__trigger-img-zoom(
             :class="[`img-zoom-${index}`]"
@@ -533,7 +537,7 @@ onMounted(() => {
     }
     &__wrapper {
         position: relative;
-        height: 9000px;
+        height: 10000px;
     }
     &__preview-text {
         position: sticky;
@@ -714,6 +718,7 @@ onMounted(() => {
         top: 0;
         width: 100%;
         left: 0;
+        pointer-events: none;
     }
     &__trigger {
         width: 100%;

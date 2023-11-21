@@ -80,7 +80,9 @@
                         |гонку за качеством, надежностью 
                         br 
                         |и технологичностью
-                UiButton ПРЕДЗАКАЗ
+                UiButton(
+                    href="#buy"
+                ) ПРЕДЗАКАЗ
         .product__text#text2(
             :class="[`text-${index}-2`]"
         )
@@ -95,7 +97,9 @@
                         |Кстати, микрофон задвигается 
                         br 
                         |и автоматически выключается.
-                UiButton ПРЕДЗАКАЗ
+                UiButton(
+                    href="#buy"
+                ) ПРЕДЗАКАЗ
     .product__triggers
         .product__trigger.product__trigger-img-zoom(
             :class="[`img-zoom-${index}`]"

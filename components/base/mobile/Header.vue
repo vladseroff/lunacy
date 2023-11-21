@@ -30,8 +30,12 @@ const toggleMenu = () => {
 <style lang="scss" scoped>
 .mobile-header {
     display: none;
-    margin-bottom: 10px;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 103;
     @media screen and (max-width: 1420px) {
         display: block;
     }

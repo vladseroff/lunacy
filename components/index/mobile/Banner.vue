@@ -15,7 +15,9 @@
                 img(
                     src="/images/mobile/bg1.png"
                 )
-            UiButton ПРЕДЗАКАЗ
+            UiButton(
+                href="#buy"
+            ) ПРЕДЗАКАЗ
 </template>
 
 <script>
@@ -26,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
+    margin-top: 70px;
     .button {
         max-width: 100%;
         margin: 0 auto;

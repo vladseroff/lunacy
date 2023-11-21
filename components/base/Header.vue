@@ -20,9 +20,12 @@ header.header
                 href="#buy"
             ) Где купить
         .header__wrapper
-            .header__lang
-                .header__lang-item.disabled Ru
-                .header__lang-item En
+            UiButton(
+                href="#buy"
+            ) ПРЕДЗАКАЗ
+            //- .header__lang
+            //-     .header__lang-item.disabled Ru
+            //-     .header__lang-item En
 </template>
 
 <script setup>
@@ -31,9 +34,12 @@ header.header
 
 <style lang="scss" scoped>
 .header {
-    padding: 30px 0;
-    position: relative;
-    z-index: 100;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
     display: none;
     @media screen and (min-width: 1420px) {
         display: block;
@@ -49,6 +55,13 @@ header.header
         align-items: center;
         &:last-child {
             justify-content: flex-end;
+        }
+        .button {
+            // height: 40px;
+            // width: 120px;
+            // min-width: 100px;
+            // font-size: 12px;
+            // text-transform: uppercase;
         }
     }
     &__nav {
