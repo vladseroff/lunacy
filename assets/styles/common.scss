@@ -17,8 +17,8 @@
     font-style: normal;
 }
 // @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
     min-height: 100vh;
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     // letter-spacing: -0.015em; /* adjust letter spacing depending on font size */
     word-spacing: 0.1em;
     -webkit-font-smoothing: antialiased; /* looks better */
