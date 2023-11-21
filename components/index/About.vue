@@ -302,7 +302,7 @@ onMounted(() => {
     }
     .container {
         padding: 300px 0;
-        height: 11000px;
+        height: 4000px;
         position: relative;
     }
     &__trigger {
@@ -310,19 +310,19 @@ onMounted(() => {
         left: 0;
         &-full {
             top: 0px;
-            height: 9000px;
+            height: 3000px;
         }
         &-one {
             top: 0px;
-            height: 4000px;
+            height: 1000px;
         }
         &-two {
-            top: 4000px;
-            height: 5000px;
+            top: 1000px;
+            height: 2000px;
         }
         &-img {
-            top: 4500px;
-            height: 5000px;
+            top: 1000px;
+            height: 2000px;
         }
     }
     &__texts {

@@ -3,9 +3,7 @@
     LayoutContainer
         .about-mobile__title
             .about-mobile__title-line.about-mobile__title-line-one
-                span(
-                    style="text-indent: 6%;"
-                ) У ИСТОКОВ &nbsp;&nbsp;&nbsp; БРЕНДА
+                span У ИСТОКОВ &nbsp; БРЕНДА
             .about-mobile__title-line.about-mobile__title-line-two
                 span СТОИТ
                 span.gold СЛАВА БУСТЕР
@@ -20,13 +18,13 @@
             )
         .about-mobile__text В поисках идеала он пришел 
             br 
-            |к идее своего бренда девайсов, которые 
+            |к идее своего бренда девайсов, 
             br 
-            |разработаны не маркетологами 
+            |которые разработаны не 
             br 
-            |в пиджаках, а настоящими 
+            |маркетологами в пиджаках, 
             br 
-            |фанатами игр: LUNACY.
+            |а настоящими фанатами игр: LUNACY.
         .about-mobile__img
             img(
                 src="/images/mobile/bg3.png"
@@ -82,7 +80,7 @@ export default {
         }
     }
     &__text {
-        text-indent: 26%;
+        text-indent: 13%;
         font-size: 14px;
         font-weight: 600;
         text-transform: uppercase;
