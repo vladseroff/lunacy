@@ -38,13 +38,13 @@ footer.mobile-footer
             a.mobile-footer__mailer(
                 href="mailto:help@lunacy.ru"
             ) Help@lunacy.ru
-        .mobile-footer__bottom
-            a(
-                href="#"
-            ) Публичная оферта
-            a(
-                href="#"
-            ) Политика конфиденциальности
+        //- .mobile-footer__bottom
+        //-     a(
+        //-         href="#"
+        //-     ) Публичная оферта
+        //-     a(
+        //-         href="#"
+        //-     ) Политика конфиденциальности
 </template>
 
 <style lang="scss" scoped>

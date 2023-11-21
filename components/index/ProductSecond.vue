@@ -88,15 +88,15 @@
         )
             .product__text-container
                 .product__text-title night
-                .product__text-pretitle Так звучит ночь
+                .product__text-pretitle Не почувствовал
                 .product__text-desc
-                    p Никаких лишних шумов, только 
+                    p Так говорят те, кто попробовал LUNACY 
                         br 
-                        |чистый звук динамиков и микрофона. 
+                        |Night. Они весят всего 211 грамм. 
                         br 
-                        |Кстати, микрофон задвигается 
+                        |Игры еще никогда не были такими 
                         br 
-                        |и автоматически выключается.
+                        |легкими.
                 UiButton(
                     href="#buy"
                 ) ПРЕДЗАКАЗ

@@ -28,33 +28,21 @@ footer.footer
                 )
         .footer__wrapper
             .footer__box
-                .footer__social
-                    a.footer__social-item(
-                        href="#"
-                    ) Вконтакте
-                        img(
-                            src="/images/ic1.svg"
-                        )
-                    a.footer__social-item(
-                        href="#"
-                    ) Телеграм
-                        img(
-                            src="/images/ic1.svg"
-                        )
-                .footer__email
-                    .footer__email-text Подпишитесь на новостную рассылку, 
-                        br 
-                        |чтобы быть в курсе последних релизов
-                    .footer__email-input
-                        input(
-                            placeholder="Почта"
-                        )
-                        .footer__email-btn
-                            img(
-                                src="/images/ic2.svg"
-                            )
-            .footer__box
                 .footer__wrapper
+                    .footer__box
+                        .footer__social
+                            a.footer__social-item(
+                                href="#"
+                            ) Вконтакте
+                                img(
+                                    src="/images/ic1.svg"
+                                )
+                            a.footer__social-item(
+                                href="#"
+                            ) Телеграм
+                                img(
+                                    src="/images/ic1.svg"
+                                )
                     .footer__box
                         .footer__nav
                             a.footer__nav-item(
@@ -69,6 +57,24 @@ footer.footer
                             a.footer__nav-item(
                                 href="#buy"
                             ) Где купить
+                //- .footer__email
+                //-     .footer__email-text Подпишитесь на новостную рассылку, 
+                //-         br 
+                //-         |чтобы быть в курсе последних релизов
+                //-     .footer__email-input
+                //-         input(
+                //-             placeholder="Почта"
+                //-         )
+                //-         .footer__email-btn
+                //-             img(
+                //-                 src="/images/ic2.svg"
+                //-             )
+            .footer__box
+                .footer__wrapper
+                    .footer__box
+                        a.footer__mailer(
+                            href="mailto:help@lunacy.ru"
+                        ) Help@lunacy.ru
                     .footer__box
                         .footer__arrow(
                             @click="scrollToTop"
@@ -86,22 +92,19 @@ footer.footer
                                 path(
                                     d="M6.25781 16.0006L6.25781 3.55664L8.62781 3.55664L8.62781 16.0006L6.25781 16.0006Z"
                                 )
-                a.footer__mailer(
-                    href="mailto:help@lunacy.ru"
-                ) Help@lunacy.ru
         .footer__bottom
             .footer__wrapper.line
                 .footer__box Все права защищены
                 .footer__box
-                    .footer__wrapper
-                        .footer__box 
-                            a(
-                                href="#"
-                            ) Публичная оферта
-                        .footer__box
-                            a(
-                                href="#"
-                            ) Политика конфиденциальности
+                    //- .footer__wrapper
+                    //-     .footer__box 
+                    //-         a(
+                    //-             href="#"
+                    //-         ) Публичная оферта
+                    //-     .footer__box
+                    //-         a(
+                    //-             href="#"
+                    //-         ) Политика конфиденциальности
 </template>
 
 <script setup>
@@ -162,7 +165,7 @@ const scrollToTop = () => {
         font-size: 14px;
         color: var(--color-grey);
         position: relative;
-        margin-top: 25px;
+        margin-top: 45px;
         &:before {
             content: '';
             position: absolute;
@@ -260,7 +263,7 @@ const scrollToTop = () => {
         font-size: 63px;
         letter-spacing: 0.02em;
         color: #FFFFFF;
-        margin-top: 50px;
+        // margin-top: 50px;
         display: block;
     }
     &__logo {
