@@ -29,8 +29,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    letter-spacing: -0.015em; /* adjust letter spacing depending on font size */
-    word-spacing: -0.1em; /* adjust word spacing depending on font size */
+    // letter-spacing: -0.015em; /* adjust letter spacing depending on font size */
+    word-spacing: 0.1em;
     -webkit-font-smoothing: antialiased; /* looks better */
     -moz-osx-font-smoothing: grayscale; /* looks better */
     color: var(--color-black);
