@@ -20,9 +20,9 @@ export default defineNuxtConfig({
                 { hid: 'og-title', property: 'og:title', content: 'Lunacy' },
                 // { hid: 'og-desc', property: 'og:description', content: 'This is a sweet post' },
                 // { hid: 'og-url', property: 'og:url', content: 'https://domain.com/my-post' },
-                // { hid: 'og-image', property: 'og:image',
-                //     content: 'https://domain.com/my-image.jpg'
-                // },
+                { hid: 'og-image', property: 'og:image',
+                    content: '/og-image.jpg'
+                },
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
