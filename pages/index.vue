@@ -42,7 +42,9 @@ import { gsap, ScrollTrigger } from "gsap/all";
 
 
 setTimeout(() => {
-    window.scrollTo(0, 0)
+    if (process.cleint) {
+        window.scrollTo(0, 0)
+    }
 }, 1)
 onMounted(() => {
     // let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
