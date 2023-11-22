@@ -44,17 +44,17 @@ export default defineNuxtConfig({
     },
     modules: [
         '@hypernym/nuxt-gsap',
-        [
-            'yandex-metrika-module-nuxt3',
-            {
-                id: '95646052',
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true,
-                webvisor: true
-            }
-        ]
+        'nuxt-yandex-metrika',
     ],
+    yandexMetrika: {
+        id: '95646052',
+        options: {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        }
+    },
     gsap: {
         extraPlugins: {
             scrollTrigger: true

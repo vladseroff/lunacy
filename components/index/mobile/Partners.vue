@@ -5,16 +5,16 @@
             .mobile-partners__title-text где купить
                 span (2)
         .mobile-partners__items
-            a.mobile-partners__item(
-                href="https://www.mvideo.ru/promo/novinka-lunacy"
+            .mobile-partners__item(
+                @click="clickMvideo"
                 target="_blank"
             )
                 img(
                     src="/images/mobile/p1.svg"
                 )
                 .mobile-partners__name купить в мвидео
-            a.mobile-partners__item(
-                href="https://www.ozon.ru/highlight/lunacy-1251855/"
+            .mobile-partners__item(
+                @click="clickOzon"
                 target="_blank"
             )
                 img(
@@ -22,6 +22,21 @@
                 )
                 .mobile-partners__name купить в озоне
 </template>
+
+<script setup>
+import { useYandexMetrika } from "#imports";
+const { reachGoal } = useYandexMetrika();
+
+const clickMvideo = () => {
+    reachGoal('click-mvideo')
+    window.open('https://www.mvideo.ru/promo/novinka-lunacy', '_blank') 
+}
+
+const clickOzon = () => {
+    reachGoal('click-ozon')
+    window.open('https://www.ozon.ru/highlight/lunacy-1251855/', '_blank')
+}
+</script>
 
 <style lang="scss" scoped>
 .mobile-partners {
@@ -31,6 +46,7 @@
         color: #fff;
         position: relative;
         display: block;
+        cursor: pointer;
         img {
             display: block;
             width: 100%;

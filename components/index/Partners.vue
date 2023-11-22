@@ -9,8 +9,8 @@
             //-         )
             //-     .partners__description Официальный партнер
             .partners__item
-                a.partners__content(
-                    href="https://www.mvideo.ru/promo/novinka-lunacy"
+                .partners__content(
+                    @click="clickMvideo"
                     target="_blank"
                 )
                     span купить в мвидео
@@ -51,8 +51,8 @@
             //-         )
             //-     .partners__description Официальный партнер
             .partners__item
-                a.partners__content(
-                    href="https://www.ozon.ru/highlight/lunacy-1251855/"
+                .partners__content(
+                    @click="clickOzon"
                     target="_blank"
                 )
                     span купить в озоне
@@ -89,6 +89,18 @@
 
 <script setup>
 const { $gsap } = useNuxtApp()
+import { useYandexMetrika } from "#imports";
+const { reachGoal } = useYandexMetrika();
+
+const clickMvideo = () => {
+    reachGoal('click-mvideo')
+    window.open('https://www.mvideo.ru/promo/novinka-lunacy', '_blank') 
+}
+
+const clickOzon = () => {
+    reachGoal('click-ozon')
+    window.open('https://www.ozon.ru/highlight/lunacy-1251855/', '_blank')
+}
 
 onMounted(() => {
     // $gsap.fromTo(".partners__box-1", {

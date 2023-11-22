@@ -16,11 +16,11 @@
     "@types/node": "^18",
     "gh-pages": "^5.0.0",
     "nuxt": "^3.6.1",
+    "nuxt-yandex-metrika": "^1.2.3",
     "sass": "^1.63.6",
     "vite-plugin-pug": "^0.3.2"
   },
   "dependencies": {
-    "swiper": "^10.0.3",
-    "yandex-metrika-module-nuxt3": "^1.5.3"
+    "swiper": "^10.0.3"
   }
 }
