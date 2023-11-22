@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     // },
     app: {
         head: {
-            title: 'Lunacy',
+            title: 'Lunacy - игровые девайсы для геймеров',
             htmlAttrs: {
                 lang: 'ru'
             },
@@ -14,11 +14,11 @@ export default defineNuxtConfig({
                 { charset: 'utf-8' },
                 // { name: 'viewport', content: 'width=1920, user-scalable=1' },
                 { name: 'viewport', content: 'width=device-width, user-scalable=no' },
-                { hid: 'description', name: 'description', content: 'Kettari' },
+                { hid: 'description', name: 'description', content: 'Премиальные игровые девайсы Славы Бустера.' },
                 { name: 'format-detection', content: 'telephone=no' },
                 { hid: 'og-type', property: 'og:type', content: 'website' },
-                { hid: 'og-title', property: 'og:title', content: 'Lunacy' },
-                // { hid: 'og-desc', property: 'og:description', content: 'This is a sweet post' },
+                { hid: 'og-title', property: 'og:title', content: 'Lunacy - игровые девайсы для геймеров' },
+                { hid: 'og-desc', property: 'og:description', content: 'Премиальные игровые девайсы Славы Бустера.' },
                 // { hid: 'og-url', property: 'og:url', content: 'https://domain.com/my-post' },
                 { hid: 'og-image', property: 'og:image',
                     content: '/og-image.jpg'
