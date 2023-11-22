@@ -32,13 +32,15 @@ footer.footer
                     .footer__box
                         .footer__social
                             a.footer__social-item(
-                                href="#"
+                                href="https://vk.com/lunacy_ru"
+                                target="_blank"
                             ) Вконтакте
                                 img(
                                     src="/images/ic1.svg"
                                 )
                             a.footer__social-item(
-                                href="#"
+                                href="https://t.me/lunacy_ru"
+                                target="_blank"
                             ) Телеграм
                                 img(
                                     src="/images/ic1.svg"

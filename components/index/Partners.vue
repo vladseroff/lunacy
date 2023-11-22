@@ -10,7 +10,8 @@
             //-     .partners__description Официальный партнер
             .partners__item
                 a.partners__content(
-                    href="#"
+                    href="https://www.mvideo.ru/promo/novinka-lunacy"
+                    target="_blank"
                 )
                     span купить в мвидео
                     .partners__logo
@@ -51,7 +52,8 @@
             //-     .partners__description Официальный партнер
             .partners__item
                 a.partners__content(
-                    href="#"
+                    href="https://www.ozon.ru/highlight/lunacy-1251855/"
+                    target="_blank"
                 )
                     span купить в озоне
                     .partners__logo

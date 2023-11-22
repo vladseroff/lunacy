@@ -6,14 +6,16 @@
                 span (2)
         .mobile-partners__items
             a.mobile-partners__item(
-                href="#"
+                href="https://www.mvideo.ru/promo/novinka-lunacy"
+                target="_blank"
             )
                 img(
                     src="/images/mobile/p1.svg"
                 )
                 .mobile-partners__name купить в мвидео
             a.mobile-partners__item(
-                href="#"
+                href="https://www.ozon.ru/highlight/lunacy-1251855/"
+                target="_blank"
             )
                 img(
                     src="/images/mobile/p1.svg"
