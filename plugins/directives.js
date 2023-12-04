@@ -1,3 +1,7 @@
+import _ from 'lodash'
+// const { $gsap } = useNuxtApp()
+import gsap from 'gsap'
+
 export default defineNuxtPlugin(nuxtApp => {
     let hasParallaxDirective = false
     nuxtApp.vueApp.directive('parallax', {
@@ -69,5 +73,83 @@ export default defineNuxtPlugin(nuxtApp => {
             let observer = new IntersectionObserver(callback, options);
             observer.observe(el);
         },
+    })
+    const getCharsFromWord = (word) => {
+        let string = ''
+        for (let index = 0; index < word.length; index++) {
+            const char = word[index];
+            string += `<span class="char">${char}</span>`
+        }
+        return string
+    }
+    const setSpans = (el, bind) => {
+        let string = ''
+        _.words(bind.value, /([^\s]+)/g).forEach(word => {
+            if (word === 'br') {
+                string += `<br> `
+            } else {
+                string += `<span class="word">${getCharsFromWord(word)}</span> `
+            }
+        })
+        el.innerHTML = string
+    }
+    nuxtApp.vueApp.directive('word-to-span', {
+        updated: (el, bind) => {
+            setSpans(el, bind)
+        },
+        mounted: (el, bind) => {
+            setSpans(el, bind)
+        }
+    })
+    const gsapAnimate = (element, trigger, bind, delay, duration) => {
+        const options = {
+            scrollTrigger: {
+                trigger: bind.value.trigger || trigger,
+                start: "top 70%",
+                // scrub: true,
+                end: "+=100%",
+            },
+            transformOrigin: "center center", 
+            ease: 'ease',
+            delay: delay,
+            duration: duration || bind.value.duration || 0.4,
+        }
+        gsap.fromTo(element, {
+            ...options,
+            y: 50,
+            opacity: 0,
+        },{
+            ...options,
+            y: 0,
+            opacity: 1,
+        })
+    }
+    nuxtApp.vueApp.directive('text-char-anim', {
+        mounted: (el, bind) => {
+            // [].forEach.call(el.children, (span, i) => {
+            //     [].forEach.call(span.children, (char, index) => {
+            //         let delay = bind.value.delay || 0.04;
+            //         if (bind.value.startDelay) {
+            //             delay = delay * (index + 1) + bind.value.startDelay * ((i + 1) * (bind.value.duration || .22))
+            //         } else {
+            //             delay = (index + 1) * delay * ((i + 1) * (bind.value.duration || .22))
+            //         }
+            //         gsapAnimate(char, el, bind, delay, bind.value.duration || .22)
+            //     })
+            // })
+        }
+    })
+    nuxtApp.vueApp.directive('text-span-anim', {
+        mounted: (el, bind) => {
+            // [].forEach.call(el.children, (span, index) => {
+            //     let delay = bind.value.delay || 0.01;
+            //     if (bind.value.startDelay) {
+            //         delay = delay * (index + 1) + bind.value.startDelay
+            //     } else {
+            //         delay = (index + 1) * delay
+            //     }
+            //     gsapAnimate(span, el, bind, delay)
+            // })
+        }
     })
 })

@@ -4,11 +4,26 @@
         .index-product__container
             .index-product__wrapper
                 .index-product__box
-                    .index-product__text три режима
-                    .index-product__text подключения:
-                    .index-product__text проводной,
-                    .index-product__text радиоканал,
-                    .index-product__text bluetooth
+                    .index-product__text(
+                        v-word-to-span="'три режима'"
+                        v-text-char-anim="{}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'подключения:'"
+                        v-text-char-anim="{startDelay: .4}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'проводной,'"
+                        v-text-char-anim="{startDelay: .8}"
+                    ) 
+                    .index-product__text(
+                        v-word-to-span="'радиоканал,'"
+                        v-text-char-anim="{startDelay: 1}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'bluetooth'"
+                        v-text-char-anim="{startDelay: 1.3}"
+                    ) 
                     .index-product__desc совместимы с 
                         br 
                         |большинством устройств на 
@@ -92,10 +107,10 @@ export default {
         font-weight: 500;
         line-height: 90%;
         &:nth-child(3) {
-            text-indent: 130px;
+            padding-left: 150px;
         }
         &:nth-child(4) {
-            text-indent: 50px;
+            padding-left: 50px;
         }
         &:nth-child(5) {
             text-align: right;

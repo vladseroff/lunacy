@@ -21,6 +21,7 @@
     "vite-plugin-pug": "^0.3.2"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "swiper": "^10.0.3"
   }
 }
