@@ -5,12 +5,9 @@
 
 <style lang="scss" scoped>
 .container {
-    max-width: 1400px;
+    max-width: 1230px;
     width: 100%;
     margin: 0 auto;
-    @media screen and (max-width: 1420px) {
-        padding: 0 15px;
-        max-width: 530px;
-    }
+    padding: 0 15px;
 }
 </style>

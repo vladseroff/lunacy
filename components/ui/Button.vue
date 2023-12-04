@@ -26,35 +26,38 @@ defineProps({
 
 <style lang="scss" scoped>
 .button {
-    min-width: 180px;
-    max-width: 200px;
-    height: 48px;
+    min-width: 130px;
+    // max-width: 130px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000;
-    font-weight: 600;
-    font-style: italic;
-    font-size: 16px;
-    background: var(--color-white);
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 12px;
-    @media screen and (max-width: 1420px) {
-        max-width: 320px;
+    position: relative;
+    padding: 0 30px;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        background: url('/images/index/ic1.svg') center center no-repeat;
+        width: 9px;
+        height: 100%;
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+        transform: scale(-1, 1)
     }
     &:hover {
-        background: darken(#fff, 10%);
-    }
-    &.outlined {
-        border: 1px solid var(--color-white);
-        color: var(--color-white);
-        background: transparent;
-        &:hover {
-            background: transparent;
-            border-color: darken(#fff, 10%);
-            color: darken(#fff, 10%);
-        }
+        
     }
 }
 </style>

@@ -10,15 +10,20 @@
 //     font-weight: bold;
 //     font-style: italic;
 // }
-@font-face {
-    font-family: 'Cygre';
-    src: url('../fonts/Cygre-Medium.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Cygre';
+//     src: url('../fonts/Cygre-Medium.ttf') format('truetype');
+//     font-weight: 400;
+//     font-style: normal;
+// }
 // @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,body {
+    min-width: 1230px;
+    overflow-x: hidden;
+}
 
 html {
     min-height: 100vh;
@@ -28,31 +33,24 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     // letter-spacing: -0.015em; /* adjust letter spacing depending on font size */
     word-spacing: 0.1em;
     -webkit-font-smoothing: antialiased; /* looks better */
     -moz-osx-font-smoothing: grayscale; /* looks better */
-    color: var(--color-black);
-    // overflow-x: hidden;
-    color: #fff;
     min-height: 100vh;
     width: 100vw;
-    min-width: 360px;
-    // overflow-x: hidden;
+    background: #0E0E0E;
+    color: #B6B6B6;
 }
 
 ::placeholder {
-    color: #B6BCC8;
+    color: #686868;
     opacity: 1;
 }
 :-ms-input-placeholder {
-    color: #B6BCC8;
+    color: #686868;
 }
 ::-ms-input-placeholder {
-    color: #B6BCC8;
-}
-
-#app {
-    // overflow-x: hidden;
+    color: #686868;
 }

@@ -8,21 +8,21 @@ header.header
                 )
         .header__nav
             a.header__nav-item(
-                href="#about"
-            ) О нас
-                //- img(
-                //-     src="/images/arrow.svg"
-                //- )
+                href="#"
+            ) продукты
+                img(
+                    src="/images/arrow.svg"
+                )
             a.header__nav-item(
-                href="#products"
-            ) Продукты
+                href="#"
+            ) драйвера
             a.header__nav-item(
-                href="#buy"
-            ) Где купить
+                href="#"
+            ) поддержка
         .header__wrapper
             UiButton(
                 href="#buy"
-            ) ПРЕДЗАКАЗ
+            ) купить
             //- .header__lang
             //-     .header__lang-item.disabled Ru
             //-     .header__lang-item En
@@ -34,16 +34,16 @@ header.header
 
 <style lang="scss" scoped>
 .header {
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 101;
-    display: none;
-    @media screen and (min-width: 1420px) {
-        display: block;
-    }
+    // display: none;
+    // @media screen and (min-width: 1420px) {
+    //     display: block;
+    // }
     .container {
         display: flex;
         justify-content: center;
@@ -73,7 +73,6 @@ header.header
             font-size: 14px;
             text-decoration: none;
             cursor: pointer;
-            text-transform: uppercase;
             color: var(--color-white);
             margin: 0 30px;
             padding: 15px 0;
