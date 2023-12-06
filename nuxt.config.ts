@@ -13,7 +13,7 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 // { name: 'viewport', content: 'width=1920, user-scalable=1' },
-                { name: 'viewport', content: 'width=1230, minimum-scale=1, maximum-scale=1' },
+                { name: 'viewport', content: 'width=1230, user-scalable=1' },
                 { hid: 'description', name: 'description', content: 'Премиальные игровые девайсы Славы Бустера.' },
                 { name: 'format-detection', content: 'telephone=no' },
                 { hid: 'og-type', property: 'og:type', content: 'website' },
