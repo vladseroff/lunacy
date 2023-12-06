@@ -28,7 +28,7 @@ export default defineNuxtConfig({
                 { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
             ]
         },
-        // baseURL: '/lunacy/',
+        baseURL: '/lunacy/',
     },
     css: [
         '@/assets/styles/common.scss'
