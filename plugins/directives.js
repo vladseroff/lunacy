@@ -102,6 +102,7 @@ export default defineNuxtPlugin(nuxtApp => {
         }
     })
     const gsapAnimate = (element, trigger, bind, delay, duration) => {
+        console.log('anim');
         const options = {
             scrollTrigger: {
                 trigger: bind.value.trigger || trigger,
@@ -126,30 +127,30 @@ export default defineNuxtPlugin(nuxtApp => {
     }
     nuxtApp.vueApp.directive('text-char-anim', {
         mounted: (el, bind) => {
-            // [].forEach.call(el.children, (span, i) => {
-            //     [].forEach.call(span.children, (char, index) => {
-            //         let delay = bind.value.delay || 0.04;
-            //         if (bind.value.startDelay) {
-            //             delay = delay * (index + 1) + bind.value.startDelay * ((i + 1) * (bind.value.duration || .22))
-            //         } else {
-            //             delay = (index + 1) * delay * ((i + 1) * (bind.value.duration || .22))
-            //         }
-            //         gsapAnimate(char, el, bind, delay, bind.value.duration || .22)
-            //     })
-            // })
+            [].forEach.call(el.children, (span, i) => {
+                [].forEach.call(span.children, (char, index) => {
+                    let delay = bind.value.delay || 0.04;
+                    if (bind.value.startDelay) {
+                        delay = delay * (index + 1) + bind.value.startDelay * ((i + 1) * (bind.value.duration || .22))
+                    } else {
+                        delay = (index + 1) * delay * ((i + 1) * (bind.value.duration || .22))
+                    }
+                    gsapAnimate(char, el, bind, delay, bind.value.duration || .22)
+                })
+            })
         }
     })
     nuxtApp.vueApp.directive('text-span-anim', {
         mounted: (el, bind) => {
-            // [].forEach.call(el.children, (span, index) => {
-            //     let delay = bind.value.delay || 0.01;
-            //     if (bind.value.startDelay) {
-            //         delay = delay * (index + 1) + bind.value.startDelay
-            //     } else {
-            //         delay = (index + 1) * delay
-            //     }
-            //     gsapAnimate(span, el, bind, delay)
-            // })
+            [].forEach.call(el.children, (span, index) => {
+                let delay = bind.value.delay || 0.01;
+                if (bind.value.startDelay) {
+                    delay = delay * (index + 1) + bind.value.startDelay
+                } else {
+                    delay = (index + 1) * delay
+                }
+                gsapAnimate(span, el, bind, delay)
+            })
         }
     })
 })

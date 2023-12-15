@@ -14,14 +14,24 @@
                     )
                         .headphones-spec__text-line(
                             v-for="line of block"
-                        ) {{line}}
+                            v-word-to-span="line"
+                            v-text-char-anim="{duration: .3}"
+                        )
                 .headphones-spec__desc
                     .headphones-spec__desc-line(
                         v-for="line of desc"
-                    ) {{line}}
+                        v-word-to-span="line"
+                        v-text-char-anim="{duration: .3}"
+                    )
                 .headphones-spec__price
-                    .headphones-spec__name {{name}}
-                    .headphones-spec__price-num {{price}}
+                    .headphones-spec__name(
+                        v-word-to-span="name"
+                        v-text-char-anim="{duration: .3}"
+                    )
+                    .headphones-spec__price-num(
+                        v-word-to-span="price"
+                        v-text-char-anim="{duration: .3}"
+                    )
                 .headphones-spec__button
                     UiButton купить
 </template>

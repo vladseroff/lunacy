@@ -6,6 +6,7 @@
                 .headphones-about__text-line(
                     v-for="line of text"
                     v-word-to-span="line"
+                    v-text-char-anim="{duration: .6}"
                 )
             .headphones-about__desc
                 .headphones-about__desc-wrapper(
@@ -13,7 +14,9 @@
                 )
                     .headphones-about__desc-line(
                         v-for="line of descBlock"
-                    ) {{line}}
+                        v-word-to-span="line"
+                        v-text-char-anim="{duration: .3}"
+                    )
 </template>
 
 <script setup>

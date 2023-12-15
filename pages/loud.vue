@@ -30,6 +30,12 @@
             :name="productSpec.name"
             :price="productSpec.price"
         )
+        HeadphonesSoundInterface(
+            :image="soundInterface.image"
+            :title="soundInterface.title"
+            :desc="soundInterface.desc"
+            :specs="soundInterface.specs"
+        )
         IndexPartners
     BaseFooter
 </template>
@@ -112,6 +118,29 @@ const productSpec = ref({
         'lunacy loud обеспечат тебе',
         'стопроцентную инфу.'
     ]
+})
+const soundInterface = ref({
+    title: 'русифицированный звуковой интерфейс',
+    desc: [
+        'беспроводная гарнитура',
+        'премиум класса, наслаждайся',
+        'голосом Бустера, когда',
+        'переключаешь режимы'
+    ],
+    image: '/images/loud/img7.png',
+    specs: [{
+        title: 'Кабель зарядки',
+        desc: '[ USB 1.8 м ]'
+    },{
+        title: 'работает',
+        desc: '[ до 30 часов ]'
+    },{
+        title: 'Аккумулятор',
+        desc: '[ 750 мА*ч ]'
+    },{
+        title: 'Время зарядки',
+        desc: '[ 3 часа ]'
+    }]
 })
 </script>
 
