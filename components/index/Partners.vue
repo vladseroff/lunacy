@@ -3,13 +3,17 @@
     LayoutContainer
         .index-partner__top где купить
         .index-partner__body
-            .index-partner__box
+            .index-partner__box(
+                @click="clickOzon"
+            )
                 .index-partner__img
                     img(
                         src="/images/index/ozon.svg"
                     )
                 .index-partner__text Официальный партнер
-            .index-partner__box
+            .index-partner__box(
+                @click="clickMvideo"
+            )
                 .index-partner__img
                     img(
                         src="/images/index/mvideo.svg"
@@ -17,9 +21,17 @@
                 .index-partner__text Официальный партнер
 </template>
 
-<script>
-export default {
-    
+<script setup>
+const { reachGoal } = useYandexMetrika();
+
+const clickMvideo = () => {
+    reachGoal('click-mvideo')
+    window.open('https://www.mvideo.ru/promo/novinka-lunacy', '_blank') 
+}
+
+const clickOzon = () => {
+    reachGoal('click-ozon')
+    window.open('https://www.ozon.ru/highlight/lunacy-1251855/', '_blank')
 }
 </script>
 

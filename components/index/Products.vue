@@ -2,9 +2,13 @@
 .index-products
     LayoutContainer
         .index-products__top
-            .index-products__button.loud
+            nuxt-link.index-products__button.loud(
+                :to="{name: 'night'}"
+            )
                 span lunacy night
-            .index-products__button.night
+            nuxt-link.index-products__button.night(
+                :to="{name: 'loud'}"
+            )
                 span 
                     em lun
                     |acy loud
@@ -104,6 +108,8 @@ export default {
         display: flex;
         align-items: center;
         height: 60px;
+        text-decoration: none;
+        color: #B6B6B6;
         $button: &;
         &:before {
             content: '';
@@ -114,7 +120,9 @@ export default {
             border-radius: 50%;
             position: absolute;
             top: 50%;
+            z-index: 5;
             margin-top: -30px;
+            mix-blend-mode: exclusion;
         }
         span {
             position: relative;
@@ -126,6 +134,7 @@ export default {
         &.loud {
             &:before {
                 right: -16px;
+                // z-index: 1;
             }
             #{$button} {
                 span {
@@ -135,7 +144,7 @@ export default {
         }
         &.night {
             em {
-                color: #000;
+                // color: #000;
             }
             &:before {
                 left: -26px;

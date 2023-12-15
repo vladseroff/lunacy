@@ -36,7 +36,19 @@
             :desc="soundInterface.desc"
             :specs="soundInterface.specs"
         )
+        HeadphonesMicrophone(
+            :text="microphone.text"
+            :desc="microphone.desc"
+            :image="microphone.image"
+        )
         IndexPartners
+        HeadphonesSpecs(
+            :title="specs.title"
+            :data="specs.data"
+        )
+        BaseDevices(
+            :data="devices.data"
+        )
     BaseFooter
 </template>
 
@@ -48,12 +60,121 @@ import img4 from '~/assets/images/loud/img4.png'
 import img5 from '~/assets/images/loud/img5.jpg'
 import img6 from '~/assets/images/loud/img6.png'
 import img7 from '~/assets/images/loud/img7.png'
+import img8 from '~/assets/images/loud/img8.png'
+import img9 from '~/assets/images/loud/img9.png'
+import img10 from '~/assets/images/loud/img10.png'
 
 setTimeout(() => {
     if (process.cleint) {
         window.scrollTo(0, 0)
     }
 }, 1)
+
+const devices = ref({
+    data: [{
+        name: [
+            'lunacy',
+            'night'
+        ],
+        route: {
+            name: 'night'
+        },
+        image: img9,
+    },{
+        name: [
+            'lunacy',
+            'in space'
+        ],
+        image: img10,
+    }]
+})
+
+const specs = ref({
+    title: [
+        'полные',
+        'технические характеристики',
+        'для самых душных'
+    ],
+    data: [{
+        category: 'Модель',
+        model: 'LLHP01',
+    },{
+        category: 'Динамик',
+        specs: [{
+            name: 'Диаметр',
+            description: 'Ф50 мм',
+        },{
+            name: 'Мощность',
+            description: '20 мВ',
+        },{
+            name: 'Чувствительность',
+            description: '99 ± 3Дб на 1 кГц',
+        },{
+            name: 'Сопротивление',
+            description: '64±15% Ом',
+        },{
+            name: 'Частотный диапазон',
+            description: '20 Гц - 20.000 Гц',
+        }]
+    },{
+        category: 'Микрофон',
+        specs: [{
+            name: 'Размеры микрофона',
+            description: 'Ф6.0*2.7 мм',
+        },{
+            name: 'Чувствительность',
+            description: '-42±3 Дб на 1 кГц',
+        },{
+            name: 'Сопротивление',
+            description: '2.2 кОм',
+        },{
+            name: 'Частотный диапазон',
+            description: '100 Гц - 10.000 Гц',
+        }]
+    },{
+        category: 'Другое',
+        specs: [{
+            name: 'Тип подключения',
+            description: 'Беспроводные',
+        },{
+            name: 'Вес',
+            description: 'Около 300г (без кабеля)',
+        },{
+            name: 'Частотный диапазон',
+            description: '20 Гц - 20.000 Гц',
+        },{
+            name: 'Питание',
+            description: '20 Вт',
+        },{
+            name: 'Продолжительность работы',
+            description: 'до 30 часов',
+        },{
+            name: 'Время зарядки',
+            description: '3 часа',
+        },{
+            name: 'Кабель зарядки',
+            description: 'USB 1.8 м',
+        }]
+    },{
+        category: 'Совместимость',
+        description: 'Только по проводу',
+        special: [[
+            'pc',
+            'mac'
+        ],[
+            'xbox*',
+        ],[
+            'nintendo switch',
+        ],[
+            'ps 5*',
+        ],[
+            'ps 4*',
+        ],[
+            'планшеты',
+            'телефоны',
+        ]]
+    }]
+})
 
 const welcome = ref({
     desc: 'Громче.',
@@ -94,7 +215,7 @@ const description = ref({
         'с большинством',
         'устройств на рынке,',
         'включая мобильные телефоны,',
-        'игровые консоли и настольные ПК.'
+        'игровые консоли и настольные пк.'
     ],
     desc: [
         'бескомпромиссный дизайн',
@@ -149,6 +270,26 @@ const soundInterface = ref({
         title: 'Время зарядки',
         desc: '[ 3 часа ]'
     }]
+})
+const microphone = ref({
+    text: [
+        'качественный микрофон,',
+        'который можно снять,',
+        'чтобы не выглядеть',
+        'странно',
+    ],
+    desc: [
+        [
+            'Мы поставили увеличенный микрофон',
+            'с японским полевым транзистором,'
+        ],
+        [
+            'так что каждый хруст твоих чипсов',
+            'превратится в ASMR-контент для',
+            'всех в дискорде.'
+        ]
+    ],
+    image: img8
 })
 </script>
 

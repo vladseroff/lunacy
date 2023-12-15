@@ -102,7 +102,6 @@ export default defineNuxtPlugin(nuxtApp => {
         }
     })
     const gsapAnimate = (element, trigger, bind, delay, duration) => {
-        console.log('anim');
         const options = {
             scrollTrigger: {
                 trigger: bind.value.trigger || trigger,
@@ -117,7 +116,7 @@ export default defineNuxtPlugin(nuxtApp => {
         }
         gsap.fromTo(element, {
             ...options,
-            y: 50,
+            y: 15,
             opacity: 0,
         },{
             ...options,

@@ -245,6 +245,10 @@ onMounted(() => {
         flex: none;
         z-index: 6;
         position: relative;
+        mix-blend-mode: exclusion;
+        &:nth-child(1) {
+            mix-blend-mode: normal;
+        }
         &:before {
             content: '';
             display: block;

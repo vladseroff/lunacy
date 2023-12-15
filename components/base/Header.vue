@@ -2,7 +2,9 @@
 header.header
     LayoutContainer
         .header__wrapper
-            .header__logo
+            nuxt-link.header__logo(
+                to="/"
+            )
                 img(
                     src="/images/logo-sm.svg"
                 )
@@ -63,6 +65,9 @@ header.header
             // font-size: 12px;
             // text-transform: uppercase;
         }
+    }
+    &__logo {
+        width: 40px;
     }
     &__nav {
         flex: none;
