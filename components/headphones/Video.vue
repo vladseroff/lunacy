@@ -12,7 +12,7 @@
                         )
                     .headphones-video__preview-play
                         img(
-                            src="/images/loud/play.svg"
+                            src="~/assets/images/loud/play.svg"
                         )
 </template>
 

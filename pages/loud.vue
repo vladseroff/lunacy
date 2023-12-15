@@ -41,6 +41,14 @@
 </template>
 
 <script setup>
+import img1 from '~/assets/images/loud/img1.png'
+import img2 from '~/assets/images/loud/img2.png'
+import img3 from '~/assets/images/loud/img3.png'
+import img4 from '~/assets/images/loud/img4.png'
+import img5 from '~/assets/images/loud/img5.jpg'
+import img6 from '~/assets/images/loud/img6.png'
+import img7 from '~/assets/images/loud/img7.png'
+
 setTimeout(() => {
     if (process.cleint) {
         window.scrollTo(0, 0)
@@ -52,9 +60,9 @@ const welcome = ref({
     title: 'Еще громче.',
     text: '( lunacy loud)',
     images: [
-        './images/loud/img1.png',
-        './images/loud/img2.png',
-        './images/loud/img3.png',
+        img1,
+        img2,
+        img3,
     ]
 })
 const about = ref({
@@ -78,7 +86,7 @@ const about = ref({
 const video = ref({
     text: 'бренд Славы Бустера',
     title: '( Lunacy Loud )',
-    image: './images/loud/img5.jpg'
+    image: img5
 })
 const description = ref({
     text: [
@@ -95,7 +103,7 @@ const description = ref({
 })
 const productSpec = ref({
     title: 'чистый звук в играх',
-    image: './images/loud/img6.png',
+    image: img6,
     name: 'lunacy loud',
     price: '11 990 ₽',
     text: [
@@ -127,7 +135,7 @@ const soundInterface = ref({
         'голосом Бустера, когда',
         'переключаешь режимы'
     ],
-    image: './images/loud/img7.png',
+    image: img7,
     specs: [{
         title: 'Кабель зарядки',
         desc: '[ USB 1.8 м ]'
