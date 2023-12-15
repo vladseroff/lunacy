@@ -17,7 +17,7 @@
             //- )
         .index-welcome__text(
             v-word-to-span="'игровые девайсы'"
-            v-text-char-anim="{trigger: '.index-welcome', startDelay: 3, duration: .5}"
+            v-text-char-anim="{trigger: '.index-welcome', startDelay: .9, duration: .5}"
         ) 
         UiButton.index-welcome__btn купить
 </template>
@@ -62,6 +62,7 @@ onMounted(() => {
         })
         .to(`.index-welcome__btn`, {
             opacity: 1,
+            delay: 1,
             ease: "ease"
         })
     $gsap.timeline({

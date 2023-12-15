@@ -83,9 +83,10 @@ const scrollToTop = () => {
     &__mailer {
         color: #B6B6B6;
         text-decoration: none;
-        font-size: 162px;
+        font-size: 174px;
         font-weight: 500;
         white-space: nowrap;
+        letter-spacing: -0.04em;
     }
     &__email {
         &-text {

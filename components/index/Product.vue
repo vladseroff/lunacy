@@ -24,27 +24,39 @@
                         v-word-to-span="'bluetooth'"
                         v-text-char-anim="{startDelay: 1.3}"
                     ) 
-                    .index-product__desc совместимы с 
-                        br 
-                        |большинством устройств на 
-                        br 
-                        |рынке, включая мобильные 
-                        br 
-                        |телефоны, игровые консоли и 
-                        br 
-                        |настольные ПК.
+                    .index-product__desc
+                        .index-product__desc-line(
+                            v-word-to-span="'совместимы с'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'большинством устройств на'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'рынке, включая мобильные'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'телефоны, игровые консоли и'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'настольные ПК.'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
                 .index-product__images
                     .index-product__title ( lunacy loud )
                     .index-product__images-wrapper
-                        .index-product__img
+                        .index-product__img.index-product__img1
                             img(
                                 src="/images/index/img1.png"
                             )
-                        .index-product__img
+                        .index-product__img.index-product__img2
                             img(
                                 src="/images/index/img2.png"
                             )
-                        .index-product__img
+                        .index-product__img.index-product__img3
                             img(
                                 src="/images/index/img3.png"
                             )
@@ -56,18 +68,54 @@
                 ) подробнее
 </template>
 
-<script>
-export default {
-    
-}
+<script setup>
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.index-product`,
+            scrub: true,
+            start: "-=100%",
+            end: "+=80%",
+        },
+    })
+        .from(`.index-product__img2`, {
+            x: 0,
+            ease: "ease"
+        })
+        .to(`.index-product__img2`, {
+            x: 250,
+            ease: "ease"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.index-product`,
+            scrub: true,
+            start: "-=100%",
+            end: "+=80%",
+        },
+    })
+        .from(`.index-product__img3`, {
+            x: 0,
+            ease: "ease"
+        })
+        .to(`.index-product__img3`, {
+            x: 430,
+            ease: "ease"
+        })
+})
 </script>
 
 <style lang="scss" scoped>
 .index-product {
+    // height: 2000px;
     .container {
         // display: flex;
         // flex-direction: column;
         // align-items: center;
+        // position: sticky;
+        // top: 100px;
         &:before {
             content: '';
             display: block;
@@ -120,9 +168,14 @@ export default {
         color: #686868;
         font-size: 20px;
         font-weight: 500;
-        text-indent: 100px;
+        // text-indent: 100px;
         padding-left: 50px;
         margin-top: 20px;
+        &-line {
+            &:nth-child(1) {
+                padding-left: 100px;
+            }
+        }
     }
     &__images {
         max-width: 459px;
@@ -167,7 +220,7 @@ export default {
         }
         &:nth-child(2) {
             z-index: 3;
-            right: -250px;
+            right: 0;
             transform: scale(.6);
             background: #494949;
             padding: 30px 20px 30px;
@@ -177,7 +230,7 @@ export default {
         }
         &:nth-child(3) {
             z-index: 2;
-            right: -430px;
+            right: 0;
             transform: scale(.4);
             background: #343434;
             padding: 30px 20px 30px;
@@ -202,6 +255,7 @@ export default {
         left: 0;
         width: 100%;
         z-index: 5;
+        letter-spacing: -0.06em;
     }
     &__box {
         flex: 1 1 1px;

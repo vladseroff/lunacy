@@ -41,6 +41,10 @@
                             span(
                                 v-for="specialItem of specialRow"
                             ) {{specialItem}}
+                    .headphones-specs__data-special(
+                        v-if="row.specialLonely"
+                    )
+                        .headphones-specs__data-special-text {{row.specialLonely}}
 </template>
 
 <script setup>
@@ -158,6 +162,19 @@ const props = defineProps({
             border: 1px dashed #686868;
             flex: 1 1 auto;
             padding: 20px;
+            &-text {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: -0.04em;
+                text-transform: lowercase;
+                color: #FFFFFF;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 250px;
+            }
             &-row {
                 display: flex;
                 &:not(:last-child) {

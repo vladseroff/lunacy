@@ -1,5 +1,5 @@
 <template lang="pug">
-.index-product
+.index-product.index-product-second
     LayoutContainer
         .index-product__container
             .index-product__wrapper
@@ -12,28 +12,52 @@
                             img(
                                 src="/images/index/img4.png"
                             )
-                        .index-product__img
+                        .index-product__img.index-product__img22
                             img(
                                 src="/images/index/img5.png"
                             )
-                        .index-product__img
+                        .index-product__img.index-product__img33
                             img(
                                 src="/images/index/img6.png"
                             )
                 .index-product__box
-                
-                    .index-product__text никаких лишних
-                    .index-product__text шумов, 
-                    .index-product__text только чистый звук
-                    .index-product__text динамиков и
-                    .index-product__text микрофона
-                    .index-product__desc В погоне за идеальным 
-                        br 
-                        |дизайном мы не забыли о 
-                        br 
-                        |качестве, надежности и 
-                        br 
-                        |технологичности.
+                    .index-product__text(
+                        v-word-to-span="'никаких лишних'"
+                        v-text-char-anim="{}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'шумов, '"
+                        v-text-char-anim="{startDelay: .4}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'только чистый звук'"
+                        v-text-char-anim="{startDelay: .8}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'динамиков и'"
+                        v-text-char-anim="{startDelay: 1}"
+                    )
+                    .index-product__text(
+                        v-word-to-span="'микрофона'"
+                        v-text-char-anim="{startDelay: 1.3}"
+                    )
+                    .index-product__desc
+                        .index-product__desc-line(
+                            v-word-to-span="'В погоне за идеальным'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'дизайном мы не забыли о'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'качестве, надежности и'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
+                        .index-product__desc-line(
+                            v-word-to-span="'технологичности.'"
+                            v-text-char-anim="{startDelay: .4}"
+                        )
             .index-product__bottom
                 UiButton купить
                 nuxt-link(
@@ -41,10 +65,43 @@
                 ) подробнее
 </template>
 
-<script>
-export default {
-    
-}
+<script setup>
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.index-product-second`,
+            scrub: true,
+            start: "-=100%",
+            end: "+=80%",
+        },
+    })
+        .from(`.index-product__img22`, {
+            x: 0,
+            ease: "ease"
+        })
+        .to(`.index-product__img22`, {
+            x: -250,
+            ease: "ease"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.index-product-second`,
+            scrub: true,
+            start: "-=100%",
+            end: "+=80%",
+        },
+    })
+        .from(`.index-product__img33`, {
+            x: 0,
+            ease: "ease"
+        })
+        .to(`.index-product__img33`, {
+            x: -430,
+            ease: "ease"
+        })
+})
 </script>
 
 <style lang="scss" scoped>
@@ -93,22 +150,26 @@ export default {
         white-space: nowrap;
         line-height: 90%;
         &:nth-child(3) {
-            text-indent: 50px;
+            padding-left: 50px;
         }
         &:nth-child(4) {
-            text-indent: 25px;
+            padding-left: 25px;
         }
         &:nth-child(5) {
-            text-indent: 80px;
+            padding-left: 80px;
         }
     }
     &__desc {
         color: #686868;
         font-size: 20px;
         font-weight: 500;
-        text-indent: 56px;
         padding-left: 25px;
         margin-top: 20px;
+        &-line {
+            &:nth-child(1) {
+                padding-left: 56px;
+            }
+        }
     }
     &__images {
         max-width: 459px;
@@ -153,7 +214,7 @@ export default {
         }
         &:nth-child(2) {
             z-index: 3;
-            left: -250px;
+            left: 0;
             transform: scale(.6);
             background: #494949;
             padding: 30px 20px 30px;
@@ -163,7 +224,7 @@ export default {
         }
         &:nth-child(3) {
             z-index: 2;
-            left: -430px;
+            left: 0;
             transform: scale(.4);
             background: #343434;
             padding: 30px 20px 30px;
@@ -188,6 +249,7 @@ export default {
         left: 0;
         width: 100%;
         z-index: 5;
+        letter-spacing: -0.06em;
     }
     &__box {
         flex: 1 1 1px;
