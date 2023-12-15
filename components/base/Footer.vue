@@ -2,17 +2,17 @@
 footer.footer
     LayoutContainer
         .footer__top
-            .footer__email
-                .footer__email-text подпишитесь на новостную 
-                    br 
-                    |рассылку, чтобы быть в 
-                    br 
-                    |курсе последних релизов
-                .footer__email-input
-                    input(
-                        placeholder="почта"
-                    )
-                    .footer__email-btn подписаться
+            //- .footer__email
+            //-     .footer__email-text подпишитесь на новостную 
+            //-         br 
+            //-         |рассылку, чтобы быть в 
+            //-         br 
+            //-         |курсе последних релизов
+            //-     .footer__email-input
+            //-         input(
+            //-             placeholder="почта"
+            //-         )
+            //-         .footer__email-btn подписаться
             .footer__box
                 .footer__nav
                     a(href="https://t.me/lunacy_ru" target="_blank") telegram
@@ -54,10 +54,16 @@ const scrollToTop = () => {
     z-index: 100;
     &__top {
         display: flex;
+        justify-content: flex-end;
+    }
+    &__box {    
+        display: flex;
         justify-content: space-between;
+        max-width: 400px;
+        width: 100%;
     }
     &__mail {
-        margin: 60px 0;
+        margin: 10px 0 60px;
     }
     &__bottom {
         display: flex;

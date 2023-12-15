@@ -21,18 +21,19 @@
                                 src="/images/index/img6.png"
                             )
                 .index-product__box
+                
                     .index-product__text никаких лишних
                     .index-product__text шумов, 
                     .index-product__text только чистый звук
                     .index-product__text динамиков и
                     .index-product__text микрофона
-                    .index-product__desc в гонке за весом мы не 
+                    .index-product__desc В погоне за идеальным 
                         br 
-                        |бросили гонку за качеством, 
+                        |дизайном мы не забыли о 
                         br 
-                        |надежностью и 
+                        |качестве, надежности и 
                         br 
-                        |технологичностью.
+                        |технологичности.
             .index-product__bottom
                 UiButton купить
                 nuxt-link(

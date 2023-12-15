@@ -7,7 +7,11 @@
                 v-text-char-anim="{}"
             )
             .index-about__text-center(
-                v-word-to-span="'стоит Слава Бустер'"
+                v-word-to-span="'стоит'"
+                v-text-char-anim="{startDelay: .2}"
+            )
+            .index-about__text-center(
+                v-word-to-span="'Слава Бустер'"
                 v-text-char-anim="{startDelay: .2}"
             )
             .index-about__text-left(
@@ -98,10 +102,25 @@ const str1 = ref('у истоков LUNACY')
         flex-direction: column;
         align-items: center;
         font-weight: 500;
+        line-height: 90%;
         &-center {
             // overflow: hidden;
             max-width: 380px;
             width: 100%;
+            &:nth-child(2) {
+                padding-left: 230px;
+            }
+            &:nth-child(3) {
+                padding-left: 40px;
+                color: #E9E9E9
+            }
+            &_first {
+                .word {
+                    &:last-child {
+                        color: #E9E9E9;
+                    }
+                }
+            }
         }
         &-left {
             width: 100%;
@@ -114,7 +133,13 @@ const str1 = ref('у истоков LUNACY')
         width: 100%;
         padding-left: 70px;
         white-space: nowrap;
-        margin-top: 20px;
+        margin-top: 30px;
+        line-height: .93em;
+        &-text {
+            &:first-child {
+                padding-left: 70px;
+            }
+        }
     }
 }
 </style>

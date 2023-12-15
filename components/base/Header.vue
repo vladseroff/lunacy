@@ -34,7 +34,7 @@ header.header
 
 <style lang="scss" scoped>
 .header {
-    padding: 20px 0;
+    padding: 13px 0;
     position: fixed;
     top: 0;
     left: 0;

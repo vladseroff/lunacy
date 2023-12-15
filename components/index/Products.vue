@@ -161,13 +161,13 @@ export default {
         position: absolute;
         &:nth-child(1) {
             z-index: 2;
-            transform: translateX(-163px) translateY(12px);
+            transform: translateX(-252px) translateY(-110px);
             img {
                 max-width: 600px;
             }
         }
         &:nth-child(2) {
-            transform: translateX(97px) translateY(-123px);
+            transform: translateX(307px) translateY(-128px);
             img {
                 max-width: 600px;
             }
