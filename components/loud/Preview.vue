@@ -4,7 +4,7 @@
         .loud-preview__wrapper
             .loud-preview__img
                 img(
-                    src="images/loud/img4.png"
+                    src="./images/loud/img4.png"
                 )
             .loud-preview__title три режима подключения
             .loud-preview__specs

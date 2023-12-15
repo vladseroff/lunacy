@@ -52,9 +52,9 @@ const welcome = ref({
     title: 'Еще громче.',
     text: '( lunacy loud)',
     images: [
-        'images/loud/img1.png',
-        'images/loud/img2.png',
-        'images/loud/img3.png',
+        './images/loud/img1.png',
+        './images/loud/img2.png',
+        './images/loud/img3.png',
     ]
 })
 const about = ref({
@@ -78,7 +78,7 @@ const about = ref({
 const video = ref({
     text: 'бренд Славы Бустера',
     title: '( Lunacy Loud )',
-    image: 'images/loud/img5.jpg'
+    image: './images/loud/img5.jpg'
 })
 const description = ref({
     text: [
@@ -95,7 +95,7 @@ const description = ref({
 })
 const productSpec = ref({
     title: 'чистый звук в играх',
-    image: 'images/loud/img6.png',
+    image: './images/loud/img6.png',
     name: 'lunacy loud',
     price: '11 990 ₽',
     text: [
@@ -127,7 +127,7 @@ const soundInterface = ref({
         'голосом Бустера, когда',
         'переключаешь режимы'
     ],
-    image: 'images/loud/img7.png',
+    image: './images/loud/img7.png',
     specs: [{
         title: 'Кабель зарядки',
         desc: '[ USB 1.8 м ]'
