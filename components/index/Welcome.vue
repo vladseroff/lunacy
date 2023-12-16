@@ -10,14 +10,14 @@
             )
         .index-welcome__logo(
             v-word-to-span="'lunacy'"
-            v-text-char-anim="{trigger: '.index-welcome', startDelay: .5, duration: 1.2}"
+            v-text-char-anim="{trigger: '.index-welcome', startDelay: .5, duration: 1.5}"
         )
             //- img(
             //-     src="/images/index/lunacy.svg"
             //- )
         .index-welcome__text(
             v-word-to-span="'игровые девайсы'"
-            v-text-char-anim="{trigger: '.index-welcome', startDelay: .9, duration: .5}"
+            v-text-char-anim="{trigger: '.index-welcome', startDelay: .5, duration: .5}"
         ) 
         UiButton.index-welcome__btn(
             @click="scrollTo('index-partner')"

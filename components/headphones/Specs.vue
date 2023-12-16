@@ -12,9 +12,15 @@
                 v-for="row, i of data"
             )
                 .headphones-specs__data-wrapper
-                    .headphones-specs__data-num 0{{i + 1}}
+                    .headphones-specs__data-num(
+                        v-word-to-span
+                        v-text-char-anim="{duration: .2}"
+                    ) 0{{i + 1}}
                     .headphones-specs__data-category 
-                        span {{row.category}}
+                        span(
+                            v-word-to-span
+                            v-text-char-anim="{duration: .2}"
+                        ) {{row.category}}
                         span(
                             v-if="row.description"
                         ) 
@@ -23,6 +29,8 @@
                 .headphones-specs__data-wrapper
                     .headphones-specs__data-model(
                         v-if="row.model"
+                        v-word-to-span
+                        v-text-char-anim="{duration: .2}"
                     ) {{row.model}}
                     .headphones-specs__data-items(
                         v-if="row.specs"
@@ -30,8 +38,14 @@
                         .headphones-specs__data-item(
                             v-for="spec of row.specs"
                         )
-                            span {{spec.name}}
-                            span {{spec.description}}
+                            span(
+                                v-word-to-span
+                                v-text-char-anim="{duration: .2}"
+                            ) {{spec.name}}
+                            span(
+                                v-word-to-span
+                                v-text-char-anim="{duration: .2}"
+                            ) {{spec.description}}
                     .headphones-specs__data-special(
                         v-if="row.special"
                     )
@@ -40,11 +54,16 @@
                         )
                             span(
                                 v-for="specialItem of specialRow"
+                                v-word-to-span
+                                v-text-char-anim="{duration: .2}"
                             ) {{specialItem}}
                     .headphones-specs__data-special(
                         v-if="row.specialLonely"
                     )
-                        .headphones-specs__data-special-text {{row.specialLonely}}
+                        .headphones-specs__data-special-text(
+                            v-word-to-span
+                            v-text-char-anim="{duration: .2}"
+                        ) {{row.specialLonely}}
 </template>
 
 <script setup>

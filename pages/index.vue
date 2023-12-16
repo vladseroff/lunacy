@@ -3,12 +3,12 @@
     BaseHeader
     .app__container
         IndexWelcome
-        //- IndexAbout
-        //- IndexProduct
-        //- IndexProductSecond
-        //- IndexProducts
-        //- IndexText
-        //- IndexPartners
+        IndexAbout
+        IndexProduct
+        IndexProductSecond
+        IndexProducts
+        IndexText
+        IndexPartners
     BaseFooter
 </template>
 

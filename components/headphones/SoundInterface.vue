@@ -25,8 +25,14 @@
                 v-for="spec of specs"
             )
                 .headphones-sound-interface__spec-common
-                    .headphones-sound-interface__spec-title {{spec.title}}
-                    .headphones-sound-interface__spec-desc {{spec.desc}}
+                    .headphones-sound-interface__spec-title(
+                        v-word-to-span
+                        v-text-char-anim="{duration: .2}"
+                    ) {{spec.title}}
+                    .headphones-sound-interface__spec-desc(
+                        v-word-to-span
+                        v-text-char-anim="{duration: .2}"
+                    ) {{spec.desc}}
         .headphones-sound-interface__lines
             .headphones-sound-interface__line(
                 v-for="spec, i of specs"
@@ -35,8 +41,14 @@
                     :class="[`headphones-sound-interface__line_${i}`]"
                 )
                     .headphones-sound-interface__spec-common
-                        .headphones-sound-interface__spec-title {{spec.title}}
-                        .headphones-sound-interface__spec-desc {{spec.desc}}
+                        .headphones-sound-interface__spec-title(
+                            v-word-to-span
+                            v-text-char-anim="{duration: .2}"
+                        ) {{spec.title}}
+                        .headphones-sound-interface__spec-desc(
+                            v-word-to-span
+                            v-text-char-anim="{duration: .2}"
+                        ) {{spec.desc}}
 </template>
 
 <script setup>

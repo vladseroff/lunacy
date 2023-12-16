@@ -2,14 +2,24 @@
 .loud-welcome
     LayoutContainer
         .loud-welcome__wrapper
-            .loud-welcome__desc {{desc}}
-            .loud-welcome__title {{title}}
-            .loud-welcome__text {{text}}
+            .loud-welcome__desc(
+                v-word-to-span
+                v-text-char-anim="{trigger: '.loud-welcome', duration: .8}"
+            ) {{desc}}
+            .loud-welcome__title(
+                v-word-to-span
+                v-text-char-anim="{trigger: '.loud-welcome', startDelay: .5, duration: .7}"
+            ) {{title}}
+            .loud-welcome__text(
+                v-word-to-span
+                v-text-char-anim="{trigger: '.loud-welcome', startDelay: 1.3, duration: .7}"
+            ) {{text}}
             .loud-welcome__images
                 .loud-welcome__img(
-                    v-for="image of images"
+                    v-for="image, i of images"
                 )
                     img(
+                        :id="`loud-welcome-${i}`"
                         :src="image"
                     )
 </template>
@@ -32,6 +42,37 @@ const props = defineProps({
             type: Array,
             default: () => []
         }
+})
+
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    props.images.forEach((el, i) => {
+        const element = document.getElementById(`loud-welcome-${i}`)
+        let height = 308
+        let delay = 1.5
+        if (i === 1) {
+            height = 388
+            delay = 1
+        }
+        $gsap.timeline({
+            scrollTrigger: {
+                trigger: `.loud-welcome`,
+                start: "-=100%",
+                end: "bottom 100%",
+            },
+        })
+            .from(element, {
+                height: 0,
+                ease: "ease"
+            })
+            .to(element, {
+                height: height,
+                delay: delay,
+                ease: "ease"
+            })
+    })
+    
 })
 </script>
 
@@ -80,9 +121,12 @@ const props = defineProps({
         width: 100%;
         flex: 1 1 260px;
         margin: 0 5px;
+        height: 389px;
         img {
             display: block;
             width: 100%;
+            height: 0px;
+            object-fit: cover;
         }
         &:nth-child(2) {
             max-width: 360px;

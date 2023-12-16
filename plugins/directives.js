@@ -117,7 +117,7 @@ export default defineNuxtPlugin(nuxtApp => {
         }
         gsap.fromTo(element, {
             ...options,
-            y: 15,
+            y: 25,
             opacity: 0,
         },{
             ...options,
@@ -127,17 +127,29 @@ export default defineNuxtPlugin(nuxtApp => {
     }
     nuxtApp.vueApp.directive('text-char-anim', {
         mounted: (el, bind) => {
-            [].forEach.call(el.children, (span, i) => {
-                [].forEach.call(span.children, (char, index) => {
-                    let delay = bind.value.delay || 0.04;
-                    if (bind.value.startDelay) {
-                        delay = delay * (index + 1) + bind.value.startDelay * ((i + 1) * (bind.value.duration || .22))
-                    } else {
-                        delay = (index + 1) * delay * ((i + 1) * (bind.value.duration || .22))
-                    }
-                    gsapAnimate(char, el, bind, delay, bind.value.duration || .22)
-                })
+            const charsHTMLCollection = _.flattenDeep(Array.prototype.slice.call(el.children).map(elem => Array.prototype.slice.call(elem.children).map(child => child)))
+            charsHTMLCollection.forEach((char, index) => {
+                let delay = bind.value.delay || 0.04;
+                let duration = bind.value.duration || 0.22
+                if (bind.value.startDelay) {
+                    delay = (bind.value.startDelay + delay * index)
+                } else {
+                    delay = delay * index
+                }
+                gsapAnimate(char, el, bind, delay, duration)
             })
+            // [].forEach.call(charsHTMLCollection, (char, index) => {
+            //     let delay = bind.value.delay || 0.04;
+            //     let duration = bind.value.duration || 0.22
+            //     if (bind.value.startDelay) {
+            //         // delay = delay * (index + 1) + bind.value.startDelay * ((i + 1) * (bind.value.duration || .22))
+            //         delay = (bind.value.startDelay + delay * index)
+            //     } else {
+            //         delay = (index + 1) * delay * duration
+            //     }
+            //     console.log(delay, char.innerHTML);
+            //     gsapAnimate(char, el, bind, delay, duration)
+            // })
         }
     })
     nuxtApp.vueApp.directive('text-span-anim', {

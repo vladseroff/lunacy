@@ -6,7 +6,7 @@
                 .headphones-about__text-line(
                     v-for="line of text"
                     v-word-to-span
-                    v-text-char-anim="{duration: .6}"
+                    v-text-char-anim="{duration: .4}"
                 ) {{line}}
             .headphones-about__desc
                 .headphones-about__desc-wrapper(
@@ -15,7 +15,7 @@
                     .headphones-about__desc-line(
                         v-for="line of descBlock"
                         v-word-to-span
-                        v-text-char-anim="{duration: .3}"
+                        v-text-char-anim="{startDelay: .5, duration: .4}"
                     ) {{line}}
 </template>
 

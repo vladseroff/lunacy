@@ -7,7 +7,10 @@
                     :src="image"
                 )
             .headphones-spec__common
-                .headphones-spec__title {{title}}
+                .headphones-spec__title(
+                    v-word-to-span
+                    v-text-char-anim="{duration: .2}"
+                ) {{title}}
                 .headphones-spec__text
                     .headphones-spec__text-block(
                         v-for="block of text"

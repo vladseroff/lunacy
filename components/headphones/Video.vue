@@ -2,8 +2,14 @@
 .headphones-video
     LayoutContainer
         .headphones-video__wrapper
-            .headphones-video__text {{text}}
-            .headphones-video__title {{title}}
+            .headphones-video__text(
+                v-word-to-span
+                v-text-char-anim="{trigger: '.headphones-video', duration: .2}"
+            ) {{text}}
+            .headphones-video__title(
+                v-word-to-span
+                v-text-char-anim="{trigger: '.headphones-video', duration: .4}"
+            ) {{title}}
             .headphones-video__box
                 .headphones-video__preview
                     .headphones-video__preview-img
@@ -30,6 +36,29 @@ const props = defineProps({
         type: String,
         default: ''
     }
+})
+
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    // $gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: `.headphones-video`,
+    //         start: "-=100%",
+    //         end: "bottom 100%",
+    //     },
+    // })
+    //     .from('.headphones-video__box', {
+    //         opacity: 0,
+    //         y: 20,
+    //         delay: .8,
+    //         ease: "ease"
+    //     })
+    //     .to('.headphones-video__box', {
+    //         opacity: 1,
+    //         y: 0,
+    //         ease: "ease"
+    //     })
 })
 </script>
 
