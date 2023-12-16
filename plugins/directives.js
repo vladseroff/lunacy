@@ -155,9 +155,11 @@ export default defineNuxtPlugin(nuxtApp => {
     nuxtApp.hook('page:finish', () => {
         const loadingElement = document.querySelector('#loading')
         const nuxtPage = document.querySelector('#NuxtPage')
+        const header = document.querySelector('.header')
         setTimeout(() => {
             document.getElementsByTagName( 'html' )[0].classList.add('scroll')
             nuxtPage.classList.remove('loading')
+            header.classList.remove('hidden')
             if (loadingElement) {
                 loadingElement.classList.add('hidden')
             }

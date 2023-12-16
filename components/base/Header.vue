@@ -1,5 +1,5 @@
 <template lang="pug">
-header.header
+header.header.hidden
     LayoutContainer
         .header__wrapper
             a.header__logo(
@@ -42,10 +42,15 @@ header.header
     left: 0;
     right: 0;
     z-index: 101;
+    transform: none;
+    transition: 1.5s ease;
     // display: none;
     // @media screen and (min-width: 1420px) {
     //     display: block;
     // }
+    &.hidden {
+        transform: translateY(-100%);
+    }
     .container {
         display: flex;
         justify-content: center;
