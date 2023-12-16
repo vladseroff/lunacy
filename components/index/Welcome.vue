@@ -19,7 +19,9 @@
             v-word-to-span="'игровые девайсы'"
             v-text-char-anim="{trigger: '.index-welcome', startDelay: .9, duration: .5}"
         ) 
-        UiButton.index-welcome__btn купить
+        UiButton.index-welcome__btn(
+            @click="scrollTo('index-partner')"
+        ) купить
 </template>
 
 <script setup>
@@ -41,14 +43,6 @@ onMounted(() => {
             height: 620,
             ease: "ease"
         })
-        // .from(`.index-welcome__logo`, {
-        //     opacity: 0,
-        //     ease: "ease"
-        // })
-        // .to(`.index-welcome__logo`, {
-        //     opacity: 1,
-        //     ease: "ease"
-        // })
     $gsap.timeline({
         scrollTrigger: {
             trigger: `.index-welcome`,
@@ -68,9 +62,9 @@ onMounted(() => {
     $gsap.timeline({
         scrollTrigger: {
             trigger: `.index-welcome`,
-            scrub: true,
             start: "-=0%",
             end: "+=450%",
+            scrub: 2
         },
     })
         .from(`.index-welcome__img`, {
@@ -84,7 +78,7 @@ onMounted(() => {
     $gsap.timeline({
         scrollTrigger: {
             trigger: `.index-welcome`,
-            scrub: true,
+            scrub: 2,
             start: "-=60%",
             end: "bottom 100%",
         },

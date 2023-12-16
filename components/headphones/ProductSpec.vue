@@ -33,7 +33,9 @@
                         v-text-char-anim="{duration: .3}"
                     ) {{price}}
                 .headphones-spec__button
-                    UiButton купить
+                    UiButton(
+                        @click="scrollTo('index-partner')"
+                    ) купить
 </template>
 
 <script setup>

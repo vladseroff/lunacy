@@ -23,7 +23,7 @@ header.header.hidden
             ) поддержка
         .header__wrapper
             UiButton(
-                href="#buy"
+                @click="scrollTo('index-partner')"
             ) купить
             //- .header__lang
             //-     .header__lang-item.disabled Ru

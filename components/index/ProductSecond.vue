@@ -59,7 +59,9 @@
                             v-text-char-anim="{startDelay: .4}"
                         )
             .index-product__bottom
-                UiButton купить
+                UiButton(
+                    @click="scrollTo('index-partner')"
+                ) купить
                 a(
                     href="#"
                 ) подробнее
@@ -72,7 +74,7 @@ onMounted(() => {
     $gsap.timeline({
         scrollTrigger: {
             trigger: `.index-product-second`,
-            scrub: true,
+            scrub: 0.5,
             start: "-=100%",
             end: "+=80%",
         },
@@ -88,7 +90,7 @@ onMounted(() => {
     $gsap.timeline({
         scrollTrigger: {
             trigger: `.index-product-second`,
-            scrub: true,
+            scrub: 0.5,
             start: "-=100%",
             end: "+=80%",
         },
