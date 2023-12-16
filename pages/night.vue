@@ -76,9 +76,7 @@ const devices = ref({
             'lunacy',
             'loud'
         ],
-        route: {
-            name: 'loud'
-        },
+        route: 'loud',
         image: img9,
     },{
         name: [

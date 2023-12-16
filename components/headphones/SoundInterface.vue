@@ -1,5 +1,5 @@
 <template lang="pug">
-.headphones-sound-interface
+.headphones-sound-interface#headphones-sound-interface
     LayoutContainer
         .headphones-sound-interface__wrapper
             .headphones-sound-interface__title(
@@ -20,7 +20,7 @@
                     img(
                         :src="image"
                     )
-        .headphones-sound-interface__specs
+        .headphones-sound-interface__specs#headphones-sound-interface__specs
             .headphones-sound-interface__spec(
                 v-for="spec of specs"
             )
@@ -61,132 +61,119 @@ const props = defineProps({
     }
 })
 onMounted(() => {
-    $gsap.fromTo(`.headphones-sound-interface__line_0`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=150%",
-            end: "+=50%",
-        },
-        width: '0%',
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=150%",
-            end: "+=50%",
-        }, 
-        width: '68%',
-        ease: "none"
-    })
-    $gsap.fromTo(`.headphones-sound-interface__line_1`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=120%",
-            end: "+=60%",
-        },
-        width: '0%',
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=120%",
-            end: "+=60%",
-        }, 
-        width: '68%',
-        ease: "none"
-    })
-    $gsap.fromTo(`.headphones-sound-interface__line_2`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=90%",
-            end: "+=70%",
-        },
-        width: '0%',
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=90%",
-            end: "+=70%",
-        }, 
-        width: '68%',
-        ease: "none"
-    })
-    $gsap.fromTo(`.headphones-sound-interface__line_3`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=30%",
-            end: "+=80%",
-        },
-        width: '0%',
-        ease: "none"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface__specs`,
-            scrub: true,
-            start: "-=30%",
-            end: "+=80%",
-        }, 
-        width: '68%',
-        ease: "none"
-    })
-    $gsap.fromTo(`.headphones-sound-interface__img_2`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface`,
-            start: "-=30%",
-            end: "+=80%",
-        },
-        left: '0px',
-        ease: "ease"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface`,
-            start: "-=30%",
-            end: "+=80%",
-        }, 
-        left: '110px',
-        ease: "ease"
-    })
-    $gsap.fromTo(`.headphones-sound-interface__img_3`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface`,
-            start: "-=30%",
-            end: "+=80%",
-        },
-        left: '0px',
-        ease: "ease"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface`,
-            start: "-=30%",
-            end: "+=80%",
-        }, 
-        left: '198px',
-        ease: "ease"
-    })
-    $gsap.fromTo(`.headphones-sound-interface__img_4`, {
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface`,
-            start: "-=30%",
-            end: "+=80%",
-        },
-        left: '0px',
-        ease: "ease"
-    },{
-        scrollTrigger: {
-            trigger: `.headphones-sound-interface`,
-            start: "-=30%",
-            end: "+=80%",
-        }, 
-        left: '257px',
-        ease: "ease"
+    nextTick(() => {
+        $gsap.timeline({
+            scrollTrigger: {
+                trigger: `#headphones-sound-interface`,
+                end: "+=120%",
+                scrub: true,
+                // markers: true
+            }
+        })
+            .from('.headphones-sound-interface__line_0', {
+                width: '0%',
+                ease: "ease"
+            })
+            .to('.headphones-sound-interface__line_0', {
+                width: '68%',
+                ease: "ease"
+            })
+        $gsap.timeline({
+            scrollTrigger: {
+                trigger: `#headphones-sound-interface`,
+                end: "+=140%",
+                scrub: true,
+            }
+        })
+            .from('.headphones-sound-interface__line_1', {
+                width: '0%',
+                ease: "ease"
+            })
+            .to('.headphones-sound-interface__line_1', {
+                width: '68%',
+                ease: "ease"
+            })
+        $gsap.timeline({
+            scrollTrigger: {
+                trigger: `#headphones-sound-interface`,
+                end: "+=160%",
+                scrub: true,
+            }
+        })
+            .from('.headphones-sound-interface__line_2', {
+                width: '0%',
+                ease: "ease"
+            })
+            .to('.headphones-sound-interface__line_2', {
+                width: '68%',
+                ease: "ease"
+            })
+        $gsap.timeline({
+            scrollTrigger: {
+                trigger: `#headphones-sound-interface`,
+                end: "+=180%",
+                scrub: true,
+            }
+        })
+            .from('.headphones-sound-interface__line_3', {
+                width: '0%',
+                ease: "ease"
+            })
+            .to('.headphones-sound-interface__line_3', {
+                width: '68%',
+                ease: "ease"
+            })
+        $gsap.fromTo(`.headphones-sound-interface__img_2`, {
+            scrollTrigger: {
+                trigger: `.headphones-sound-interface`,
+                start: "-=30%",
+                end: "+=80%",
+            },
+            left: '0px',
+            ease: "ease"
+        },{
+            scrollTrigger: {
+                trigger: `.headphones-sound-interface`,
+                start: "-=30%",
+                end: "+=80%",
+            }, 
+            left: '110px',
+            ease: "ease"
+        })
+        $gsap.fromTo(`.headphones-sound-interface__img_3`, {
+            scrollTrigger: {
+                trigger: `.headphones-sound-interface`,
+                start: "-=30%",
+                end: "+=80%",
+            },
+            left: '0px',
+            ease: "ease"
+        },{
+            scrollTrigger: {
+                trigger: `.headphones-sound-interface`,
+                start: "-=30%",
+                end: "+=80%",
+            }, 
+            left: '198px',
+            ease: "ease"
+        })
+        $gsap.fromTo(`.headphones-sound-interface__img_4`, {
+            scrollTrigger: {
+                trigger: `.headphones-sound-interface`,
+                start: "-=30%",
+                end: "+=80%",
+            },
+            left: '0px',
+            ease: "ease"
+        },{
+            scrollTrigger: {
+                trigger: `.headphones-sound-interface`,
+                start: "-=30%",
+                end: "+=80%",
+            }, 
+            left: '257px',
+            ease: "ease"
+        })
     })
 })
 </script>
@@ -352,7 +339,7 @@ onMounted(() => {
             background: #979B9E;
             right: 0;
             top: 0;
-            width: 0%;
+            width: 0;
             overflow: hidden;
         }
     }

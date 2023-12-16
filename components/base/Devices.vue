@@ -3,9 +3,9 @@
     LayoutContainer
         .devices__top другие девайсы
         .devices__wrapper
-            nuxt-link.devices__item(
+            a.devices__item(
                 v-for="item of data"
-                :to="item.route || '#'"
+                :href="item.route || '#'"
                 :class="{disabled: !item.route}"
             )
                 .devices__item-name
@@ -71,6 +71,7 @@ const props = defineProps({
         color: #fff;
         $item: &;
         &.disabled {
+            pointer-events: none;
             #{$item} {
                 &-img {
                     opacity: .4;

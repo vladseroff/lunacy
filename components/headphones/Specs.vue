@@ -4,9 +4,9 @@
         .headphones-specs__title
             .headphones-specs__title-line(
                 v-for="line of title"
-                v-word-to-span="line"
+                v-word-to-span
                 v-text-char-anim="{duration: .3}"
-            )
+            ) {{line}}
         .headphones-specs__data
             .headphones-specs__data-row(
                 v-for="row, i of data"

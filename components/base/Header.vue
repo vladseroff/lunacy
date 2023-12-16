@@ -2,8 +2,8 @@
 header.header
     LayoutContainer
         .header__wrapper
-            nuxt-link.header__logo(
-                to="/"
+            a.header__logo(
+                href="/lunacy"
             )
                 img(
                     src="/images/logo-sm.svg"

@@ -1,80 +1,253 @@
 <template lang="pug">
-.index-products
+.index-products#index-products
     LayoutContainer
         .index-products__top
-            nuxt-link.index-products__button.loud(
-                :to="{name: 'night'}"
+            a.index-products__button.loud(
+                href="night"
             )
                 span lunacy night
-            nuxt-link.index-products__button.night(
-                :to="{name: 'loud'}"
+            a.index-products__button.night(
+                href="loud"
             )
                 span 
                     em lun
                     |acy loud
         .index-products__body
             .index-products__images
-                .index-products__img
+                .index-products__img.index-products__img11
                     img(
+                        v-mouse-parallax="{container: '.index-products', strength: 2.5}"
                         src="/images/index/img7.png"
                     )
-                .index-products__img
+                .index-products__img.index-products__img22
                     img(
+                        v-mouse-parallax="{container: '.index-products', strength: -2.5}"
                         src="/images/index/img8.png"
                     )
             .index-products__lines
                 .index-products__line
-                    span стиль
-                    span стиль
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                    ) стиль
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                    ) стиль
                 .index-products__line
-                    span дизайн
-                    span дизайн
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                    ) дизайн
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                    ) дизайн
                 .index-products__line
-                    span качество
-                    span качество
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                    ) качество
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                    ) качество
                 .index-products__line
-                    span экокожа
-                    span экокожа
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                    ) экокожа
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                    ) экокожа
                 .index-products__line
-                    span громкость
-                    span громкость
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                    ) громкость
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                    ) громкость
                 .index-products__line
-                    span микрофон
-                    span микрофон
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                    ) микрофон
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                    ) микрофон
                 .index-products__line
-                    span удобство
-                    span удобство
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                    ) удобство
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                    ) удобство
                 .index-products__line
-                    span гарантия
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .7, duration: .6}"
+                    ) гарантия
                 .index-products__line
-                    span удобство
-                    span удобство
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                    ) удобство
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                    ) удобство
                 .index-products__line
-                    span микрофон
-                    span микрофон
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                    ) микрофон
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                    ) микрофон
                 .index-products__line
-                    span экокожа
-                    span экокожа
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                    ) экокожа
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                    ) экокожа
                 .index-products__line
-                    span громкость
-                    span громкость
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                    ) громкость
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                    ) громкость
                 .index-products__line
-                    span качество
-                    span качество
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                    ) качество
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                    ) качество
                 .index-products__line
-                    span дизайн
-                    span дизайн
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                    ) дизайн
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                    ) дизайн
                 .index-products__line
-                    span стиль
-                    span стиль
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                    ) стиль
+                    span(
+                        v-word-to-span
+                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                    ) стиль
 </template>
 
 <script setup>
+const { $gsap } = useNuxtApp()
 
+onMounted(() => {
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `#index-products`,
+            start: "-=100%",
+            end: "bottom 100%",
+        },
+    })
+        .from('.index-products__img11', {
+            opacity: 0,
+            x: -500,
+            ease: "ease"
+        })
+        .to('.index-products__img11', {
+            opacity: 1,
+            x: -252,
+            duration: .8,
+            delay: .8,
+            ease: "ease"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `#index-products`,
+            start: "-=100%",
+            end: "bottom 100%",
+        },
+    })
+        .from('.index-products__img22', {
+            opacity: 0,
+            x: 500,
+            ease: "ease"
+        })
+        .to('.index-products__img22', {
+            opacity: 1,
+            x: 307,
+            duration: .8,
+            delay: .8,
+            ease: "ease"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `#index-products`,
+            start: "-=100%",
+            end: "bottom 100%",
+        },
+    })
+        .from('.index-products__button.loud', {
+            opacity: 0,
+            x: -20,
+            rotate: 5,
+            delay: 1.7,
+            ease: "ease"
+        })
+        .to('.index-products__button.loud', {
+            opacity: 1,
+            x: 0,
+            rotate: 0,
+            duration: .8,
+            ease: "ease"
+        })
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `#index-products`,
+            start: "-=100%",
+            end: "bottom 100%",
+        },
+    })
+        .from('.index-products__button.night', {
+            opacity: 0,
+            x: 20,
+            rotate: -5,
+            delay: 1.7,
+            ease: "ease"
+        })
+        .to('.index-products__button.night', {
+            opacity: 1,
+            x: 0,
+            rotate: 0,
+            duration: .8,
+            ease: "ease"
+        })
+})
 </script>
 
 <style lang="scss" scoped>
 .index-products {
+    overflow: hidden;
     .container {
         position: relative;
         &:before {
@@ -121,6 +294,7 @@
             z-index: 5;
             margin-top: -30px;
             mix-blend-mode: exclusion;
+            transition: .3s ease;
         }
         span {
             position: relative;
@@ -130,6 +304,11 @@
             font-style: normal;
         }
         &.loud {
+            &:hover {
+                &:before {
+                    transform: scale(1.2) translateX(-11px);
+                }
+            }
             &:before {
                 right: -16px;
                 // z-index: 1;
@@ -141,6 +320,11 @@
             }
         }
         &.night {
+            &:hover {
+                &:before {
+                    transform: scale(1.1) translateX(90px);
+                }
+            }
             em {
                 // color: #000;
             }
@@ -163,18 +347,19 @@
         top: 0;
     }
     &__img {
+        opacity: 0;
         width: 100%;
         height: 100%;
         position: absolute;
         &:nth-child(1) {
             z-index: 2;
-            transform: translateX(-252px) translateY(-110px);
+            transform: translateX(-500px) translateY(-110px);
             img {
                 max-width: 600px;
             }
         }
         &:nth-child(2) {
-            transform: translateX(307px) translateY(-128px);
+            transform: translateX(500px) translateY(-128px);
             img {
                 max-width: 600px;
             }

@@ -2,20 +2,47 @@
 .index-text
     LayoutContainer
         .index-text__wrapper
-            .index-text__text кто станет носить 
-            .index-text__text геймерские наушники 
-            .index-text__text на улице? 
-            .index-text__text тот, кто выбирает 
-            .index-text__text Lunacy.
-        .index-text__desc они дополняют тебя, а не 
-            br 
-            |ограничивают. Сочетание дорогой 
-            br 
-            |экокожи, ткани и терморегулирующего 
-            br 
-            |силикагеля позволят тебе наслаждаться 
-            br 
-            |комфортом даже в самых потных катках.
+            .index-text__text(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) кто станет носить 
+            .index-text__text(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) геймерские наушники 
+            .index-text__text(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) на улице? 
+            .index-text__text(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) тот, кто выбирает 
+            .index-text__text(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) Lunacy.
+        .index-text__desc
+            .index-text__desc-line(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) они дополняют тебя, а не 
+            .index-text__desc-line(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) ограничивают. Сочетание дорогой 
+            .index-text__desc-line(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) экокожи, ткани и терморегулирующего 
+            .index-text__desc-line(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) силикагеля позволят тебе наслаждаться 
+            .index-text__desc-line(
+                v-word-to-span
+                v-text-char-anim="{duration: .3}"
+            ) комфортом даже в самых потных катках.
 </template>
 
 <style lang="scss" scoped>
@@ -51,10 +78,12 @@
     &__desc {
         color: #686868;
         font-size: 18px;
-        // max-width: 600px;
-        // width: 100%;
-        text-indent: 60px;
         margin-top: 20px;
+        &-line {
+            &:first-child {
+                padding-left: 60px;
+            }
+        }
     }
 }
 </style>

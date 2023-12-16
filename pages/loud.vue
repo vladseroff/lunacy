@@ -64,11 +64,11 @@ import img8 from '~/assets/images/loud/img8.png'
 import img9 from '~/assets/images/loud/img9.png'
 import img10 from '~/assets/images/loud/img10.png'
 
-setTimeout(() => {
-    if (process.cleint) {
-        window.scrollTo(0, 0)
-    }
-}, 1)
+// setTimeout(() => {
+//     if (process.cleint) {
+//         window.scrollTo(0, 0)
+//     }
+// }, 1)
 
 const devices = ref({
     data: [{
@@ -76,9 +76,7 @@ const devices = ref({
             'lunacy',
             'night'
         ],
-        route: {
-            name: 'night'
-        },
+        route: 'night',
         image: img9,
     },{
         name: [
@@ -190,16 +188,16 @@ const about = ref({
     text: [
         'беспроводная гарнитура премиум класса',
         'обладает высокой',
-        'точностью звука в средних',
-        'и высоких частотах',
+        'точностью звука в средних',
+        'и высоких частотах',
     ],
     desc: [
         [
-            'съёмным микрофоном с увеличенным',
-            'звукоснимающим капсюлем '
+            'съёмным микрофоном с увеличенным',
+            'звукоснимающим капсюлем'
         ],
         [
-            'и расширенным частотным',
+            'и расширенным частотным',
             'диапазоном.'
         ]
     ]

@@ -60,8 +60,8 @@
                         )
             .index-product__bottom
                 UiButton купить
-                nuxt-link(
-                    to="#"
+                a(
+                    href="#"
                 ) подробнее
 </template>
 

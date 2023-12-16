@@ -5,18 +5,18 @@
             .headphones-description__text
                 .headphones-description__text-line(
                     v-for="line of text"
-                    v-word-to-span="line"
+                    v-word-to-span
                     v-text-char-anim="{duration: .3}"
-                )
+                ) {{line}}
             .headphones-description__desc
                 .headphones-description__desc-line(
                     v-for="line, i of desc"
                 )
                     .headphones-description__desc-line-num ( {{i + 1}} )
                     .headphones-description__desc-line-text(
-                        v-word-to-span="line"
+                        v-word-to-span
                         v-text-char-anim="{duration: .3}"
-                    )
+                    ) {{line}}
 </template>
 
 <script setup>

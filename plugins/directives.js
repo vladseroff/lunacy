@@ -84,7 +84,7 @@ export default defineNuxtPlugin(nuxtApp => {
     }
     const setSpans = (el, bind) => {
         let string = ''
-        _.words(bind.value, /([^\s]+)/g).forEach(word => {
+        _.words(bind.value || el.innerHTML, /([^\s]+)/g).forEach(word => {
             if (word === 'br') {
                 string += `<br> `
             } else {
@@ -150,6 +150,13 @@ export default defineNuxtPlugin(nuxtApp => {
                 }
                 gsapAnimate(span, el, bind, delay)
             })
+        }
+    })
+    nuxtApp.hook('page:finish', () => {
+        const loadingElement = document.querySelector('#loading')
+        document.getElementsByTagName( 'html' )[0].classList.add('scroll')
+        if (loadingElement) {
+            loadingElement.classList.add('hidden')
         }
     })
 })

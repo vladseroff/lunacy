@@ -5,18 +5,18 @@
             .headphones-microphone__text
                 .headphones-microphone__text-line(
                     v-for="line of text"
-                    v-word-to-span="line"
+                    v-word-to-span
                     v-text-char-anim="{duration: .6}"
-                )
+                ) {{line}}
             .headphones-microphone__desc
                 .headphones-microphone__desc-wrapper(
                     v-for="descBlock of desc"
                 )
                     .headphones-microphone__desc-line(
                         v-for="line of descBlock"
-                        v-word-to-span="line"
+                        v-word-to-span
                         v-text-char-anim="{duration: .3}"
-                    )
+                    ) {{line}}
             .headphones-microphone__img
                 img(
                     :src="image"
