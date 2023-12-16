@@ -30,8 +30,10 @@ html {
     width: 100vw;
     overflow: hidden;
     // scroll-behavior: smooth;
+    margin-right: 17px;
     &.scroll {
         overflow: hidden auto;
+        margin-right: -17px;
     }
 }
 
