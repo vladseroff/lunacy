@@ -66,7 +66,7 @@
                     @click="scrollTo('index-partner')"
                 ) купить
                 a(
-                    href="#"
+                    href="loud"
                 ) подробнее
 </template>
 

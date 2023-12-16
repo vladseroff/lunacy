@@ -59,6 +59,8 @@
         font-size: 34px;
         max-width: 400px;
         width: 100%;
+        line-height: .96em;
+        letter-spacing: -0.04em;
         &:nth-child(1) {
             transform: translateX(-80px);
         }

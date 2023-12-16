@@ -3,7 +3,7 @@
     LayoutContainer
         .night-preview__wrapper
             .night-preview__img
-                img(
+                img#nightPreviewImg(
                     src="~/assets/images/night/img4.png"
                 )
             .night-preview__desc
@@ -34,10 +34,26 @@
             
 </template>
 
-<script>
-export default {
-    
-}
+<script setup>
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+    $gsap.timeline({
+        scrollTrigger: {
+            trigger: `.night-preview`,
+            start: "-=100%",
+            end: "bottom 100%",
+        },
+    })
+        .from('#nightPreviewImg', {
+            height: 0,
+            ease: "ease"
+        })
+        .to('#nightPreviewImg', {
+            height: 372,
+            ease: "ease"
+        })
+})
 </script>
 
 <style lang="scss" scoped>
@@ -50,9 +66,12 @@ export default {
     &__img {
         width: 330px;
         margin-left: 138px;
+        height: 372px;
         img {
             display: block;
             width: 100%;
+            height: 0px;
+            object-fit: cover;
         }
     }
     &__desc {

@@ -1,7 +1,10 @@
 <template lang="pug">
 .devices
     LayoutContainer
-        .devices__top другие девайсы
+        .devices__top(
+            v-word-to-span
+            v-text-char-anim="{duration: .4}"
+        ) другие девайсы
         .devices__wrapper
             a.devices__item(
                 v-for="item of data"
@@ -11,6 +14,8 @@
                 .devices__item-name
                     span(
                         v-for="span of item.name"
+                        v-word-to-span
+                        v-text-char-anim="{duration: .4}"
                     ) {{span}}
                 .devices__item-box
                     .devices__item-img
@@ -78,6 +83,18 @@ const props = defineProps({
                 }
             }
         }
+        &:hover {
+            #{$item} {
+                &-img {
+                    img {
+                        transform: scale(1.1)
+                    }
+                }
+                &-text {
+                    transform: scale(.8)
+                }
+            }
+        }
         &-name {
             text-align: center;
             color: #fff;
@@ -87,7 +104,7 @@ const props = defineProps({
             span {
                 &:first-child {
                     color: #686868;
-                    margin-right: 6px;
+                    // margin-right: 6px;
                 }
             }
         }
@@ -104,6 +121,7 @@ const props = defineProps({
                 display: block;
                 max-width: 532px;
                 max-height: 460px;
+                transition: .8s ease-in-out;
             }
         }
         &-text {
@@ -115,6 +133,7 @@ const props = defineProps({
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: .8s ease-in-out;
         }
     }
 }

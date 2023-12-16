@@ -63,7 +63,7 @@
                     @click="scrollTo('index-partner')"
                 ) купить
                 a(
-                    href="#"
+                    href="night"
                 ) подробнее
 </template>
 

@@ -18,13 +18,14 @@ header.header.hidden
             a.header__nav-item(
                 href="#"
             ) драйвера
+        .header__wrapper
             a.header__nav-item(
+                style="margin-right: 0px"
                 href="#"
             ) поддержка
-        .header__wrapper
-            UiButton(
-                @click="scrollTo('index-partner')"
-            ) купить
+            //- UiButton(
+            //-     @click="scrollTo('index-partner')"
+            //- ) купить
             //- .header__lang
             //-     .header__lang-item.disabled Ru
             //-     .header__lang-item En
@@ -36,6 +37,7 @@ header.header.hidden
 
 <style lang="scss" scoped>
 .header {
+    background: linear-gradient(to bottom, #0E0E0E, transparent);
     padding: 13px 0;
     position: fixed;
     top: 0;
