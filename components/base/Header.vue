@@ -302,6 +302,7 @@ const clickBuy = () => {
             padding: 15px 0;
             display: flex;
             align-items: center;
+            letter-spacing: -0.02em;
             justify-content: center;
             transition: .3s ease;
             &:hover {

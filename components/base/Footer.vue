@@ -70,6 +70,7 @@ const scrollToTop = () => {
         justify-content: space-between;
         align-items: center;
         padding: 40px 0;
+        letter-spacing: -0.02em;
         a {
             color: #686868;
             text-decoration: none;
@@ -133,6 +134,7 @@ const scrollToTop = () => {
             display: flex;
             align-items: center;
             margin: 5px 0;
+            letter-spacing: -0.02em;
             &:hover {
                 text-decoration: underline;
             }
