@@ -101,7 +101,7 @@ export default defineNuxtPlugin(nuxtApp => {
             setSpans(el, bind)
         }
     })
-    const gsapAnimate = (element, trigger, bind, delay, duration) => {
+    const gsapAnimate = (element, trigger, bind, delay, duration, y = 25) => {
         const options = {
             scrollTrigger: {
                 trigger: bind.value.trigger || trigger,
@@ -117,7 +117,7 @@ export default defineNuxtPlugin(nuxtApp => {
         }
         gsap.fromTo(element, {
             ...options,
-            y: 25,
+            y: y,
             opacity: 0,
         },{
             ...options,
@@ -130,13 +130,14 @@ export default defineNuxtPlugin(nuxtApp => {
             const charsHTMLCollection = _.flattenDeep(Array.prototype.slice.call(el.children).map(elem => Array.prototype.slice.call(elem.children).map(child => child)))
             charsHTMLCollection.forEach((char, index) => {
                 let delay = bind.value.delay || 0.04;
-                let duration = bind.value.duration || 0.22
+                let duration = bind.value.duration || 0.1
+                let y = bind.value.y
                 if (bind.value.startDelay) {
                     delay = (bind.value.startDelay + delay * index)
                 } else {
                     delay = delay * index
                 }
-                gsapAnimate(char, el, bind, delay, duration)
+                gsapAnimate(char, el, bind, delay, duration, y)
             })
             // [].forEach.call(charsHTMLCollection, (char, index) => {
             //     let delay = bind.value.delay || 0.04;
@@ -156,12 +157,14 @@ export default defineNuxtPlugin(nuxtApp => {
         mounted: (el, bind) => {
             [].forEach.call(el.children, (span, index) => {
                 let delay = bind.value.delay || 0.01;
+                let duration = bind.value.duration || 0.1
+                let y = bind.value.y
                 if (bind.value.startDelay) {
                     delay = delay * (index + 1) + bind.value.startDelay
                 } else {
                     delay = (index + 1) * delay
                 }
-                gsapAnimate(span, el, bind, delay)
+                gsapAnimate(span, el, bind, delay, duration, y)
             })
         }
     })

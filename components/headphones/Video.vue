@@ -8,7 +8,7 @@
             ) {{text}}
             .headphones-video__title(
                 v-word-to-span
-                v-text-char-anim="{trigger: '.headphones-video', duration: .4}"
+                v-text-char-anim="{trigger: '.headphones-video', y: 0, duration: .7}"
             ) {{title}}
             .headphones-video__box
                 .headphones-video__preview

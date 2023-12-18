@@ -1,10 +1,7 @@
 <template lang="pug">
 .devices
     LayoutContainer
-        .devices__top(
-            v-word-to-span
-            v-text-char-anim="{duration: .4}"
-        ) другие девайсы
+        .devices__top другие девайсы
         .devices__wrapper
             a.devices__item(
                 v-for="item of data"

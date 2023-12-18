@@ -64,11 +64,11 @@ import img8 from '~/assets/images/night/img8.png'
 import img9 from '~/assets/images/night/img9.png'
 import img10 from '~/assets/images/loud/img10.png'
 
-setTimeout(() => {
-    if (process.cleint) {
-        window.scrollTo(0, 0)
-    }
-}, 1)
+// setTimeout(() => {
+//     if (process.cleint) {
+//         window.scrollTo(0, 0)
+//     }
+// }, 1)
 
 const devices = ref({
     data: [{

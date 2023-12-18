@@ -8,7 +8,7 @@
                 )
             .loud-preview__title(
                 v-word-to-span
-                v-text-char-anim="{trigger: '.loud-preview', duration: .4}"
+                v-text-char-anim="{trigger: '.loud-preview', y: 0, duration: .4}"
             ) три режима подключения
             .loud-preview__specs
                 .loud-preview__spec
@@ -23,7 +23,7 @@
                         ) проводной
                         .loud-preview__spec-desc(
                             v-word-to-span
-                            v-text-char-anim="{trigger: '.loud-preview__specs', duration: .4}"
+                            v-text-char-anim="{trigger: '.loud-preview__specs', y: 0, duration: .4}"
                         ) Type C-Jack 3.5 мм
                 .loud-preview__spec
                     .loud-preview__spec-number(
@@ -37,7 +37,7 @@
                         ) bluetooth
                         .loud-preview__spec-desc(
                             v-word-to-span
-                            v-text-char-anim="{trigger: '.loud-preview__specs', duration: .4}"
+                            v-text-char-anim="{trigger: '.loud-preview__specs', y: 0, duration: .4}"
                         ) Bluetooth 5.3
                 .loud-preview__spec
                     .loud-preview__spec-number(
@@ -51,7 +51,7 @@
                         ) радиоканал
                         .loud-preview__spec-desc(
                             v-word-to-span
-                            v-text-char-anim="{trigger: '.loud-preview__specs', duration: .4}"
+                            v-text-char-anim="{trigger: '.loud-preview__specs', y: 0, duration: .4}"
                         ) 2.4 ГГц
 </template>
 

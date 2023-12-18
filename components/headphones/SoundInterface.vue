@@ -4,7 +4,7 @@
         .headphones-sound-interface__wrapper
             .headphones-sound-interface__title(
                 v-word-to-span="title"
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{duration: .3, y: 0, }"
             )
             .headphones-sound-interface__desc
                 .headphones-sound-interface__desc-line(

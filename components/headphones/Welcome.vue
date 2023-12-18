@@ -12,7 +12,7 @@
             ) {{title}}
             .loud-welcome__text(
                 v-word-to-span
-                v-text-char-anim="{trigger: '.loud-welcome', startDelay: 1.3, duration: .7}"
+                v-text-char-anim="{trigger: '.loud-welcome', startDelay: 1, duration: .7}"
             ) {{text}}
             .loud-welcome__images
                 .loud-welcome__img(
@@ -50,7 +50,7 @@ onMounted(() => {
     props.images.forEach((el, i) => {
         const element = document.getElementById(`loud-welcome-${i}`)
         let height = 308
-        let delay = 1.5
+        let delay = 1.1
         if (i === 1) {
             height = 388
             delay = 1

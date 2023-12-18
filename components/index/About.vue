@@ -4,31 +4,31 @@
         .index-about__text#aboutText
             .index-about__text-center.index-about__text-center_first(
                 v-word-to-span="'у истоков LUNACY'"
-                v-text-char-anim="{startDelay: .1}"
+                v-text-char-anim="{y: 0, }"
             )
             .index-about__text-center(
                 v-word-to-span="'стоит'"
-                v-text-char-anim="{startDelay: .2}"
+                v-text-char-anim="{y: 0, }"
             )
             .index-about__text-center(
                 v-word-to-span="'Слава Бустер'"
-                v-text-char-anim="{startDelay: .3}"
+                v-text-char-anim="{y: 0, }"
             )
             .index-about__text-left(
                 v-word-to-span="'геймер, который знает какими br должны быть дейвайсы,'"
-                v-text-char-anim="{startDelay: .6}"
+                v-text-char-anim="{y: 0, }"
             )
             .index-about__text-center(
                 v-word-to-span="'через него прошли десятки мышек,'"
-                v-text-char-anim="{startDelay: .7}"
+                v-text-char-anim="{y: 0, }"
             ) 
             .index-about__text-center(
                 v-word-to-span="'клавиатур и наушников'"
-                v-text-char-anim="{startDelay: .8}"
+                v-text-char-anim="{y: 0, }"
             )
             .index-about__text-center(
                 v-word-to-span="'именитых брендов'"
-                v-text-char-anim="{startDelay: .9}"
+                v-text-char-anim="{y: 0, }"
             )
         .index-about__desc#aboutDesc
             .index-about__desc-text(

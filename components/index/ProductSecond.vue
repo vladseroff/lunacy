@@ -28,40 +28,40 @@
                 .index-product__box
                     .index-product__text(
                         v-word-to-span="'никаких лишних'"
-                        v-text-char-anim="{}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'шумов, '"
-                        v-text-char-anim="{startDelay: .4}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'только чистый звук'"
-                        v-text-char-anim="{startDelay: .8}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'динамиков и'"
-                        v-text-char-anim="{startDelay: 1}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'микрофона'"
-                        v-text-char-anim="{startDelay: 1.3}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__desc
                         .index-product__desc-line(
                             v-word-to-span="'В погоне за идеальным'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'дизайном мы не забыли о'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'качестве, надежности и'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'технологичности.'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
             .index-product__bottom
                 UiButton(
@@ -169,9 +169,9 @@ onMounted(() => {
     &__desc {
         color: #686868;
         font-size: 20px;
-        font-weight: 500;
         padding-left: 25px;
         margin-top: 20px;
+        line-height: .93em;
         &-line {
             &:nth-child(1) {
                 padding-left: 56px;

@@ -4,9 +4,9 @@
         .headphones-microphone__wrapper
             .headphones-microphone__text
                 .headphones-microphone__text-line(
-                    v-for="line of text"
+                    v-for="line, i of text"
                     v-word-to-span
-                    v-text-char-anim="{duration: .6}"
+                    v-text-char-anim="{y: 0, startDelay: 0.4 * i, trigger: '.headphones-microphone'}"
                 ) {{line}}
             .headphones-microphone__desc
                 .headphones-microphone__desc-wrapper(
@@ -15,7 +15,7 @@
                     .headphones-microphone__desc-line(
                         v-for="line of descBlock"
                         v-word-to-span
-                        v-text-char-anim="{duration: .3}"
+                        v-text-char-anim="{}"
                     ) {{line}}
             .headphones-microphone__img
                 img(

@@ -34,133 +34,133 @@
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', duration: .2}"
                     ) стиль
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', duration: .2}"
                     ) стиль
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .2}"
                     ) дизайн
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .2}"
                     ) дизайн
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .2}"
                     ) качество
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .2}"
                     ) качество
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .2}"
                     ) экокожа
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .2}"
                     ) экокожа
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .2}"
                     ) громкость
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .2}"
                     ) громкость
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .2}"
                     ) микрофон
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .2}"
                     ) микрофон
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .2}"
                     ) удобство
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .2}"
                     ) удобство
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .7, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .7, duration: .2}"
                     ) гарантия
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .2}"
                     ) удобство
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .6, duration: .2}"
                     ) удобство
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .2}"
                     ) микрофон
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .5, duration: .2}"
                     ) микрофон
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .2}"
                     ) экокожа
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .4, duration: .2}"
                     ) экокожа
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .2}"
                     ) громкость
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .3, duration: .2}"
                     ) громкость
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .2}"
                     ) качество
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .2, duration: .2}"
                     ) качество
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .2}"
                     ) дизайн
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', startDelay: .1, duration: .2}"
                     ) дизайн
                 .index-products__line
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', duration: .2}"
                     ) стиль
                     span(
                         v-word-to-span
-                        v-text-char-anim="{trigger: '#index-products', duration: .6}"
+                        v-text-char-anim="{trigger: '#index-products', duration: .2}"
                     ) стиль
 </template>
 
@@ -328,7 +328,7 @@ onMounted(() => {
         &.night {
             &:hover {
                 &:before {
-                    transform: scale(1.1) translateX(90px);
+                    transform: scale(1.2) translateX(19px);
                 }
             }
             em {

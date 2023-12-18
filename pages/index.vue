@@ -13,11 +13,13 @@
 </template>
 
 <script setup>
-setTimeout(() => {
-    if (process.cleint) {
-        window.scrollTo(0, 0)
-    }
-}, 1)
+onMounted(() => {
+    nextTick(() => {
+        if (process?.cleint) {
+            window.scrollTo(0, 0)
+        }
+    })
+})
 </script>
 
 <style lang="scss" scoped>

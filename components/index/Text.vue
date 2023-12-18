@@ -4,44 +4,44 @@
         .index-text__wrapper
             .index-text__text(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{y: 0, }"
             ) кто станет носить 
             .index-text__text(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{y: 0, }"
             ) геймерские наушники 
             .index-text__text(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{y: 0, }"
             ) на улице? 
             .index-text__text(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{y: 0, }"
             ) тот, кто выбирает 
             .index-text__text(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{y: 0, }"
             ) Lunacy.
         .index-text__desc
             .index-text__desc-line(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{}"
             ) они дополняют тебя, а не 
             .index-text__desc-line(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{}"
             ) ограничивают. Сочетание дорогой 
             .index-text__desc-line(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{}"
             ) экокожи, ткани и терморегулирующего 
             .index-text__desc-line(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{}"
             ) силикагеля позволят тебе наслаждаться 
             .index-text__desc-line(
                 v-word-to-span
-                v-text-char-anim="{duration: .3}"
+                v-text-char-anim="{}"
             ) комфортом даже в самых потных катках.
 </template>
 
@@ -81,6 +81,7 @@
         color: #686868;
         font-size: 18px;
         margin-top: 20px;
+        line-height: .93em;
         &-line {
             &:first-child {
                 padding-left: 60px;

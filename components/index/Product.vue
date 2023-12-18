@@ -6,44 +6,44 @@
                 .index-product__box
                     .index-product__text(
                         v-word-to-span="'три режима'"
-                        v-text-char-anim="{}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'подключения:'"
-                        v-text-char-anim="{startDelay: .4}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'проводной,'"
-                        v-text-char-anim="{startDelay: .8}"
+                        v-text-char-anim="{y: 0, }"
                     ) 
                     .index-product__text(
                         v-word-to-span="'радиоканал,'"
-                        v-text-char-anim="{startDelay: 1}"
+                        v-text-char-anim="{y: 0, }"
                     )
                     .index-product__text(
                         v-word-to-span="'bluetooth'"
-                        v-text-char-anim="{startDelay: 1.3}"
+                        v-text-char-anim="{y: 0, }"
                     ) 
                     .index-product__desc
                         .index-product__desc-line(
                             v-word-to-span="'совместимы с'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'большинством устройств на'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'рынке, включая мобильные'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'телефоны, игровые консоли и'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                         .index-product__desc-line(
                             v-word-to-span="'настольные ПК.'"
-                            v-text-char-anim="{startDelay: .4}"
+                            v-text-char-anim="{}"
                         )
                 .index-product__images
                     .index-product__title ( lunacy loud )
@@ -173,10 +173,10 @@ onMounted(() => {
     &__desc {
         color: #686868;
         font-size: 20px;
-        font-weight: 500;
         // text-indent: 100px;
         padding-left: 50px;
         margin-top: 20px;
+        line-height: .93em;
         &-line {
             &:nth-child(1) {
                 padding-left: 100px;
