@@ -18,12 +18,12 @@ footer.footer
                     a(href="https://t.me/lunacy_ru" target="_blank") telegram
                     a(href="https://vk.com/lunacy_ru" target="_blank") вконтакте
                 .footer__nav
-                    a.footer__nav-item(
-                        href="#"
-                    ) продукты
-                        img(
-                            src="/images/arrow.svg"
-                        )
+                    //- a.footer__nav-item(
+                    //-     href="#"
+                    //- ) продукты
+                    //-     img(
+                    //-         src="/images/arrow.svg"
+                    //-     )
                     a.footer__nav-item(
                         href="#"
                     ) драйвера

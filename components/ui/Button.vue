@@ -26,7 +26,6 @@ defineProps({
 
 const btnRef = ref(null)
 onMounted(() => {
-    console.log(btnRef);
     btnRef.value.innerHTML = '<div><span>' + btnRef.value.textContent.trim().split('').join('</span><span>') + '</span></div>'
 })
 </script>
