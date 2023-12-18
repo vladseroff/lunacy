@@ -49,15 +49,16 @@
                     .index-product__title ( lunacy loud )
                     .index-product__images-wrapper
                         .index-product__img.index-product__img1
-                            img(
+                            NuxtImg(
                                 src="/images/index/img1.png"
+                                width="387" height="495"
                             )
                         .index-product__img.index-product__img2
-                            img(
+                            NuxtImg(
                                 src="/images/index/img2.png"
                             )
                         .index-product__img.index-product__img3
-                            img(
+                            NuxtImg(
                                 src="/images/index/img3.png"
                             )
                 .index-product__box

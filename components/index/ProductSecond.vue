@@ -9,15 +9,17 @@
                     .index-product__title ( lunacy night )
                     .index-product__images-wrapper
                         .index-product__img
-                            img(
+                            NuxtImg(
                                 src="/images/index/img4.png"
+                                width="387"
+                                height="487"
                             )
                         .index-product__img.index-product__img22
-                            img(
+                            NuxtImg(
                                 src="/images/index/img5.png"
                             )
                         .index-product__img.index-product__img33
-                            img(
+                            NuxtImg(
                                 src="/images/index/img6.png"
                             )
                 .index-product__box

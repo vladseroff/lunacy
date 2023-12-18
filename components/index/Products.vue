@@ -15,14 +15,18 @@
         .index-products__body
             .index-products__images
                 .index-products__img.index-products__img11
-                    img(
+                    NuxtImg(
                         v-mouse-parallax="{container: '.index-products', strength: 2.5}"
                         src="/images/index/img7.png"
+                        width="600"
+                        height="533"
                     )
                 .index-products__img.index-products__img22
-                    img(
+                    NuxtImg(
                         v-mouse-parallax="{container: '.index-products', strength: -2.5}"
                         src="/images/index/img8.png"
+                        width="600"
+                        height="602"
                     )
             .index-products__lines
                 .index-products__line

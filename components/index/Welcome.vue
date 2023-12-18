@@ -2,11 +2,13 @@
 .index-welcome
     LayoutContainer
         .index-welcome__img
-            img.welcome-img-index(
+            NuxtImg.welcome-img-index(
                 src="/images/index/bg1.png"
+                width="460" height="593"
             )
-            img.welcome-img-index2(
+            NuxtImg.welcome-img-index2(
                 src="/images/index/bg2.png"
+                width="460" height="593"
             )
         .index-welcome__logo(
             v-word-to-span="'lunacy'"

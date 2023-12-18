@@ -42,10 +42,7 @@ export default defineNuxtConfig({
             }
         }
     },
-    modules: [
-        '@hypernym/nuxt-gsap',
-        'nuxt-yandex-metrika',
-    ],
+    modules: ['@hypernym/nuxt-gsap', 'nuxt-yandex-metrika', "@nuxt/image"],
     yandexMetrika: {
         id: '95646052',
         options: {
