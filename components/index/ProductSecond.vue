@@ -13,14 +13,17 @@
                                 src="/images/index/img4.png"
                                 width="387"
                                 height="487"
+                                format="webp"
                             )
                         .index-product__img.index-product__img22
                             NuxtImg(
                                 src="/images/index/img5.png"
+                                format="webp"
                             )
                         .index-product__img.index-product__img33
                             NuxtImg(
                                 src="/images/index/img6.png"
+                                format="webp"
                             )
                 .index-product__box
                     .index-product__text(

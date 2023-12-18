@@ -5,10 +5,12 @@
             NuxtImg.welcome-img-index(
                 src="/images/index/bg1.png"
                 width="460" height="593"
+                format="webp"
             )
             NuxtImg.welcome-img-index2(
                 src="/images/index/bg2.png"
                 width="460" height="593"
+                format="webp"
             )
         .index-welcome__logo(
             v-word-to-span="'lunacy'"

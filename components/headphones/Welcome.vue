@@ -18,9 +18,10 @@
                 .loud-welcome__img(
                     v-for="image, i of images"
                 )
-                    img(
+                    NuxtImg(
                         :id="`loud-welcome-${i}`"
                         :src="image"
+                        format="webp"
                     )
 </template>
 
