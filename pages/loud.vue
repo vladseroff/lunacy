@@ -179,9 +179,9 @@ const welcome = ref({
     title: 'Еще громче.',
     text: '( lunacy loud)',
     images: [
-        'images/loud/img1.png',
-        'images/loud/img2.png',
-        'images/loud/img3.png',
+        img1,
+        img2,
+        img3,
     ]
 })
 const about = ref({
