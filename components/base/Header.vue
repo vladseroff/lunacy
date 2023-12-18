@@ -132,11 +132,15 @@ const clickBuy = () => {
         right: 0;
         overflow: hidden;
         opacity: 0;
+        pointer-events: none;
         transition: .4s ease;
         $dropdown: &;
         &.opened {
             opacity: 1;
             #{$dropdown} {
+                &-wrapper {
+                    pointer-events: all;
+                }
                 &-item {
                     animation: showItem .8s ease forwards;
                     &:nth-child(2) {
