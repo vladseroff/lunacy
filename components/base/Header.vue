@@ -1,36 +1,37 @@
 <template lang="pug">
 header.header.hidden
     LayoutContainer
-        .header__wrapper
-            a.header__logo(
-                href="/lunacy"
-            )
-                img(
-                    src="/images/logo-sm.svg"
+        .header__common
+            .header__wrapper
+                a.header__logo(
+                    href="/lunacy"
                 )
-        .header__nav
-            .header__nav-item(
-                @click.stop="toggleDropdown"
-                :class="{active: openedDropdown}"
-            ) продукты
-                img(
-                    :class="{rotated: openedDropdown}"
-                    src="/images/arrow.svg"
-                )
-            a.header__nav-item(
-                href="#"
-            ) драйвера
-        .header__wrapper
-            a.header__nav-item(
-                style="margin-right: 0px"
-                href="#"
-            ) поддержка
-            //- UiButton(
-            //-     @click="scrollTo('index-partner')"
-            //- ) купить
-            //- .header__lang
-            //-     .header__lang-item.disabled Ru
-            //-     .header__lang-item En
+                    img(
+                        src="/images/logo-sm.svg"
+                    )
+            .header__nav
+                .header__nav-item(
+                    @click.stop="toggleDropdown"
+                    :class="{active: openedDropdown}"
+                ) продукты
+                    img(
+                        :class="{rotated: openedDropdown}"
+                        src="/images/arrow.svg"
+                    )
+                a.header__nav-item(
+                    href="#"
+                ) драйвера
+            .header__wrapper
+                a.header__nav-item(
+                    style="margin-right: 0px"
+                    href="#"
+                ) поддержка
+                //- UiButton(
+                //-     @click="scrollTo('index-partner')"
+                //- ) купить
+                //- .header__lang
+                //-     .header__lang-item.disabled Ru
+                //-     .header__lang-item En
         .header__dropdown(
             :class="{opened: openedDropdown}"
         )
@@ -113,9 +114,9 @@ const clickBuy = () => {
         transform: translateY(-100%);
     }
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
     }
     @keyframes showItem {
         0% {
@@ -124,6 +125,11 @@ const clickBuy = () => {
         100% {
             height: 348px;
         }
+    }
+    &__common {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &__dropdown {
         position: absolute;
