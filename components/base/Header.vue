@@ -202,9 +202,13 @@ const clickBuy = () => {
             text-align: center;
             overflow: hidden;
             height: 0px;
+            transition: .3s ease;
             $item: &;
             &:not(:last-child) {
                 margin-right: 8px;
+            }
+            &:hover {
+                
             }
             &_soon {
                 position: relative;
@@ -270,8 +274,9 @@ const clickBuy = () => {
                 color: #FFFFFF;
                 opacity: 0.5;
                 text-decoration: none;
+                transition: .3s ease;
                 &:hover {
-                    text-decoration: underline;
+                    opacity: .3;
                 }
             }
         }
@@ -312,7 +317,6 @@ const clickBuy = () => {
             justify-content: center;
             transition: .3s ease;
             &:hover {
-                // text-decoration: underline;
                 opacity: .4;
             }
             &.active {

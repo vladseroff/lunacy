@@ -76,7 +76,7 @@ export default defineNuxtPlugin(nuxtApp => {
     })
     const getCharsFromWord = (word) => {
         let string = ''
-        for (let index = 0; index < word.length; index++) {
+        for (let index = 0; index < word.split(/(?!$)/u).length; index++) {
             const char = word[index];
             string += `<span class="char">${char}</span>`
         }

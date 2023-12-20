@@ -147,8 +147,9 @@ onMounted(() => {
             cursor: pointer;
             display: block;
             margin-top: 10px;
+            transition: .3s ease;
             &:hover {
-                text-decoration: underline;
+                opacity: .3;
             }
         }
     }

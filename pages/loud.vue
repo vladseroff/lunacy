@@ -2,53 +2,53 @@
 .app
     BaseHeader
     .app__container
-        HeadphonesWelcome(
-            :desc="welcome.desc"
-            :title="welcome.title"
-            :text="welcome.text"
-            :images="welcome.images"
-        )
-        HeadphonesAbout(
-            :text="about.text"
-            :desc="about.desc"
-        )
-        LoudPreview
-        HeadphonesVideo(
-            :text="video.text"
-            :title="video.title"
-            :image="video.image"
-        )
-        HeadphonesDescription(
-            :text="description.text"
-            :desc="description.desc"
-        )
-        HeadphonesProductSpec(
-            :image="productSpec.image"
-            :title="productSpec.title"
-            :text="productSpec.text"
-            :desc="productSpec.desc"
-            :name="productSpec.name"
-            :price="productSpec.price"
-        )
-        HeadphonesSoundInterface(
-            :image="soundInterface.image"
-            :title="soundInterface.title"
-            :desc="soundInterface.desc"
-            :specs="soundInterface.specs"
-        )
-        HeadphonesMicrophone(
-            :text="microphone.text"
-            :desc="microphone.desc"
-            :image="microphone.image"
-        )
-        IndexPartners
+        //- HeadphonesWelcome(
+        //-     :desc="welcome.desc"
+        //-     :title="welcome.title"
+        //-     :text="welcome.text"
+        //-     :images="welcome.images"
+        //- )
+        //- HeadphonesAbout(
+        //-     :text="about.text"
+        //-     :desc="about.desc"
+        //- )
+        //- LoudPreview
+        //- HeadphonesVideo(
+        //-     :text="video.text"
+        //-     :title="video.title"
+        //-     :image="video.image"
+        //- )
+        //- HeadphonesDescription(
+        //-     :text="description.text"
+        //-     :desc="description.desc"
+        //- )
+        //- HeadphonesProductSpec(
+        //-     :image="productSpec.image"
+        //-     :title="productSpec.title"
+        //-     :text="productSpec.text"
+        //-     :desc="productSpec.desc"
+        //-     :name="productSpec.name"
+        //-     :price="productSpec.price"
+        //- )
+        //- HeadphonesSoundInterface(
+        //-     :image="soundInterface.image"
+        //-     :title="soundInterface.title"
+        //-     :desc="soundInterface.desc"
+        //-     :specs="soundInterface.specs"
+        //- )
+        //- HeadphonesMicrophone(
+        //-     :text="microphone.text"
+        //-     :desc="microphone.desc"
+        //-     :image="microphone.image"
+        //- )
+        //- IndexPartners
         HeadphonesSpecs(
             :title="specs.title"
             :data="specs.data"
         )
-        BaseDevices(
-            :data="devices.data"
-        )
+        //- BaseDevices(
+        //-     :data="devices.data"
+        //- )
     BaseFooter
 </template>
 
@@ -111,7 +111,7 @@ const specs = ref({
             name: 'Сопротивление',
             description: '64±15% Ом',
         },{
-            name: 'Частотный диапазон',
+            name: 'Частотный диапазон',
             description: '20 Гц - 20.000 Гц',
         }]
     },{
@@ -126,7 +126,7 @@ const specs = ref({
             name: 'Сопротивление',
             description: '2.2 кОм',
         },{
-            name: 'Частотный диапазон',
+            name: 'Частотный диапазон',
             description: '100 Гц - 10.000 Гц',
         }]
     },{

@@ -60,10 +60,11 @@
                     .headphones-specs__data-special(
                         v-if="row.specialLonely"
                     )
-                        .headphones-specs__data-special-text(
-                            v-word-to-span
-                            v-text-char-anim="{duration: .2}"
-                        ) {{row.specialLonely}}
+                        .headphones-specs__data-special-wrp
+                            .headphones-specs__data-special-text(
+                                v-word-to-span
+                                v-text-char-anim="{duration: .2}"
+                            ) {{row.specialLonely}}
 </template>
 
 <script setup>
@@ -181,6 +182,12 @@ const props = defineProps({
             border: 1px dashed #686868;
             flex: 1 1 auto;
             padding: 20px;
+            &-wrp {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 250px;
+            }
             &-text {
                 font-weight: 400;
                 font-size: 20px;
@@ -189,10 +196,6 @@ const props = defineProps({
                 text-transform: lowercase;
                 color: #FFFFFF;
                 text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 250px;
             }
             &-row {
                 display: flex;

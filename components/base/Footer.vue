@@ -75,9 +75,10 @@ const scrollToTop = () => {
             color: #686868;
             text-decoration: none;
             margin-left: 50px;
+            transition: .3s ease;
             &:hover {
                 color: #fff;
-                text-decoration: underline;
+                opacity: .4;
             }
         }
     }
@@ -135,8 +136,9 @@ const scrollToTop = () => {
             align-items: center;
             margin: 5px 0;
             letter-spacing: -0.02em;
+            transition: .3s ease;
             &:hover {
-                text-decoration: underline;
+                opacity: .3;
             }
             &.disabled {
                 pointer-events: none;

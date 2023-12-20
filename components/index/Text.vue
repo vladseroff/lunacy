@@ -38,7 +38,7 @@
             .index-text__desc-line(
                 v-word-to-span
                 v-text-char-anim="{}"
-            ) силикагеля позволят тебе наслаждаться 
+            ) геля позволят тебе наслаждаться 
             .index-text__desc-line(
                 v-word-to-span
                 v-text-char-anim="{}"
@@ -79,12 +79,12 @@
     }
     &__desc {
         color: #686868;
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 20px;
         line-height: .93em;
         &-line {
             &:first-child {
-                padding-left: 60px;
+                padding-left: 82px;
             }
         }
     }
